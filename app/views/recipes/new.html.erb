@@ -1,0 +1,40 @@
+<%= link_to("<< Back to Recipes List", {:action => 'index'}, :class => 'back_button') %>
+
+<div id='new_wrap'>
+
+  <h2>Insert New Recipe</h2>
+
+  <%= form_for(:recipe, :url => {:action => 'create'}) do |f| %>
+    <table summary="Recipe form field">
+      <tr>
+        <th>Recipe Name</th>
+        <td><%= f.text_field(:recipe_name) %></td>
+      </tr>
+      <tr>
+        <th>Description</th>
+        <td><%= f.text_field(:description) %></td>
+      </tr>
+      <tr>
+        <th>Preparation</th>
+        <td><%= f.text_field(:preparation) %></td>
+      </tr>
+      <tr>
+        <th>Tags</th>
+        <td><%= f.text_field(:tags) %></td>
+      </tr>
+    </table>
+
+    <div id='new_button'>
+      <%= submit_tag("Add Recipe!") %>
+    </div>
+  <% end %>
+</div>
+
+
+
+
+
+
+
+
+</div>

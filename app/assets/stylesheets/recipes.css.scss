@@ -1,0 +1,104 @@
+// Place all the styles related to the Recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('http://fonts.googleapis.com/css?family=Indie+Flower');
+
+
+body {
+  background: -webkit-linear-gradient(-45deg, #b4e391 0%,#61c419 100%,#b4e391 100%,#61c419 100%);
+}
+
+
+#recipes_wrap {
+  width: 765px;
+  position: relative;
+}
+
+#add_recipe{
+  position: absolute;
+  top: 20px;
+  left: 670px;
+}
+
+.recipe_wrap {
+  border: 1px solid;
+  width: 350px;
+  //background-color: rgba(0, 0, 30, 0.5);
+  background: cadetblue;
+  box-shadow: 5px 5px 5px #1A1717;
+  padding: 0px 0px 0px 5px;
+  float: left;
+  margin: 0px 0px 20px 20px;
+}
+
+.recipe_wrap h2{
+margin: 0px 0px 0px 0px;
+//height: 35px;
+}
+
+.recipe_wrap h3{
+margin: 0px 0px 0px 0px;
+}
+
+.recipe_wrap h4{
+margin: 0px 0px 0px 0px;
+}
+
+.name {
+  position: relative;
+  //top: 2px;
+  // left: 50px;
+  color: aliceblue;
+  text-shadow: 1px 1px 3px #070707, -1px -1px 3px #070707;
+  width: 340px;
+  text-transform: uppercase;
+  font-family: 'Indie Flower', cursive;
+  margin: 0px 0px 0px 0px;
+}
+
+#desc {
+text-align: center;
+}
+
+.desc {
+  text-align: left;
+  margin: 5px 0px 5px 0px;
+  border: 1px solid;
+  width: 340px;
+  font-family: 'Indie Flower', cursive;
+}
+
+#prep {
+text-align: center;
+}
+
+.prep {
+text-align: left;
+margin: 5px 0px 5px 0px;
+border: 1px solid;
+width: 340px;
+  font-family: 'Indie Flower', cursive;
+}
+
+.tags {
+text-align: left;
+margin: 5px 0px 5px 0px;
+border: 1px solid;
+width: 340px;
+  font-family: 'Indie Flower', cursive;
+}
+
+//---------edit page-----------//
+
+#update_wrap textarea, input{
+font-size: 20px;
+}
+
+#update_prep textarea{
+width: 200px;
+height: 150px;
+}
+
+
+
+

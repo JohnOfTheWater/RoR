@@ -1,0 +1,24 @@
+<%= link_to("<< Back to Recipes List", {:action => 'index'}, :class => 'back_button') %>
+
+<div id='delete_wrap'>
+
+  <h2>Delete Recipe</h2>
+
+  <%= form_for(:recipe, :url => {:action => 'destroy', :id => @recipe.id}) do |f| %>
+
+    <p id='warning_message'>Are you sure you want to delete this recipe?<p>
+
+    <div id='new_button'><%= submit_tag("Delete Recipe!") %></div>
+
+  <% end %>
+
+</div>
+
+
+
+
+
+
+
+
+</div>

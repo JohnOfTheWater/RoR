@@ -1,0 +1,48 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+
+//-------edit_user_page---//
+
+#edit_user {
+  padding: 5px 0px 0px 5px;
+  position: relative;
+  top: 0px;
+  left: 260px;
+  border: 1px solid;
+  width: 900px;
+  box-shadow: 5px 5px 5px #1A1717;
+  background-color: rgba(235, 229, 229, 0.5);
+  font-size: 25px;
+}
+
+#edit_user .btn{
+  font-size: 30px;
+  width: 100px;
+  margin: 0px 0px 20px 0px;
+  position: relative;
+  top: 5px;
+  left: 15px;
+}
+
+#edit_user input {
+  height: 20px;
+  margin: 0px 10px 0px 10px;
+  position: relative;
+  top: 0px;
+  font-size: 20px;
+}
+

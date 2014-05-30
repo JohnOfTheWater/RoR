@@ -1,0 +1,1826 @@
+  [1m[36mActiveRecord::SchemaMigration Load (2.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePosts (20140527190551)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (36.2ms)[0m  [1mCREATE TABLE "posts" ("id" serial primary key, "content" character varying(255), "user_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140527190551"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 13:18:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (4.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (20.4ms)
+Completed 200 OK in 395ms (Views: 377.2ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:18:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:06 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:06 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:06 -0500
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-28 13:18:08 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oZBh1zEdLaMUIqRTVj8wh3zTuDg4mOKamveK+IxLbDo="}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 19ms (ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 13:18:08 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (3.7ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:08 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:08 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:08 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:08 -0500
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-28 13:18:10 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.4ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (43.5ms)
+Completed 200 OK in 51ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-28 13:18:13 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.4ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (18.1ms)
+Completed 200 OK in 25ms (Views: 23.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-05-28 13:18:15 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2pOIrcLgFhgMZuglgf2vAyYI0pgs1fxYEEDp6jwiqoE=", "user"=>{"email"=>"giovanni.delacqua@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'giovanni.delacqua@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+Completed 401 Unauthorized in 4ms
+Processing by Devise::SessionsController#new as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2pOIrcLgFhgMZuglgf2vAyYI0pgs1fxYEEDp6jwiqoE=", "user"=>{"email"=>"giovanni.delacqua@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 111ms (Views: 41.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:18:15 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:15 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:15 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:15 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:15 -0500
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-05-28 13:18:37 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2pOIrcLgFhgMZuglgf2vAyYI0pgs1fxYEEDp6jwiqoE=", "user"=>{"email"=>"giova.delacqua@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'giova.delacqua@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = 1[0m  [["remember_created_at", "2014-05-28 18:18:37.128772"], ["updated_at", "2014-05-28 18:18:37.129354"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 1  [["current_sign_in_at", "2014-05-28 18:18:37.134633"], ["last_sign_in_at", "2014-05-28 02:18:18.922346"], ["sign_in_count", 7], ["updated_at", "2014-05-28 18:18:37.135629"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 83ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 13:18:37 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:18:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:18:37 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 13:19:20 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (18.4ms)
+Completed 200 OK in 54ms (Views: 41.2ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:19:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:19:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:19:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:19:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:19:21 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-05-28 13:20:11 -0500
+Processing by PostsController#index as HTML
+  [1m[36mPost Load (0.4ms)[0m  [1mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.haml within layouts/application (2.5ms)
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 12ms (Views: 7.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:20:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:20:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:20:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:20:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:20:11 -0500
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2014-05-28 13:20:18 -0500
+Processing by PostsController#new as HTML
+  Rendered posts/new.html.haml within layouts/application (61.5ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 69ms (Views: 66.5ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2014-05-28 13:20:29 -0500
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tFbS2lPLy3V5AC6/IS2ibqsxl/+wHuilR765LzcxVo=", "post"=>{"content"=>"ciao"}, "commit"=>"Create Squmble"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "posts" ("content", "created_at", "updated_at", "user_id") VALUES ($1, $2, $3, $4) RETURNING "id"  [["content", "ciao"], ["created_at", "2014-05-28 18:20:29.591585"], ["updated_at", "2014-05-28 18:20:29.591585"], ["user_id", 1]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/posts
+Completed 302 Found in 24ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-05-28 13:20:29 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.3ms)[0m  SELECT "posts".* FROM "posts"
+  Rendered posts/index.html.haml within layouts/application (1.2ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 5.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:20:29 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:20:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:20:29 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:20:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:20:29 -0500
+
+
+Started GET "/posts" for 127.0.0.1 at 2014-05-28 13:44:41 -0500
+Processing by PostsController#index as HTML
+  [1m[35mPost Load (0.2ms)[0m  SELECT "posts".* FROM "posts"
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered posts/index.html.haml within layouts/application (21.6ms)
+Completed 200 OK in 32ms (Views: 24.7ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:44:41 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:44:41 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:44:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:44:41 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:44:41 -0500
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2014-05-28 13:44:55 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.haml within layouts/application (14.8ms)
+Completed 200 OK in 22ms (Views: 19.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 13:44:55 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 13:44:55 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 13:44:55 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 13:44:55 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 13:44:55 -0500
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2014-05-28 14:25:14 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 14:25:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 14:25:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 14:25:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 14:25:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 14:25:14 -0500
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2014-05-28 14:49:50 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 14:49:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 14:49:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 14:49:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 14:49:50 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 14:49:50 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-28 22:33:33 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 83ms (Views: 68.8ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-28 22:33:33 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-28 22:33:33 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-28 22:33:33 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-28 22:33:33 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-28 22:33:33 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 08:57:58 -0500
+
+PG::ConnectionBad (could not connect to server: No such file or directory
+	Is the server running locally and accepting
+	connections on Unix domain socket "/tmp/.s.PGSQL.5432"?
+):
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:881:in `initialize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:881:in `new'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:881:in `connect'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:568:in `initialize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `new'
+  activerecord (4.1.1) lib/active_record/connection_adapters/postgresql_adapter.rb:41:in `postgresql_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:435:in `new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:445:in `checkout_new_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:416:in `acquire_connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:351:in `block in checkout'
+  /Users/Giovanni/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:350:in `checkout'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:265:in `block in connection'
+  /Users/Giovanni/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/monitor.rb:211:in `mon_synchronize'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:264:in `connection'
+  activerecord (4.1.1) lib/active_record/connection_adapters/abstract/connection_pool.rb:541:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:113:in `retrieve_connection'
+  activerecord (4.1.1) lib/active_record/connection_handling.rb:87:in `connection'
+  activerecord (4.1.1) lib/active_record/migration.rb:388:in `check_pending!'
+  activerecord (4.1.1) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.1.1) lib/active_support/callbacks.rb:82:in `run_callbacks'
+  actionpack (4.1.1) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/remote_ip.rb:76:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Giovanni/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Giovanni/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Giovanni/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 08:59:03 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (3.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (3.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (21.9ms)
+Completed 200 OK in 59ms (Views: 41.3ms | ActiveRecord: 5.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 08:59:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 08:59:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 08:59:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 08:59:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 08:59:03 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 09:07:26 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 23ms (Views: 21.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 09:07:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 09:07:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 09:07:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 09:07:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 09:07:26 -0500
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2014-05-29 09:07:31 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.haml within layouts/application (70.9ms)
+Completed 200 OK in 79ms (Views: 76.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 09:07:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 09:07:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 09:07:31 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 09:07:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 09:07:31 -0500
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2014-05-29 09:18:09 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 26ms (Views: 15.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 09:18:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 09:18:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 09:18:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 09:18:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 09:18:09 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 09:18:14 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.5ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 09:18:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 09:18:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 09:18:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 09:18:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 09:18:14 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 09:36:47 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 18ms (Views: 14.4ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 09:36:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 09:36:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 09:36:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 09:36:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 09:36:48 -0500
+
+
+Started GET "/users/edit" for 127.0.0.1 at 2014-05-29 09:36:52 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.haml within layouts/application (9.9ms)
+Completed 200 OK in 17ms (Views: 15.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 09:36:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 09:36:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 09:36:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 09:36:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 09:36:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateRecipes (20140524133517)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (20.8ms)[0m  [1mCREATE TABLE "recipes" ("id" serial primary key, "recipe_name" character varying(25), "description" character varying(100), "preparation" character varying(1000), "tags" character varying(30), "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140524133517"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 09:58:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (15.7ms)
+Completed 200 OK in 54ms (Views: 40.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 09:58:56 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 09:58:56 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 09:58:56 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 09:58:56 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 09:58:56 -0500
+
+
+Started GET "/santa" for 127.0.0.1 at 2014-05-29 09:59:02 -0500
+
+ActionController::RoutingError (No route matches [GET] "/santa"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Giovanni/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Giovanni/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Giovanni/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (0.9ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.9ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.0ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (28.9ms)
+
+
+Started GET "/santa" for 127.0.0.1 at 2014-05-29 10:03:48 -0500
+
+ActionController::RoutingError (No route matches [GET] "/santa"):
+  actionpack (4.1.1) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.1.1) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.1.1) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.1.1) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.5.2) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.5.2) lib/rack/runtime.rb:17:in `call'
+  activesupport (4.1.1) lib/active_support/cache/strategy/local_cache_middleware.rb:26:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  actionpack (4.1.1) lib/action_dispatch/middleware/static.rb:64:in `call'
+  rack (1.5.2) lib/rack/sendfile.rb:112:in `call'
+  railties (4.1.1) lib/rails/engine.rb:514:in `call'
+  railties (4.1.1) lib/rails/application.rb:144:in `call'
+  rack (1.5.2) lib/rack/lock.rb:17:in `call'
+  rack (1.5.2) lib/rack/content_length.rb:14:in `call'
+  rack (1.5.2) lib/rack/handler/webrick.rb:60:in `service'
+  /Users/Giovanni/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /Users/Giovanni/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /Users/Giovanni/.rvm/rubies/ruby-2.1.1/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (22.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 10:04:02 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (9.1ms)
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 10:04:02 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 10:04:02 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 10:04:02 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 10:04:02 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 10:04:02 -0500
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 10:04:12 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 12ms (Views: 8.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 10:04:12 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 10:04:13 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 10:04:13 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 10:04:13 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 10:04:13 -0500
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2014-05-29 10:04:48 -0500
+Processing by RecipesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 16ms (Views: 12.9ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/recipes/create" for 127.0.0.1 at 2014-05-29 10:06:41 -0500
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tFbS2lPLy3V5AC6/IS2ibqsxl/+wHuilR765LzcxVo=", "recipe"=>{"recipe_name"=>"popeye pasta", "description"=>"very easy recipe", "preparation"=>"cook pasta and add spinach, tomato sause and mozzarella", "tags"=>"easy, one pot"}, "commit"=>"Add Recipe!"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "recipes" ("created_at", "description", "preparation", "recipe_name", "tags", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-05-29 15:06:41.580384"], ["description", "very easy recipe"], ["preparation", "cook pasta and add spinach, tomato sause and mozzarella"], ["recipe_name", "popeye pasta"], ["tags", "easy, one pot"], ["updated_at", "2014-05-29 15:06:41.580384"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/recipes/index
+Completed 302 Found in 8ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 10:06:41 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 10:06:41 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 10:06:41 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 10:06:41 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 10:06:41 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 10:06:41 -0500
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 10:09:32 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (1.8ms)
+Completed 200 OK in 33ms (Views: 30.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 10:09:32 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 10:09:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 10:09:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 10:09:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 10:09:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 10:09:33 -0500
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2014-05-29 10:31:17 -0500
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 8ms (Views: 6.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipes/create" for 127.0.0.1 at 2014-05-29 10:31:50 -0500
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tFbS2lPLy3V5AC6/IS2ibqsxl/+wHuilR765LzcxVo=", "recipe"=>{"recipe_name"=>"pippo pasta", "description"=>"very easy recipe", "preparation"=>"cook pasta and add spinach, tomato sause and mozzarella", "tags"=>"easy, one pot"}, "commit"=>"Add Recipe!"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("created_at", "description", "preparation", "recipe_name", "tags", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-05-29 15:31:50.316517"], ["description", "very easy recipe"], ["preparation", "cook pasta and add spinach, tomato sause and mozzarella"], ["recipe_name", "pippo pasta"], ["tags", "easy, one pot"], ["updated_at", "2014-05-29 15:31:50.316517"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/recipes/index
+Completed 302 Found in 4ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 10:31:50 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (2.3ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 10:31:50 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 10:31:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 10:31:50 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 10:31:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 10:31:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 10:31:50 -0500
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2014-05-29 10:32:03 -0500
+Processing by RecipesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipes/create" for 127.0.0.1 at 2014-05-29 10:32:45 -0500
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tFbS2lPLy3V5AC6/IS2ibqsxl/+wHuilR765LzcxVo=", "recipe"=>{"recipe_name"=>"snowman pasta", "description"=>"very easy recipe", "preparation"=>"cook pasta and add spinach, tomato sause and mozzarella", "tags"=>"easy, one pot"}, "commit"=>"Add Recipe!"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("created_at", "description", "preparation", "recipe_name", "tags", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-05-29 15:32:45.669138"], ["description", "very easy recipe"], ["preparation", "cook pasta and add spinach, tomato sause and mozzarella"], ["recipe_name", "snowman pasta"], ["tags", "easy, one pot"], ["updated_at", "2014-05-29 15:32:45.669138"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/recipes/index
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 10:32:45 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (2.8ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 10:32:45 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 10:32:45 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 10:32:45 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 10:32:45 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 10:32:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 10:32:45 -0500
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 10:32:53 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (3.2ms)
+Completed 200 OK in 10ms (Views: 8.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 10:32:53 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 10:32:53 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 10:32:53 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 10:32:53 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 10:32:53 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 10:32:53 -0500
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2014-05-29 10:33:03 -0500
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipes/create" for 127.0.0.1 at 2014-05-29 10:34:45 -0500
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tFbS2lPLy3V5AC6/IS2ibqsxl/+wHuilR765LzcxVo=", "recipe"=>{"recipe_name"=>"elf pasta", "description"=>"very easy recipe", "preparation"=>"cook pasta and add spinach, tomato sause and mozzarella", "tags"=>"easy, two pots"}, "commit"=>"Add Recipe!"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("created_at", "description", "preparation", "recipe_name", "tags", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-05-29 15:34:45.478921"], ["description", "very easy recipe"], ["preparation", "cook pasta and add spinach, tomato sause and mozzarella"], ["recipe_name", "elf pasta"], ["tags", "easy, two pots"], ["updated_at", "2014-05-29 15:34:45.478921"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/recipes/index
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 10:34:45 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 10ms (Views: 8.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 10:34:45 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 10:34:45 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 10:34:45 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 10:34:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 10:34:45 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 10:34:45 -0500
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2014-05-29 10:37:00 -0500
+Processing by RecipesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 11ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipes/create" for 127.0.0.1 at 2014-05-29 10:38:29 -0500
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tFbS2lPLy3V5AC6/IS2ibqsxl/+wHuilR765LzcxVo=", "recipe"=>{"recipe_name"=>"santa pasta", "description"=>"very easy recipe", "preparation"=>"cook pasta and add spinach, tomato sause and mozzarella", "tags"=>"easy, two pots"}, "commit"=>"Add Recipe!"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("created_at", "description", "preparation", "recipe_name", "tags", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"[0m  [["created_at", "2014-05-29 15:38:29.348799"], ["description", "very easy recipe"], ["preparation", "cook pasta and add spinach, tomato sause and mozzarella"], ["recipe_name", "santa pasta"], ["tags", "easy, two pots"], ["updated_at", "2014-05-29 15:38:29.348799"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/recipes/index
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 10:38:29 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 10ms (Views: 8.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 10:38:29 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 10:38:29 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 10:38:29 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 10:38:29 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 10:38:29 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 10:38:29 -0500
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2014-05-29 10:38:50 -0500
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/new.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 8ms (Views: 6.3ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipes/create" for 127.0.0.1 at 2014-05-29 10:40:54 -0500
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5tFbS2lPLy3V5AC6/IS2ibqsxl/+wHuilR765LzcxVo=", "recipe"=>{"recipe_name"=>"godzilla pasta", "description"=>"very boring to prepare", "preparation"=>"Add a lot of stuff together then put everything in the oven for some time", "tags"=>"hard, gadzilion pots"}, "commit"=>"Add Recipe!"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("created_at", "description", "preparation", "recipe_name", "tags", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["created_at", "2014-05-29 15:40:54.387384"], ["description", "very boring to prepare"], ["preparation", "Add a lot of stuff together then put everything in the oven for some time"], ["recipe_name", "godzilla pasta"], ["tags", "hard, gadzilion pots"], ["updated_at", "2014-05-29 15:40:54.387384"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/recipes/index
+Completed 302 Found in 4ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 10:40:54 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 10:40:54 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 10:40:54 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 10:40:54 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 10:40:54 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 10:40:54 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 10:40:54 -0500
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 10:43:32 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 11ms (Views: 9.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 10:43:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 10:43:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 10:43:32 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 10:43:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 10:43:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 10:43:32 -0500
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 13:08:01 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 12ms (Views: 10.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:08:01 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:08:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:08:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:08:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:08:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:08:01 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:11:23 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.4ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:11:23 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:11:23 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:11:23 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:11:23 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:11:23 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:11:23 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:11:24 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.6ms)
+Completed 200 OK in 7ms (Views: 6.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:11:24 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:11:24 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:11:24 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:11:24 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:11:24 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:11:24 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:14:40 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:14:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:14:40 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:14:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:14:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:14:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:14:40 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:14:42 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 6.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:14:42 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:14:42 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:14:42 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:14:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:14:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:14:42 -0500
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 13:14:49 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:14:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:14:49 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:14:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:14:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:14:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:14:49 -0500
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-29 13:15:43 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"5tFbS2lPLy3V5AC6/IS2ibqsxl/+wHuilR765LzcxVo="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["remember_created_at", nil], ["updated_at", "2014-05-29 18:15:43.091942"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 17ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:15:43 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 7.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:15:43 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:15:43 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:15:43 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:15:43 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:15:43 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:15:43 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:20:36 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:20:36 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:20:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:20:36 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:20:36 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:20:36 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:20:36 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:24:36 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:24:36 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:24:36 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:24:36 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:24:36 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:24:36 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:24:36 -0500
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 13:24:42 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.haml (2.5ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-05-29 13:24:46 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"nPwqiL9f8zTOxdAlpm/EpvZKOiPGz8g50EmDzb2Xv4o=", "user"=>{"email"=>"giova.delacqua@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (1.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'giova.delacqua@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["remember_created_at", "2014-05-29 18:24:46.438775"], ["updated_at", "2014-05-29 18:24:46.439251"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 1[0m  [["current_sign_in_at", "2014-05-29 18:24:46.441247"], ["last_sign_in_at", "2014-05-28 18:18:37.134633"], ["sign_in_count", 8], ["updated_at", "2014-05-29 18:24:46.442189"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 82ms (ActiveRecord: 3.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:24:46 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:24:46 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:24:46 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:24:46 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:24:46 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:24:46 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:24:46 -0500
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 13:24:49 -0500
+Processing by RecipesController#index as HTML
+  Parameters: {"authenticity_token"=>"mp3/Qvhmi2UpKgMRQmulnAGsr90HdR5dJd+OAf6K9FU="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (4.8ms)
+Completed 200 OK in 11ms (Views: 9.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:24:50 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:24:50 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:24:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:24:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:24:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:24:50 -0500
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-29 13:25:37 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"mp3/Qvhmi2UpKgMRQmulnAGsr90HdR5dJd+OAf6K9FU="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["remember_created_at", nil], ["updated_at", "2014-05-29 18:25:37.585643"]]
+  [1m[36m (1.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 7ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:25:37 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 8ms (Views: 8.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:25:37 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:25:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:25:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:25:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:25:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:25:37 -0500
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 13:25:39 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.haml (0.5ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 17ms (Views: 11.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-05-29 13:25:41 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VOeVttymLBkTARELDc2vjN4y3K2rJ2tyinBfRfCF+N4=", "user"=>{"email"=>"giova.delacqua@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'giova.delacqua@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["remember_created_at", "2014-05-29 18:25:42.009435"], ["updated_at", "2014-05-29 18:25:42.009858"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 1[0m  [["current_sign_in_at", "2014-05-29 18:25:42.012160"], ["last_sign_in_at", "2014-05-29 18:24:46.441247"], ["sign_in_count", 9], ["updated_at", "2014-05-29 18:25:42.012664"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 76ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:25:42 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:25:42 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:25:42 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:25:42 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:25:42 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:25:42 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:25:42 -0500
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 13:25:43 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 23ms (Views: 20.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 13:26:31 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:26:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:26:31 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:26:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:26:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:26:31 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:26:31 -0500
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 13:31:25 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:31:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:31:26 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:31:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:31:26 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:31:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:31:26 -0500
+
+
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-05-29 13:31:32 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"3p+gYBAK7n47pfv7+8e/MrsxdM3jYgALTC9TvClRiHk="}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "remember_created_at" = $1, "updated_at" = $2 WHERE "users"."id" = 1  [["remember_created_at", nil], ["updated_at", "2014-05-29 18:31:32.103863"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 8ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:31:32 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:31:32 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:31:32 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:31:32 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:31:32 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:31:32 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:31:32 -0500
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 13:31:35 -0500
+Processing by RecipesController#index as HTML
+  Parameters: {"authenticity_token"=>"p84wsbGex4qOKVGZY8r4rWvhYMxWiC8o93uMaN3EeMM="}
+Completed 401 Unauthorized in 1ms
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 13:31:35 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.haml (0.3ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:31:35 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:31:35 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:31:35 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:31:35 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:31:35 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:31:35 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:50:21 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 42ms (Views: 32.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:50:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:21 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:50:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:21 -0500
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-05-29 13:50:24 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.haml (2.5ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (58.1ms)
+Completed 200 OK in 70ms (Views: 64.4ms | ActiveRecord: 2.3ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2014-05-29 13:50:40 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p84wsbGex4qOKVGZY8r4rWvhYMxWiC8o93uMaN3EeMM=", "user"=>{"email"=>"giova.delacqua@gmail.com", "username"=>"giova", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.8ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'giova.delacqua@gmail.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'giova' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  Rendered devise/shared/_links.haml (0.3ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (13.2ms)
+Completed 200 OK in 104ms (Views: 18.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:50:40 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:50:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:40 -0500
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-05-29 13:50:47 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.haml (0.4ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/devise-3.2.4/app/views/devise/sessions/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:50:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:47 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:50:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:47 -0500
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-05-29 13:50:50 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"p84wsbGex4qOKVGZY8r4rWvhYMxWiC8o93uMaN3EeMM=", "user"=>{"email"=>"giova.delacqua@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'giova.delacqua@gmail.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = 1  [["current_sign_in_at", "2014-05-29 18:50:50.583283"], ["last_sign_in_at", "2014-05-29 18:25:42.012160"], ["sign_in_count", 10], ["updated_at", "2014-05-29 18:50:50.584410"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/recipes/index
+Completed 302 Found in 81ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 13:50:50 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (13.3ms)
+Completed 200 OK in 22ms (Views: 17.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:50:50 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:50 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:50:50 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:50 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:50 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:50:50 -0500
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 13:51:28 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (13.4ms)
+Completed 200 OK in 70ms (Views: 40.0ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:51:28 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:51:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:51:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:51:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:51:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:51:28 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:51:33 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (2.2ms)
+Completed 200 OK in 7ms (Views: 6.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:51:34 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:51:34 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:51:34 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:51:34 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:51:34 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:51:34 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:52:21 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:52:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:52:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:52:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:52:21 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:52:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:52:21 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:53:03 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:53:03 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:53:03 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:53:03 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:53:03 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:53:03 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:53:03 -0500
+
+
+Started GET "/recipes/index" for 127.0.0.1 at 2014-05-29 13:53:07 -0500
+Processing by RecipesController#index as HTML
+  Parameters: {"authenticity_token"=>"4Xi7wUz+1ipVpU3QskpK8Wsqy1lSm/cVsC2PtpmXTSA="}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 11ms (Views: 8.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:53:07 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:53:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:53:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:53:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:53:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:53:07 -0500
+
+
+Started GET "/" for 127.0.0.1 at 2014-05-29 13:53:14 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 7.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-05-29 13:53:14 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-05-29 13:53:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-05-29 13:53:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-05-29 13:53:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-05-29 13:53:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-05-29 13:53:14 -0500
