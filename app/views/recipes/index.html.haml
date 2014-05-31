@@ -3,7 +3,8 @@
     = flash[:notice]
 #recipes_wrap
   %h1 Recipes
-  = link_to("Add Recipe", {:action => 'new'}, :id => 'add_recipe')
+  - if user_signed_in?
+    = link_to("Add Recipe", {:action => 'new'}, :id => 'add_recipe')
   - @recipes.each do |recipe |
     .recipe_wrap
       %h2
@@ -18,6 +19,7 @@
       %h4
         Tags:
       %p.tags= recipe.tags
-      = link_to("Show", {:action => 'show', :id => recipe.id }, :class => 'action show')
-      = link_to("Edit", {:action => 'edit', :id => recipe.id }, :class => 'action edit')
-      = link_to("Delete", {:action => 'delete', :id => recipe.id}, :class => 'action delete')
+      - if user_signed_in? && recipe.user == current_user.username
+        = link_to("Show", {:action => 'show', :id => recipe.id }, :class => 'action show')
+        = link_to("Edit", {:action => 'edit', :id => recipe.id }, :class => 'action edit')
+        = link_to("Delete", {:action => 'delete', :id => recipe.id}, :class => 'action delete')
