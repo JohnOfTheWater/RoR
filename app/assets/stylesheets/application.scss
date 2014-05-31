@@ -14,6 +14,70 @@
  *= require_self
  */
 
+//-------navigation--------//
+@import url('http://fonts.googleapis.com/css?family=Montserrat');
+body{
+  //background: -webkit-linear-gradient(-45deg, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
+  //background: -webkit-linear-gradient(-45deg, #b4e391 0%,#61c419 100%,#b4e391 100%,#61c419 100%);
+  background: -webkit-linear-gradient(-45deg, #eaefb5 0%,#e1e9a0 100%);
+  font-family: 'Montserrat', sans-serif;
+}
+
+.devise_navigation{
+float: right;
+}
+
+#user {
+
+}
+
+.devise_navigation li{
+display: inline;
+}
+.devise_navigation a{
+color: whitesmoke;
+text-decoration: none;
+text-shadow: 1px 1px 1px black;
+}
+
+#sign_out a{
+border-right: transparent;
+}
+
+.main_navigation {
+margin: 0px 0px 0px 0px;
+background: azure;
+width: 100%;
+position: absolute;
+top: 0px;
+left: 0px;
+height: 30px;
+padding: 3px 0px 0px 0px;
+font-size: 18px;
+box-shadow: 0px 0px 5px black;
+
+}
+
+.main_navigation li{
+display: inline;
+}
+
+.main_navigation a{
+text-decoration: none;
+color: whitesmoke;
+border-right: 1px solid whitesmoke;
+padding: 0px 10px 0px 10px;
+text-shadow: 1px 1px 1px black;
+border-right: 1px solid black;
+}
+
+.flash_notice {
+  margin-top: 7px;
+}
+
+#title{
+margin: 30px 0px 0px 0px;
+}
 
 //-------edit_user_page---//
 

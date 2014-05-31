@@ -6,6 +6,10 @@ class RecipesController < ApplicationController
     @recipes = Recipe.all.order("id asc")
   end
 
+  def my_recipes
+    @recipes = Recipe.all.where(:user => params[:user]).order("id asc")
+  end
+
   def show
     @recipe = Recipe.find_by_id(params[:id])
   end
@@ -51,7 +55,7 @@ class RecipesController < ApplicationController
   private
 
   def recipe_params
-    params.require(:recipe).permit(:recipe_name, :description, :preparation, :tags)
+    params.require(:recipe).permit(:recipe_name, :description, :preparation, :tags, :user)
   end
 
 

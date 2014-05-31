@@ -7,15 +7,17 @@
     = csrf_meta_tags
   %body
     %header
-      %ul.devise_navigation
-        - if user_signed_in?
-          %li= link_to 'Sign out', destroy_user_session_path, method: 'delete'
-        - else
-          %li= link_to 'Sign in', new_user_session_path
       %ul.main_navigation
         %li= link_to 'Recipes', recipes_index_path, method: 'get'#<- keep the method == not keeping it for get
         - if user_signed_in?
+          %li= link_to("My Recipes", {:controller => 'Recipes', :action => 'my_recipes', :user => current_user.username}, :class => 'action my_recipes')
           %li= link_to "Add a Recipe", recipes_new_path
+        %ul.devise_navigation
+          - if user_signed_in?
+            %li= link_to current_user.username, edit_user_registration_path
+            %li#sign_out= link_to 'Sign out', destroy_user_session_path, method: 'delete'
+          - else
+            %li= link_to 'Sign in', new_user_session_path
     .alert= alert
     .notice= notice
     = yield

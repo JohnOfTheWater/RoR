@@ -4,14 +4,11 @@
 @import url('http://fonts.googleapis.com/css?family=Indie+Flower');
 
 
-body {
-  background: -webkit-linear-gradient(-45deg, #b4e391 0%,#61c419 100%,#b4e391 100%,#61c419 100%);
-}
-
 
 #recipes_wrap {
   width: 765px;
   position: relative;
+  margin-top: 30px;
 }
 
 #add_recipe{
@@ -87,6 +84,9 @@ border: 1px solid;
 width: 340px;
   font-family: 'Indie Flower', cursive;
 }
+ #recipe_user {
+ display: none;
+ }
 
 //---------edit page-----------//
 

@@ -6,6 +6,7 @@ class CreateRecipes < ActiveRecord::Migration
       t.string "description", :limit => 100
       t.string "preparation", :limit => 1000
       t.string "tags", :limit => 30
+      t.string "user", :limit => 30
       t.timestamps
     end
   end
