@@ -18,7 +18,7 @@
       %p.prep= recipe.preparation
       %h4 Tags:
       %p.tags= recipe.tags
-      %h4 Created by:
+      %h4#creator Created by:
       %p.creator= recipe.user
       - if user_signed_in? && recipe.user == current_user.username
         = link_to("Show", {:action => 'show', :id => recipe.id }, :class => 'action show')

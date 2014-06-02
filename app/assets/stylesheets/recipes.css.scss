@@ -84,9 +84,24 @@ border: 1px solid;
 width: 340px;
   font-family: 'Indie Flower', cursive;
 }
- #recipe_user {
- display: none;
- }
+
+#recipe_user {
+display: none;
+}
+
+#creator{
+font-size: 21px;
+}
+
+.creator{
+position: relative;
+font-size: 20px;
+top: -26px;
+left: 140px;
+text-align: right;
+max-width: 200px;
+margin: 0px 0px 0px 0px;
+}
 
 //---------edit page-----------//
 
