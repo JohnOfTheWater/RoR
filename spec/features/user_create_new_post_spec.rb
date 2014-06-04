@@ -1,19 +1,31 @@
 require 'spec_helper'
 
-feature "New posts" do
+feature "New recipe" do
 
-  scenario "user creates a new post" do
-    login_as Fabricate(:user, email: "ruby@example.com", username: "ruby")
-    click_link "write a squmbl"
-    fill_in "Content", with: "Text input with body for test!"
-    click_button "create squmbl"
-    page.should have_content "Your squmbl has been created"
-    current_path.should == posts_path
-    page.should have_content "ruby squmbd: Text input with body for test!"
+  background do
+    User.create(email: "joe@example.com", password: "mypassword")
+    visit root_path
+    click_link "Sign in"
+    fill_in "Email", with: "joe@example.com"
+    fill_in "Password", with: "mypassword"
+    click_button "Sign in"
   end
 
+  scenario "user creates a new recipe" do
+    click_link "Add a Recipe"
+    fill_in "recipe[recipe_name]", with: "Text input with body for test!"
+    fill_in "recipe[description]", with: "Text input with body for test!"
+    fill_in "recipe[preparation]", with: "Text input with body for test!"
+    fill_in "recipe[tags]", with: "Text input with body for test!"
+    #save_and_open_page
+    click_button "Add Recipe!"
+    page.should have_content "Recipe created successfully"
+    #current_path.should == posts_path
+    page.should have_content "Recipes"
+  end
+end
+=begin
   scenario "user fails to create a new post" do
-    login_as Fabricate(:user, email: "ruby@example.com", username: "ruby")
     click_link "write a squmbl"
     fill_in "Content", with: ""
     click_button "create squmbl"
@@ -33,3 +45,4 @@ feature "New posts" do
     page.should have_content("You need to sign in or sign up before continuing.")
   end
 end
+=end

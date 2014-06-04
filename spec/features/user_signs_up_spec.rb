@@ -3,7 +3,7 @@ require 'spec_helper'
 feature "User signs up" do
   scenario "happy path" do
     visit '/'
-    click_link "I'm Ready!"
+    click_link "Let's start!"
     fill_in "Email", with: "joe@example.com"
     fill_in "Username", with: "joe"
     fill_in "Password", with: "mypassword"
@@ -28,7 +28,7 @@ feature "User signs up" do
   scenario "failed signup" do
     Fabricate(:user, email: "joe@example.com", username: "joe")
     visit '/'
-    click_link "I'm Ready!"
+    click_link "Let's start!"
     fill_in "Email", with: "joe@example.com"
     fill_in "Username", with: "joe"
     fill_in "Password", with: "mypassword"
