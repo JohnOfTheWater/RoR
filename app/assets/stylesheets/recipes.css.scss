@@ -20,6 +20,7 @@
 .recipe_wrap {
   border: 1px solid;
   width: 350px;
+  height: 320px;
   //background-color: rgba(0, 0, 30, 0.5);
   background: cadetblue;
   box-shadow: 5px 5px 5px #1A1717;
@@ -28,22 +29,34 @@
   margin: 0px 0px 20px 20px;
 }
 
-.recipe_wrap a{
+.my_recipe_wrap {
+  border: 1px solid;
+  width: 350px;
+  height: 320px;
+  //background-color: rgba(0, 0, 30, 0.5);
+  background: cadetblue;
+  box-shadow: 5px 5px 5px #1A1717;
+  padding: 0px 0px 0px 5px;
+  float: left;
+  margin: 0px 0px 20px 20px;
+}
+
+.recipe_wrap a, .my_recipe_wrap a{
 text-decoration: none;
 color: black;
 text-shadow: 1px 1px 2px white;
 }
 
-.recipe_wrap h2{
+.recipe_wrap h2, .my_recipe_wrap h2{
 margin: 0px 0px 0px 0px;
 //height: 35px;
 }
 
-.recipe_wrap h3{
+.recipe_wrap h3, .my_recipe_wrap h3{
 margin: 0px 0px 0px 0px;
 }
 
-.recipe_wrap h4{
+.recipe_wrap h4, .my_recipe_wrap h4{
 margin: 0px 0px 0px 0px;
 }
 
@@ -118,6 +131,20 @@ font-size: 20px;
 #update_prep textarea{
 width: 200px;
 height: 150px;
+}
+
+//---------show page-----------//
+
+#full_image img{
+width: 250px;
+position: relative;
+top: -350px;
+left: 300px;
+border: 2px solid cadetblue;
+}
+
+.full_prep {
+width: 300px;
 }
 
 
