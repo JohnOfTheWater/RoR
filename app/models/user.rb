@@ -7,4 +7,5 @@ class User < ActiveRecord::Base
 
   has_many :posts
   validates :username, uniqueness: true
+  mount_uploader :image, ImageUploader
 end
