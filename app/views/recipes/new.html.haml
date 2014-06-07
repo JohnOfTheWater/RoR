@@ -1,0 +1,20 @@
+= link_to("<< Back to Recipes List", {:action => 'index'}, :class => 'back_button')
+#new_wrap
+  %h2 Insert New Recipe
+  = form_for(:recipe, html:  {:multipart => true}, :url => {:action => 'create'}) do |f|
+    %table{:summary => "Recipe form field"}
+      %h2 Recipe Name
+      #new_name= f.text_field(:recipe_name)
+      %h2 Description
+      #new_prep= f.text_area(:description)
+      %h2 Ingredients
+      #new_desc= f.text_area(:ingredients)
+      %h2 Preparation
+      #new_prep= f.text_area(:preparation)
+      %h2 Tags
+      #new_tags= f.text_field(:tags)
+      %h2 Image
+      #new_image= f.file_field(:image)
+      #creator= f.text_field(:user, :value => current_user.username)
+    #new_button
+      = submit_tag("Add Recipe!")

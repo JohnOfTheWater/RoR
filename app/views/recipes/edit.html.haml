@@ -1,0 +1,18 @@
+= link_to("<< Back to Recipes List", {:action => 'index'}, :class => 'back_button')
+#update_wrap
+  %h2 Update Recipe
+  = form_for(:recipe, html: {:multipart => true}, :url => {:action => 'update', :id => @recipe.id}) do |f|
+    %table{:summary => "Recipe form field"}
+    %h2 Recipe Name
+    #update_name= f.text_field(:recipe_name)
+    %h2 Ingredients
+    #update_desc= f.text_area(:ingredients)
+    %h2 Preparation
+    #update_prep= f.text_area(:preparation)
+    %h2 Tags
+    #update_tags= f.text_field(:tags)
+    %h2 Image
+    #update_tags= f.file_field(:image)
+    #creator= f.text_field(:user, :value => current_user.username)
+    #new_button
+      = submit_tag("Update Recipe!")

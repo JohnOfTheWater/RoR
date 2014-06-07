@@ -1,0 +1,23 @@
+- if !flash[:notice].blank?
+  .flash_notice
+    = flash[:notice]
+#recipes_wrap
+  %h1 My Recipes
+  = link_to("Add Recipe", {:action => 'new'}, :id => 'add_recipe')
+  - @recipes.each do |recipe |
+    .my_recipe_wrap
+      %h2
+        Recipe Name:
+      %p.name= recipe.recipe_name
+      %h3#desc
+        DESCRIPTION
+      %p.desc= recipe.ingredients
+      %h3#prep
+        PREPARATION
+      %p.prep= recipe.preparation
+      %h4
+        Tags:
+      %p.tags= recipe.tags
+      = link_to("Show", {:action => 'show', :id => recipe.id }, :class => 'action show')
+      = link_to("Edit", {:action => 'edit', :id => recipe.id }, :class => 'action edit')
+      = link_to("Delete", {:action => 'delete', :id => recipe.id}, :class => 'action delete')

@@ -1,0 +1,24 @@
+
+
+$('#recipe_wrap div').remove();
+$('#recipe_wrap').hide();
+$('#recipe_wrap').fadeIn(500);
+//$('body').css('background', 'url('+'<%=@recipe.image%>'+')').css('background-size', 'cover');
+
+
+var $recipeName = $('<div>');
+var $recipePic = $('<div>');
+var $close = $('<div>');
+//var image = "'<%=@recipe.image%>'";
+//console.log(image);
+$recipeName.addClass('r_name').text('<%=@recipe.recipe_name%>');
+$recipePic.addClass('r_pic').css('background', 'url('+'<%=@recipe.image%>'+')').css('background-size', 'cover');
+$close.addClass('close_recipe').text('close[x]');
+
+    //$($picture).hide();
+
+    $('#recipe_wrap').append($recipeName);
+    $('#recipe_wrap').append($recipePic);
+    $('#recipe_wrap').append($close);
+
+    //$($picture).fadeIn('slow');
