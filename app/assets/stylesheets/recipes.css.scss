@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import url('http://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('http://fonts.googleapis.com/css?family=Concert+One');
 
 
 
@@ -19,12 +20,11 @@
 
 .recipe_wrap {
   border: 1px solid;
-  width: 350px;
-  height: 320px;
-  //background-color: rgba(0, 0, 30, 0.5);
-  background: cadetblue;
+  width: 200px;
+  height: 400px;
+  background: #383838;
   box-shadow: 5px 5px 5px #1A1717;
-  padding: 0px 0px 0px 5px;
+  padding: 0px 0px 0px 0px;
   float: left;
   margin: 0px 0px 20px 20px;
 }
@@ -60,28 +60,32 @@ margin: 0px 0px 0px 0px;
 margin: 0px 0px 0px 0px;
 }
 
-.name {
-  position: relative;
-  //top: 2px;
-  // left: 50px;
-  color: aliceblue;
-  text-shadow: 1px 1px 3px #070707, -1px -1px 3px #070707;
-  width: 340px;
-  text-transform: uppercase;
-  font-family: 'Indie Flower', cursive;
-  margin: 0px 0px 0px 0px;
+.index_image img{
+//position: relative;
+background-size: cover;
+width: 200px;
+height: 200px;
 }
 
-#desc {
-text-align: center;
+.name {
+  position: relative;
+  color: aliceblue;
+  text-shadow: 1px 1px 3px #070707, -1px -1px 3px #070707;
+  width: 200px;
+  text-transform: uppercase;
+  font-family: 'Indie Flower', cursive;
+  font-size: 19px;
+  margin: 0px 0px 0px 0px;
+  height: 45px;
 }
 
 .desc {
   text-align: left;
   margin: 5px 0px 5px 0px;
-  border: 1px solid;
-  width: 340px;
+  //border: 1px solid;
+  width: 200px;
   font-family: 'Indie Flower', cursive;
+  background: aliceblue;
 }
 
 #prep {
@@ -97,10 +101,11 @@ width: 340px;
 }
 
 .tags {
-text-align: left;
-margin: 5px 0px 5px 0px;
-border: 1px solid;
-width: 340px;
+  text-align: left;
+  background: aliceblue;
+  margin: 1px 0px 5px 0px;
+  //border: 1px solid;
+  width: 200px;
   font-family: 'Indie Flower', cursive;
 }
 
@@ -113,13 +118,14 @@ font-size: 21px;
 }
 
 .creator{
-position: relative;
+//position: relative;
+//top: -26px;
+//left: 140px;
 font-size: 20px;
-top: -26px;
-left: 140px;
-text-align: right;
 max-width: 200px;
-margin: 0px 0px 0px 0px;
+margin: -5px 0px 0px 0px;
+//border: 1px solid;
+background: aliceblue;
 }
 
 //---------edit page-----------//
@@ -147,6 +153,42 @@ border: 2px solid cadetblue;
 width: 300px;
 }
 
+//---------show recipe-----------//
+
+#recipe_wrap {
+  display: none;
+  position: absolute;
+  top: 100px;
+  left: 930px;
+  width: 590px;
+  height: 300px;
+  box-shadow: 5px 5px 5px #1A1717;
+  background-color: rgba(235, 229, 229, 0.5);
+  border: 1px solid white;
+  padding: 5px 0px 0px 5px;
+}
+
+.r_name {
+font-size: 30px;
+}
+
+.r_pic {
+  width: 200px;
+  height: 200px;
+}
+
+.close_recipe {
+position: absolute;
+top: 3px;
+left: 525px;
+margin: 0px 0px 0px 0px;
+font-size: 16px;
+color: white;
+text-transform: uppercase;
+text-shadow: 1px 1px 1px #000000, -1px -1px 1px #000000;
+z-index: 4;
+font-family: 'Concert One', cursive;
+}
 
 
 

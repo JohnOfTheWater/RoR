@@ -7,22 +7,17 @@
     = link_to("Add Recipe", {:action => 'new'}, :id => 'add_recipe')
   - @recipes.each do |recipe |
     .recipe_wrap
-      %h2
-        Recipe Name:
+      .index_image
+        = image_tag recipe.image.to_s
       %p.name= recipe.recipe_name
-      %h3#desc
-        DESCRIPTION
       %p.desc= recipe.description
-      %h3#prep
-        PREPARATION
-      %p.prep= recipe.preparation
-      %h4 Tags:
+      %p.creator= 'by: '+recipe.user
       %p.tags= recipe.tags
-      %h4#creator Created by:
-      %p.creator= recipe.user
       - if user_signed_in? && recipe.user == current_user.username
-        = link_to("Show", {:action => 'show', :id => recipe.id }, :class => 'action show')
+        = link_to("Show", {:action => 'show', :id => recipe.id, remote: true }, :class => 'action_show')
         = link_to("Edit", {:action => 'edit', :id => recipe.id }, :class => 'action edit')
         = link_to("Delete", {:action => 'delete', :id => recipe.id}, :class => 'action delete')
       - else
+        = link_to("Show", {:action => 'show', :id => recipe.id, remote: true }, :class => 'action_show')
         = link_to('Send message to '+recipe.user, '#')
+#recipe_wrap

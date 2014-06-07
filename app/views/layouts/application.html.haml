@@ -18,7 +18,7 @@
             %li= link_to current_user.username, edit_user_registration_path
             %li#sign_out= link_to 'Sign out', destroy_user_session_path, method: 'delete'
           - else
-            %li= link_to 'Sign in', new_user_session_path
+            %li#sign_in= link_to 'Sign in', new_user_session_path
     .alert= alert
     .notice= notice
     = yield

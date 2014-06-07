@@ -19,7 +19,8 @@
 body{
   //background: -webkit-linear-gradient(-45deg, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
   //background: -webkit-linear-gradient(-45deg, #b4e391 0%,#61c419 100%,#b4e391 100%,#61c419 100%);
-  background: -webkit-linear-gradient(-45deg, #eaefb5 0%,#e1e9a0 100%);
+  //background: -webkit-linear-gradient(-45deg, #eaefb5 0%,#e1e9a0 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #f0f9ff 0%,#cbebff 97%,#a1dbff 100%);
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -41,6 +42,10 @@ text-shadow: 1px 1px 1px black;
 }
 
 #sign_out a{
+border-right: transparent;
+}
+
+#sign_in a{
 border-right: transparent;
 }
 
