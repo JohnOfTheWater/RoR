@@ -5,7 +5,7 @@ class User < ActiveRecord::Base
          :rememberable, :trackable, :validatable
 
 
-  has_many :posts
+  has_many :comments
   validates :username, uniqueness: true
   mount_uploader :image, ImageUploader
 end

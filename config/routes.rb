@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   resources :posts, except: [:show, :edit, :update, :destroy]
   root to: "home#index"
 
+  resources :recipes, except: :destroy do
+    resources :comments
+  end
+
   get 'recipes/index'
 
   get 'recipes/show'

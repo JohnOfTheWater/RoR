@@ -3,6 +3,7 @@ ruby '2.1.1'
 source 'https://rubygems.org'
 
 gem 'coffee-rails', '~> 4.0.0'
+gem 'acts_as_commentable'
 gem 'devise'
 gem 'carrierwave'
 gem 'haml-rails'
