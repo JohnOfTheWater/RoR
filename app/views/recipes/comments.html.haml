@@ -1,0 +1,10 @@
+- if !flash[:notice].blank?
+  .flash_notice
+    = flash[:notice]
+#recipes_wrap
+  %h1 My Recipes
+  = link_to("Add Recipe", {:action => 'new'})
+  - @comments.each do |com|
+    %h2
+      Comment:
+    %p= com.comment
