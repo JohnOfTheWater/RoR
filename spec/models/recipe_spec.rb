@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Recipe do
-  #pending "add some examples to (or delete) #{__FILE__}"
   context ".find_by_id" do
     context "empty db" do
       it "should return nil" do
@@ -36,6 +35,20 @@ describe Recipe do
         Recipe.find_by_recipe_name("ciao").should == aaa
       end
     end
+  end
+
+  context ".destroy" do
+    context "with multiple recipes in the database" do
+      let!(:aaa){Recipe.new}
+      let!(:bbb){Recipe.new}
+      it "should delete the recipe named ciao" do
+        aaa.update_attributes(:recipe_name => "ciao")
+        Recipe.find_by_recipe_name("ciao").should == aaa
+        aaa.destroy
+        Recipe.find_by_recipe_name("ciao").should == nil
+      end
+    end
+
   end
 
 end

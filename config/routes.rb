@@ -1,24 +1,16 @@
 Rails.application.routes.draw do
 
   devise_for :users
-  resources :posts, except: [:show, :edit, :update, :destroy]
   root to: "home#index"
 
-  resources :recipes, except: :destroy do
+  resources :recipes
+
+  resources :recipes do
     resources :comments
   end
 
-  get 'recipes/index'
 
-  get 'recipes/show'
-
-  get 'recipes/new'
-
-  get 'recipes/edit'
-
-  get 'recipes/delete'
-
-  match ':controller(/:action(/:id))', :via => [:get, :post, :delete]
+  match ':controller(/:action(/:id))', :via => [:get, :post, :put, :delete]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

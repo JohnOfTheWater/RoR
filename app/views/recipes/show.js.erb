@@ -10,18 +10,24 @@ var $recipeName = $('<div>');
 var $recipePic = $('<div>');
 var $close = $('<div>');
 var $comments = $('<div>');
+var $from = $('<div>');
+var $from_pic = $('<div>');
 //var image = "'<%=@recipe.image%>'";
-//console.log(image);
+//var comments = '<%=@comments%>';
+console.log(<%=@comments.length%>);
+var i = <%=@comments.length%>;
+console.log(i);
 $recipeName.addClass('r_name').text('<%=@recipe.recipe_name%>');
 $recipePic.addClass('r_pic').css('background', 'url('+'<%=@recipe.image%>'+')').css('background-size', 'cover');
 $close.addClass('close_recipe').text('close[x]');
-$comments.addClass('comments').text('<%=@recipe.comments[0].comment%>');
+$comments.addClass('comments').text('Last comment: '+'<%=@comments[-1].comment%>');
+$from.addClass('from').text('from: '+'<%=@comments[0].username%>');
+$from_pic.addClass('from_pic').css('background', 'url('+'<%=@comments[0].user_image%>'+')').css('background-size', 'cover');
 
-    //$($picture).hide();
+$('#recipe_wrap').append($recipeName);
+$('#recipe_wrap').append($recipePic);
+$('#recipe_wrap').append($close);
+$('#recipe_wrap').append($comments);
+$('#recipe_wrap').append($from);
+$('#recipe_wrap').append($from_pic);
 
-    $('#recipe_wrap').append($recipeName);
-    $('#recipe_wrap').append($recipePic);
-    $('#recipe_wrap').append($close);
-    $('#recipe_wrap').append($comments);
-
-    //$($picture).fadeIn('slow');

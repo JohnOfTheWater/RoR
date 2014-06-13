@@ -2,6 +2,7 @@
 
   'use strict';
 
+  $(document).on('page:load', initialize);
   $(document).ready(initialize);
 
   function initialize(){
