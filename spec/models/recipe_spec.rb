@@ -37,6 +37,38 @@ describe Recipe do
     end
   end
 
+  context ".find_by_user" do
+    context "empty db" do
+      it "should return nil" do
+        Recipe.find_by_user("ryu").should be_nil
+      end
+    end
+    context "with multiple recipes in the database" do
+      let!(:aaa){Recipe.new}
+      let!(:bbb){Recipe.new}
+      it "should return the recipe named ciao" do
+        aaa.update_attributes(:user => "ryu")
+        Recipe.find_by_user("ryu").should == aaa
+      end
+    end
+  end
+
+  context ".find_by_tags" do
+    context "empty db" do
+      it "should return nil" do
+        Recipe.find_by_tags("goof").should be_nil
+      end
+    end
+    context "with multiple recipes in the database" do
+      let!(:aaa){Recipe.new}
+      let!(:bbb){Recipe.new}
+      it "should return the recipe tagged goof" do
+        aaa.update_attributes(:tags => "goof")
+        Recipe.find_by_tags("goof").should == aaa
+      end
+    end
+  end
+
   context ".destroy" do
     context "with multiple recipes in the database" do
       let!(:aaa){Recipe.new}

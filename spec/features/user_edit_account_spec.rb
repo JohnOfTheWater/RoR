@@ -3,7 +3,7 @@ require 'spec_helper'
 feature "User edits account" do
 
   background do #<-- rspec
-    User.create(email: "joe@example.com", password: "mypassword")
+    User.create(email: "joe@example.com", password: "mypassword", username: "pippo")
     visit root_path
     click_link "Sign in"
     fill_in "Email", with: "joe@example.com"
@@ -61,4 +61,5 @@ feature "User edits account" do
 
     page.should have_error("can't be blank", on: "Email")
   end
+
 end
