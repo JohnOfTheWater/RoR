@@ -16,8 +16,8 @@ feature "User edits account" do
   scenario "happy path" do
     visit recipes_path
     click_link "Edit"
-    fill_in "Recipe name", with: "banana pudding"
-    fill_in "Ingredients", with: "put some pudding on your banana"
+    fill_in "recipe[recipe_name]", with: "banana pudding"
+    fill_in "recipe[ingredients]", with: "put some pudding on your banana"
     click_button "Update Recipe!"
     #save_and_open_page
     page.should have_content "Recipe updated successfully"

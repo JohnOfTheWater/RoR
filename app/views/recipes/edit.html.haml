@@ -4,7 +4,7 @@
   = simple_form_for(@recipe) do |f|
     %h2#update_name Recipe Name
     = f.text_field :recipe_name, as: :string
-    %h2#update_desc Ingredients
+    %h2#update_desc Description
     = f.text_area(:description, as: :text)
     %h2#update_ing Ingredients
     = f.text_area(:ingredients, as: :text)

@@ -10,7 +10,7 @@
       .index_image
         = image_tag recipe.image.to_s
       %p.name= recipe.recipe_name
-      %p.desc= recipe.description
+      %p.desc= recipe.description.slice(0, 83)
       %p.creator= 'by: '+recipe.user
       %p.tags= recipe.tags
       - if user_signed_in? && recipe.user == current_user.username
