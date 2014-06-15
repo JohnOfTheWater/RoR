@@ -7,15 +7,17 @@
 
 
 #recipes_wrap {
-  width: 765px;
+  width: 100%;
   position: relative;
   margin-top: 30px;
+  //float: right;
+  //border: 1px solid;
 }
 
 #add_recipe{
   position: absolute;
   top: 20px;
-  left: 670px;
+  left: 570px;
 }
 
 .recipe_wrap {
@@ -26,7 +28,8 @@
   box-shadow: 5px 5px 5px #1A1717;
   padding: 0px 0px 0px 0px;
   float: left;
-  margin: 0px 0px 20px 20px;
+  margin: 0px 5px 20px 25px;
+  border-radius: 10px;
 }
 
 .my_recipe_wrap {
@@ -65,6 +68,8 @@ margin: 0px 0px 0px 0px;
 background-size: cover;
 width: 200px;
 height: 200px;
+border-top-right-radius: 9px;
+border-top-left-radius: 9px;
 }
 
 .name {
@@ -196,4 +201,31 @@ font-family: 'Concert One', cursive;
 }
 
 
+//---------new recipe-----------//
 
+#recipe_recipe_name {
+width: 240px;
+}
+
+#recipe_description {
+  width: 240px;
+  height: 80px;
+  font-size: 17px;
+}
+
+#recipe_ingredients {
+  width: 240px;
+  height: 300px;
+  font-size: 17px;
+  //float: left;
+  //position: relative;
+  //top: -260px;
+  //left: 350px;
+}
+
+#new_ingr {
+  //position: relative;
+  //top: -260px;
+  //left: 350px;
+  //float: left;
+}
