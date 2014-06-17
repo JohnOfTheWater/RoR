@@ -15,6 +15,8 @@ var $comments = $('<div>');
 var $commenter = $('<div>');
 var $commenter_pic = $('<div>');
 var $ingredients = $('<div>');
+var $preparation = $('<div>');
+var $prep_title = $('<div>');
 
 var comments;
 if ('<%=@recipe.commented%>' == 'yes'){
@@ -24,14 +26,9 @@ if ('<%=@recipe.commented%>' == 'yes'){
   $comments.addClass('comments').text('Last comment: ' + comments)
   $commenter.addClass('commenter').text('User: ' + commenter)
   $commenter_pic.addClass('from_pic').css('background', 'url('+commenter_pic+')').css('background-size', 'cover');
-  //console.log(comments);
-  //console.log(commenter);
-  //console.log(commenter_pic);
-  //console.log('<%=@recipe.image%>');
 }else{
   comments = 'no comments';
   $comments.addClass('comments').text('Add a comment for this recipe');
-  //console.log(comments);
 }
 
 
@@ -39,12 +36,16 @@ $recipeName.addClass('r_name').text('<%=@recipe.recipe_name%>');
 $recipePic.addClass('r_pic').css('background', 'url('+'<%=@recipe.image%>'+')').css('background-size', 'cover');
 $close.addClass('close_recipe').text('close[x]');
 $ingredients.html("<%= j render('ingredients.html.haml') %>").addClass('r_ing');
+$preparation.addClass('r_prep').text('<%=@recipe.preparation%>');
+$prep_title.addClass('r_prep_title').text('Preparation:');
 
 $('#recipe_wrap').append($recipeName);
 $('#recipe_wrap').append($recipePic);
 $('#recipe_wrap').append($close);
-$('#recipe_wrap').append($comments);
-$('#recipe_wrap').append($commenter);
-$('#recipe_wrap').append($commenter_pic);
+//$('#recipe_wrap').append($comments);
+//$('#recipe_wrap').append($commenter);
+//$('#recipe_wrap').append($commenter_pic);
 $('#recipe_wrap').append($ingredients);
+$('#recipe_wrap').append($prep_title);
+$prep_title.append($preparation);
 

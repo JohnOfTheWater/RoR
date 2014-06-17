@@ -26625,3 +26625,1523 @@ Processing by RecipesController#show as HTML
   Rendered recipes/show.html.haml within layouts/application (3.9ms)
 Completed 200 OK in 9ms (Views: 5.2ms | ActiveRecord: 0.7ms)
   [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'joe' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'joe' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-17 15:43:43.882214"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$xH4QWYwUzDKzp1svebKuu.Ouw1QHYSp6ZM9dLMo6M/FtHE5WpePl."], ["updated_at", "2014-06-17 15:43:43.882214"], ["username", "joe"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:43 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 41ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-06-17 10:43:43 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (52.3ms)
+Completed 200 OK in 57ms (Views: 55.4ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'joe' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 23ms (Views: 9.7ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'joe' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-17 15:43:44.091806"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$cLFaDzVOrCCBTC2sez4xfuRno10UQy.DQp.cxnp.LCHrLDSp8ZMc2"], ["updated_at", "2014-06-17 15:43:44.091806"], ["username", "joe"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 58  [["current_sign_in_at", "2014-06-17 15:43:44.093521"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 15:43:44.093521"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 15:43:44.094828"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 1.5ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 58  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 7ms (Views: 6.4ms | ActiveRecord: 0.5ms)
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 58  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (10.6ms)
+Completed 200 OK in 14ms (Views: 13.2ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = 58  [["current_sign_in_at", "2014-06-17 15:43:44.155705"], ["sign_in_count", 2], ["updated_at", "2014-06-17 15:43:44.156422"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 1.0ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 58  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kong' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-17 15:43:44.176525"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$Qu85dMrjX0ORxQ5rxTMrA.pANXA4mQOP/8e.dzW7NiEDgORSvvvS."], ["updated_at", "2014-06-17 15:43:44.176525"], ["username", "kong"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "recipes" ("created_at", "description", "image", "ingredients", "preparation", "recipe_name", "tags", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2014-06-17 15:43:44.186945"], ["description", "bona"], ["image", nil], ["ingredients", "a banana"], ["preparation", "peal it, eat it"], ["recipe_name", "banana"], ["tags", "frutta"], ["updated_at", "2014-06-17 15:43:44.186945"], ["user", "kong"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.7ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 59[0m  [["current_sign_in_at", "2014-06-17 15:43:44.209959"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 15:43:44.209959"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 15:43:44.210476"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 59  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 59  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (5.2ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.6ms)
+Started GET "/recipes/49/edit" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"49"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 49 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 59  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/edit.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.5ms)
+Started PATCH "/recipes/49" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"recipe_name"=>"banana pudding", "description"=>"bona", "ingredients"=>"put some pudding on your banana", "preparation"=>"peal it, eat it", "tags"=>"frutta", "user"=>"kong"}, "commit"=>"Update Recipe!", "id"=>"49"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1  [["id", 49]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "recipes" SET "ingredients" = $1, "recipe_name" = $2, "updated_at" = $3 WHERE "recipes"."id" = 49  [["ingredients", "put some pudding on your banana"], ["recipe_name", "banana pudding"], ["updated_at", "2014-06-17 15:43:44.250720"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes/49
+Completed 302 Found in 5ms (ActiveRecord: 0.7ms)
+Started GET "/recipes/49" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"49"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 49 LIMIT 1
+  [1m[36mComment Load (0.6ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 49  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 49 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 59  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/show.html.haml within layouts/application (15.0ms)
+Completed 200 OK in 22ms (Views: 16.7ms | ActiveRecord: 2.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kong' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-17 15:43:44.301472"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$0uUUisgCL0YqAImEallTSufnT2UPR755xq4AtId7diSfn9Bp8x256"], ["updated_at", "2014-06-17 15:43:44.301472"], ["username", "kong"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("created_at", "description", "image", "ingredients", "preparation", "recipe_name", "tags", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", "2014-06-17 15:43:44.303816"], ["description", "bona"], ["image", nil], ["ingredients", "a banana"], ["preparation", "peal it, eat it"], ["recipe_name", "banana"], ["tags", "frutta"], ["updated_at", "2014-06-17 15:43:44.303816"], ["user", "kong"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 7ms (Views: 5.8ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 60  [["current_sign_in_at", "2014-06-17 15:43:44.326087"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 15:43:44.326087"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 15:43:44.326762"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 1.1ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 60  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 60  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.6ms)
+Started GET "/recipes/delete/50" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#delete as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 50 LIMIT 1[0m
+  Rendered recipes/delete.html.haml within layouts/application (1.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 60  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+Started POST "/Recipes/destroy/50" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#destroy as HTML
+  Parameters: {"id"=>"50"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 50 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 50]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 60  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (2.0ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'pippo' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-17 15:43:44.440176"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$sLfC1rkzlYYDguRLU.FyfunOiaLTByZS7ZlVxVIot/34cCcPlLS4C"], ["updated_at", "2014-06-17 15:43:44.440176"], ["username", "pippo"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 61  [["current_sign_in_at", "2014-06-17 15:43:44.461517"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 15:43:44.461517"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 15:43:44.461997"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 61  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/users/edit" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 61  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.haml within layouts/application (14.9ms)
+Completed 200 OK in 18ms (Views: 16.9ms | ActiveRecord: 0.4ms)
+Started PUT "/users" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"elvis@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "image_cache"=>""}, "commit"=>"Update"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 61  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 61]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.4ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'elvis@example.com' AND "users"."id" != 61) LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."username" = 'pippo' AND "users"."id" != 61) LIMIT 1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "email" = $1, "encrypted_password" = $2, "updated_at" = $3 WHERE "users"."id" = 61[0m  [["email", "elvis@example.com"], ["encrypted_password", "$2a$04$d2.36bXyC1IFx8efxKdFl.78KXCnLW1Pk2XdbM.ti3f/MCHH5doIa"], ["updated_at", "2014-06-17 15:43:44.507094"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 15ms (ActiveRecord: 1.7ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 61  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.4ms | ActiveRecord: 0.3ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'pippo' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-17 15:43:44.527237"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$D3YourvkmEEfGiv8t5ecIuxgditHqiA2g739xKUPZ37zO9idxDSNi"], ["updated_at", "2014-06-17 15:43:44.527237"], ["username", "pippo"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 62[0m  [["current_sign_in_at", "2014-06-17 15:43:44.545822"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 15:43:44.545822"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 15:43:44.546492"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 62  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+Started GET "/users/edit" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 62  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.haml within layouts/application (5.9ms)
+Completed 200 OK in 9ms (Views: 7.4ms | ActiveRecord: 0.2ms)
+Started PUT "/users" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "image_cache"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 62  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 62]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."username" = 'pippo' AND "users"."id" != 62) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered devise/registrations/edit.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 18ms (Views: 9.6ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'pippo' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-17 15:43:44.610767"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$1ECxaW.MyY4MxTeAQeNmwOD8D1jnXYzXVw20KKynNTPIIxjpJCOWu"], ["updated_at", "2014-06-17 15:43:44.610767"], ["username", "pippo"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 63[0m  [["current_sign_in_at", "2014-06-17 15:43:44.629691"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 15:43:44.629691"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 15:43:44.630156"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 63  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.2ms)
+Started GET "/users/edit" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 63  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+Started PUT "/users" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"elvis@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "image_cache"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 63  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 63]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'elvis@example.com' AND "users"."id" != 63) LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."username" = 'pippo' AND "users"."id" != 63) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered devise/registrations/edit.html.haml within layouts/application (7.7ms)
+Completed 200 OK in 19ms (Views: 9.4ms | ActiveRecord: 1.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'pippo' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-17 15:43:44.692354"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$ruGOmlKeid0rd1u4WGQCBuu0z0eJMEIfic3tlXA6RouowP4FQPMSW"], ["updated_at", "2014-06-17 15:43:44.692354"], ["username", "pippo"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 64  [["current_sign_in_at", "2014-06-17 15:43:44.713900"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 15:43:44.713900"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 15:43:44.714373"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 64  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.3ms)
+Started GET "/users/edit" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 64  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.haml within layouts/application (7.8ms)
+Completed 200 OK in 11ms (Views: 9.7ms | ActiveRecord: 0.3ms)
+Started PUT "/users" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"elvis@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "image_cache"=>""}, "commit"=>"Update"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 64  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 64]]
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'elvis@example.com' AND "users"."id" != 64) LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."username" = 'pippo' AND "users"."id" != 64) LIMIT 1[0m
+  Rendered devise/registrations/edit.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 14ms (Views: 6.8ms | ActiveRecord: 0.9ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kong' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-17 15:43:44.775303"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$nipg72Ch84I6.NJPOvy8HOLDgRYVBNtDVD9b5scNVUe1umMR8Qb.S"], ["updated_at", "2014-06-17 15:43:44.775303"], ["username", "kong"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("created_at", "description", "image", "ingredients", "preparation", "recipe_name", "tags", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", "2014-06-17 15:43:44.777677"], ["description", "bona"], ["image", nil], ["ingredients", "a banana"], ["preparation", "peal it, eat it"], ["recipe_name", "banana"], ["tags", "frutta"], ["updated_at", "2014-06-17 15:43:44.777677"], ["user", "kong"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 65  [["current_sign_in_at", "2014-06-17 15:43:44.798549"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 15:43:44.798549"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 15:43:44.799214"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 65  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.3ms)
+Started GET "/Recipes/my_recipes?user=kong" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#my_recipes as HTML
+  Parameters: {"user"=>"kong"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"  WHERE "recipes"."user" = 'kong'  ORDER BY id asc[0m
+  Rendered recipes/my_recipes.html.haml within layouts/application (4.5ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 65  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 0.5ms)
+Started GET "/recipes/51" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 51 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 51  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 51 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 65  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/show.html.haml within layouts/application (3.6ms)
+Completed 200 OK in 7ms (Views: 5.0ms | ActiveRecord: 0.7ms)
+Started POST "/recipes/51/comments" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"bananaaaaaaaa!!!", "username"=>"kong", "user_image"=>""}, "commit"=>"Comment", "recipe_id"=>"51"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 51]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1  [["id", "51"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "recipes" SET "commented" = $1, "updated_at" = $2 WHERE "recipes"."id" = 51  [["commented", "yes"], ["updated_at", "2014-06-17 15:43:44.850655"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 65  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "comments" ("comment", "created_at", "recipe_id", "updated_at", "user_id", "user_image", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["comment", "bananaaaaaaaa!!!"], ["created_at", "2014-06-17 15:43:44.856835"], ["recipe_id", 51], ["updated_at", "2014-06-17 15:43:44.856835"], ["user_id", 65], ["user_image", ""], ["username", "kong"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes/51
+Completed 302 Found in 23ms (ActiveRecord: 1.6ms)
+Started GET "/recipes/51" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"51"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 51 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 51  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 51  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 51  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 51  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 51 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 65  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/show.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 16ms (Views: 5.4ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kong' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-17 15:43:44.891717"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$d58AdlCuwZiLehinFOpGMe4C2daU1hCHrybv3C1IjXMdprzgkyHb2"], ["updated_at", "2014-06-17 15:43:44.891717"], ["username", "kong"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("created_at", "description", "image", "ingredients", "preparation", "recipe_name", "tags", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2014-06-17 15:43:44.894065"], ["description", "bona"], ["image", nil], ["ingredients", "a banana"], ["preparation", "peal it, eat it"], ["recipe_name", "banana"], ["tags", "frutta"], ["updated_at", "2014-06-17 15:43:44.894065"], ["user", "kong"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (6.7ms)
+Completed 200 OK in 10ms (Views: 8.9ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 66[0m  [["current_sign_in_at", "2014-06-17 15:43:44.923670"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 15:43:44.923670"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 15:43:44.924273"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 8ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 66  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+Started GET "/Recipes/my_recipes?user=kong" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#my_recipes as HTML
+  Parameters: {"user"=>"kong"}
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"  WHERE "recipes"."user" = 'kong'  ORDER BY id asc
+  Rendered recipes/my_recipes.html.haml within layouts/application (3.0ms)
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 66  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.7ms)
+Started GET "/recipes/52" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 52 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 52  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 52 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 66  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/show.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.7ms)
+Started POST "/recipes/52/comments" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"more bananaaaaaaaas!!!", "username"=>"kong", "user_image"=>""}, "commit"=>"Comment", "recipe_id"=>"52"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1  [["id", 52]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", "52"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "recipes" SET "commented" = $1, "updated_at" = $2 WHERE "recipes"."id" = 52[0m  [["commented", "yes"], ["updated_at", "2014-06-17 15:43:44.962886"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 66  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "recipe_id", "updated_at", "user_id", "user_image", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["comment", "more bananaaaaaaaas!!!"], ["created_at", "2014-06-17 15:43:44.965838"], ["recipe_id", 52], ["updated_at", "2014-06-17 15:43:44.965838"], ["user_id", 66], ["user_image", ""], ["username", "kong"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/recipes/52
+Completed 302 Found in 7ms (ActiveRecord: 1.4ms)
+Started GET "/recipes/52" for 127.0.0.1 at 2014-06-17 10:43:44 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"52"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 52 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 52  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 52  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 52  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 52  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 52 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 66  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/show.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 10ms (Views: 5.9ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-17 15:43:45.004603"], ["email", "0"], ["encrypted_password", "0"], ["updated_at", "2014-06-17 15:43:45.004603"], ["username", "a"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'a' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'a' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-17 15:43:45.019648"], ["email", "0"], ["encrypted_password", "0"], ["updated_at", "2014-06-17 15:43:45.019648"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '0' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '0' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt%' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt%' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt?' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt?' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'as df jkl' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'as df jkl' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt=matt' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt=matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("created_at", "recipe_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-17 15:43:45.065880"], ["recipe_name", "ciao"], ["updated_at", "2014-06-17 15:43:45.065880"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."recipe_name" = 'ciao' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "recipes" WHERE "recipes"."id" = $1[0m  [["id", 53]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."recipe_name" = 'ciao' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."user" = 'ryu' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("created_at", "updated_at", "user") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-17 15:43:45.072620"], ["updated_at", "2014-06-17 15:43:45.072620"], ["user", "ryu"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."user" = 'ryu' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."recipe_name" = 'yup' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("created_at", "recipe_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-17 15:43:45.077068"], ["recipe_name", "ciao"], ["updated_at", "2014-06-17 15:43:45.077068"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."recipe_name" = 'ciao' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."tags" = 'goof' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("created_at", "tags", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-17 15:43:45.081398"], ["tags", "goof"], ["updated_at", "2014-06-17 15:43:45.081398"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."tags" = 'goof' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("created_at", "recipe_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-17 15:43:45.085398"], ["recipe_name", "ciao"], ["updated_at", "2014-06-17 15:43:45.085398"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("created_at", "recipe_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-17 15:43:45.087462"], ["recipe_name", "lollo"], ["updated_at", "2014-06-17 15:43:45.087462"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kong' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-17 15:43:45.092451"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$eghWqZYhOGi7Tr.fUE2m9uD14g6MWDcbIeUuMHRW3A.1WiZZcscCC"], ["updated_at", "2014-06-17 15:43:45.092451"], ["username", "kong"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("created_at", "description", "image", "ingredients", "preparation", "recipe_name", "tags", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", "2014-06-17 15:43:45.094219"], ["description", "bona"], ["image", nil], ["ingredients", "a banana"], ["preparation", "peal it, eat it"], ["recipe_name", "banana"], ["tags", "frutta"], ["updated_at", "2014-06-17 15:43:45.094219"], ["user", "kong"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:45 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:45 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 69  [["current_sign_in_at", "2014-06-17 15:43:45.115403"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 15:43:45.115403"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 15:43:45.116100"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:45 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 69  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.3ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.4ms)
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 10:43:45 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 69  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.5ms)
+Started GET "/recipes/59" for 127.0.0.1 at 2014-06-17 10:43:45 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"59"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 59 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 59  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 59 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 69  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/show.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 10ms (Views: 7.4ms | ActiveRecord: 0.8ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments"  WHERE "comments"."id" = 1  ORDER BY created_at ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'pippo' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-17 15:43:45.190359"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$o2NajNLHd/YQLrpbYJ6lIODCoyxUyJsd/EOPGPMcUdaPFQSnKP96C"], ["updated_at", "2014-06-17 15:43:45.190359"], ["username", "pippo"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:45 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:45 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 10:43:45 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 70[0m  [["current_sign_in_at", "2014-06-17 15:43:45.211798"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 15:43:45.211798"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 15:43:45.212494"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 10:43:45 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 70  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+Started GET "/recipes/new" for 127.0.0.1 at 2014-06-17 10:43:45 -0500
+Processing by RecipesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 70  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/new.html.haml within layouts/application (4.9ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.3ms)
+Started POST "/recipes" for 127.0.0.1 at 2014-06-17 10:43:45 -0500
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"recipe_name"=>"body for test!", "description"=>"Text input with body for test!", "ingredients"=>"Text input with body for test!", "preparation"=>"Text input with body for test!", "tags"=>"Text input with body for test!", "user"=>"pippo"}, "commit"=>"Add Recipe!"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "recipes" ("created_at", "description", "ingredients", "preparation", "recipe_name", "tags", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", "2014-06-17 15:43:45.239889"], ["description", "Text input with body for test!"], ["ingredients", "Text input with body for test!"], ["preparation", "Text input with body for test!"], ["recipe_name", "body for test!"], ["tags", "Text input with body for test!"], ["updated_at", "2014-06-17 15:43:45.239889"], ["user", "pippo"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 3ms (ActiveRecord: 0.6ms)
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 10:43:45 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 70  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (3.0ms)
+Completed 200 OK in 5ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mUser Exists (0.7ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'joe' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'joe' LIMIT 1[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-17 18:21:04.567823"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$gInHUt7p13q7QMwI1f/8VuQYHG8WURe8BgH6hjAxN3X0nJJhJOV1u"], ["updated_at", "2014-06-17 18:21:04.567823"], ["username", "joe"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (5.6ms)
+Completed 200 OK in 107ms (Views: 90.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (1.1ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (59.2ms)
+Completed 200 OK in 64ms (Views: 62.4ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'joe' LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (8.4ms)
+Completed 200 OK in 23ms (Views: 9.7ms | ActiveRecord: 0.8ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 2.1ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_up" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by Devise::RegistrationsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/registrations/new.html.haml within layouts/application (6.6ms)
+Completed 200 OK in 9ms (Views: 7.9ms | ActiveRecord: 0.0ms)
+Started POST "/users" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "username"=>"joe", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'joe' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-17 18:21:04.854917"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$kf/UGRGLkIxg1/li46TYKuRmpN7VPIBJsaVm9wfw1JP3.OYmuW9ty"], ["updated_at", "2014-06-17 18:21:04.854917"], ["username", "joe"]]
+  [1m[35m (0.2ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 72  [["current_sign_in_at", "2014-06-17 18:21:04.856683"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 18:21:04.856683"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 18:21:04.858033"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 10ms (ActiveRecord: 1.4ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 72  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.5ms)
+Started DELETE "/users/sign_out" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by Devise::SessionsController#destroy as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 72  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.6ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.3ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "sign_in_count" = $2, "updated_at" = $3 WHERE "users"."id" = 72  [["current_sign_in_at", "2014-06-17 18:21:04.926940"], ["sign_in_count", 2], ["updated_at", "2014-06-17 18:21:04.927650"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 9ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 72  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kong' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-17 18:21:04.948729"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$j0flC4yYOWcjcw20u.FT/OkklrjUqWvbodNzMSY33VfEDBjdT09gy"], ["updated_at", "2014-06-17 18:21:04.948729"], ["username", "kong"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "recipes" ("created_at", "description", "image", "ingredients", "preparation", "recipe_name", "tags", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2014-06-17 18:21:04.959218"], ["description", "bona"], ["image", nil], ["ingredients", "a banana"], ["preparation", "peal it, eat it"], ["recipe_name", "banana"], ["tags", "frutta"], ["updated_at", "2014-06-17 18:21:04.959218"], ["user", "kong"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 73[0m  [["current_sign_in_at", "2014-06-17 18:21:04.980137"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 18:21:04.980137"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 18:21:04.980664"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 73  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.3ms)
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 13:21:04 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 73  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.6ms)
+Started GET "/recipes/delete/61" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#delete as HTML
+  Parameters: {"id"=>"61"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 61 LIMIT 1
+  Rendered recipes/delete.html.haml within layouts/application (2.1ms)
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 73  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.7ms)
+Started POST "/Recipes/destroy/61" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#destroy as HTML
+  Parameters: {"id"=>"61"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 61 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = $1  [["id", 61]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 3ms (ActiveRecord: 0.8ms)
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 73  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (2.1ms)
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.5ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."user" = 'ryu' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("created_at", "updated_at", "user") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-17 18:21:05.048261"], ["updated_at", "2014-06-17 18:21:05.048261"], ["user", "ryu"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."user" = 'ryu' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."recipe_name" = 'yup' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "recipes" ("created_at", "recipe_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-17 18:21:05.053755"], ["recipe_name", "ciao"], ["updated_at", "2014-06-17 18:21:05.053755"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."recipe_name" = 'ciao' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mRecipe Load (0.1ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."tags" = 'goof' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("created_at", "tags", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-17 18:21:05.058087"], ["tags", "goof"], ["updated_at", "2014-06-17 18:21:05.058087"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."tags" = 'goof' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("created_at", "recipe_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-17 18:21:05.061065"], ["recipe_name", "ciao"], ["updated_at", "2014-06-17 18:21:05.061065"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."recipe_name" = 'ciao' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "recipes" WHERE "recipes"."id" = $1  [["id", 65]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."recipe_name" = 'ciao' LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mRecipe Load (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 1 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("created_at", "recipe_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["created_at", "2014-06-17 18:21:05.066590"], ["recipe_name", "ciao"], ["updated_at", "2014-06-17 18:21:05.066590"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "recipes" ("created_at", "recipe_name", "updated_at") VALUES ($1, $2, $3) RETURNING "id"  [["created_at", "2014-06-17 18:21:05.068912"], ["recipe_name", "lollo"], ["updated_at", "2014-06-17 18:21:05.068912"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-17 18:21:05.087086"], ["email", "0"], ["encrypted_password", "0"], ["updated_at", "2014-06-17 18:21:05.087086"], ["username", "a"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'a' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'a' LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"   ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["created_at", "2014-06-17 18:21:05.106412"], ["email", "0"], ["encrypted_password", "0"], ["updated_at", "2014-06-17 18:21:05.106412"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '0' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = '0' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" IS NULL LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt?' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt?' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'as df jkl' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'as df jkl' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt=matt' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt=matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt%' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt%' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'matt' LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kong' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-17 18:21:05.158949"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$HHB5fyfCsMY9CH9TYp5G1e19g0HQfPNGXBnYAg1iVVpNayh1I6LMO"], ["updated_at", "2014-06-17 18:21:05.158949"], ["username", "kong"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("created_at", "description", "image", "ingredients", "preparation", "recipe_name", "tags", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", "2014-06-17 18:21:05.161122"], ["description", "bona"], ["image", nil], ["ingredients", "a banana"], ["preparation", "peal it, eat it"], ["recipe_name", "banana"], ["tags", "frutta"], ["updated_at", "2014-06-17 18:21:05.161122"], ["user", "kong"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.7ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 7ms (Views: 5.9ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 76  [["current_sign_in_at", "2014-06-17 18:21:05.182935"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 18:21:05.182935"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 18:21:05.183475"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 76  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+Started GET "/Recipes/my_recipes?user=kong" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#my_recipes as HTML
+  Parameters: {"user"=>"kong"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"  WHERE "recipes"."user" = 'kong'  ORDER BY id asc[0m
+  Rendered recipes/my_recipes.html.haml within layouts/application (4.7ms)
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 76  ORDER BY "users"."id" ASC LIMIT 1
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.5ms)
+Started GET "/recipes/68" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 68 LIMIT 1[0m
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 68  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 68 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 76  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/show.html.haml within layouts/application (15.8ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 1.0ms)
+Started POST "/recipes/68/comments" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"bananaaaaaaaa!!!", "username"=>"kong", "user_image"=>""}, "commit"=>"Comment", "recipe_id"=>"68"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 68]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1  [["id", "68"]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "recipes" SET "commented" = $1, "updated_at" = $2 WHERE "recipes"."id" = 68  [["commented", "yes"], ["updated_at", "2014-06-17 18:21:05.252929"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 76  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "comments" ("comment", "created_at", "recipe_id", "updated_at", "user_id", "user_image", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"  [["comment", "bananaaaaaaaa!!!"], ["created_at", "2014-06-17 18:21:05.257886"], ["recipe_id", 68], ["updated_at", "2014-06-17 18:21:05.257886"], ["user_id", 76], ["user_image", ""], ["username", "kong"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes/68
+Completed 302 Found in 27ms (ActiveRecord: 1.4ms)
+Started GET "/recipes/68" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"68"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 68 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 68  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 68  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 68  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 68  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 68 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 76  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/show.html.haml within layouts/application (3.5ms)
+Completed 200 OK in 8ms (Views: 4.6ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kong' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-17 18:21:05.282715"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$1jP5ZX9bKf4I/RwmPzR3eeEKM3zpz3U6y7GOYvWdKSAaXgto/In7e"], ["updated_at", "2014-06-17 18:21:05.282715"], ["username", "kong"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("created_at", "description", "image", "ingredients", "preparation", "recipe_name", "tags", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2014-06-17 18:21:05.284837"], ["description", "bona"], ["image", nil], ["ingredients", "a banana"], ["preparation", "peal it, eat it"], ["recipe_name", "banana"], ["tags", "frutta"], ["updated_at", "2014-06-17 18:21:05.284837"], ["user", "kong"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.6ms)
+Completed 200 OK in 2ms (Views: 2.0ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 77[0m  [["current_sign_in_at", "2014-06-17 18:21:05.307189"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 18:21:05.307189"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 18:21:05.307688"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.8ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 77  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.3ms)
+Started GET "/Recipes/my_recipes?user=kong" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#my_recipes as HTML
+  Parameters: {"user"=>"kong"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"  WHERE "recipes"."user" = 'kong'  ORDER BY id asc
+  Rendered recipes/my_recipes.html.haml within layouts/application (2.0ms)
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 77  ORDER BY "users"."id" ASC LIMIT 1[0m
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms)
+Started GET "/recipes/69" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 69 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 69  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 69 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 77  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/show.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 7ms (Views: 5.2ms | ActiveRecord: 0.6ms)
+Started POST "/recipes/69/comments" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "comment"=>{"comment"=>"more bananaaaaaaaas!!!", "username"=>"kong", "user_image"=>""}, "commit"=>"Comment", "recipe_id"=>"69"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1  [["id", 69]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", "69"]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "commented" = $1, "updated_at" = $2 WHERE "recipes"."id" = 69[0m  [["commented", "yes"], ["updated_at", "2014-06-17 18:21:05.339721"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 77  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "comments" ("comment", "created_at", "recipe_id", "updated_at", "user_id", "user_image", "username") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["comment", "more bananaaaaaaaas!!!"], ["created_at", "2014-06-17 18:21:05.342423"], ["recipe_id", 69], ["updated_at", "2014-06-17 18:21:05.342423"], ["user_id", 77], ["user_image", ""], ["username", "kong"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/recipes/69
+Completed 302 Found in 8ms (ActiveRecord: 1.5ms)
+Started GET "/recipes/69" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"69"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 69 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 69  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 69  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 69  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 69  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 69 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 77  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/show.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'pippo' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-17 18:21:05.369152"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$HHTg/jPQaa2tjF.wlcG6HuGSXBPTy5Hf/z7hLfxrQxgTb/a3fl8vq"], ["updated_at", "2014-06-17 18:21:05.369152"], ["username", "pippo"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 78[0m  [["current_sign_in_at", "2014-06-17 18:21:05.389339"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 18:21:05.389339"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 18:21:05.390009"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 78  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+Started GET "/recipes/new" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#new as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 78  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/new.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 8ms (Views: 7.3ms | ActiveRecord: 0.3ms)
+Started POST "/recipes" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"recipe_name"=>"body for test!", "description"=>"Text input with body for test!", "ingredients"=>"Text input with body for test!", "preparation"=>"Text input with body for test!", "tags"=>"Text input with body for test!", "user"=>"pippo"}, "commit"=>"Add Recipe!"}
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "recipes" ("created_at", "description", "ingredients", "preparation", "recipe_name", "tags", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"  [["created_at", "2014-06-17 18:21:05.420175"], ["description", "Text input with body for test!"], ["ingredients", "Text input with body for test!"], ["preparation", "Text input with body for test!"], ["recipe_name", "body for test!"], ["tags", "Text input with body for test!"], ["updated_at", "2014-06-17 18:21:05.420175"], ["user", "pippo"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 78  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (3.1ms)
+Completed 200 OK in 5ms (Views: 4.4ms | ActiveRecord: 0.6ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.1ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kong' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-17 18:21:05.453074"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$PjOyVdyeNd3cj4.SrOEG9e/lXPrIQ/pykTdFtji3bAsUFw3C3Q2qa"], ["updated_at", "2014-06-17 18:21:05.453074"], ["username", "kong"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "recipes" ("created_at", "description", "image", "ingredients", "preparation", "recipe_name", "tags", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"  [["created_at", "2014-06-17 18:21:05.454910"], ["description", "bona"], ["image", nil], ["ingredients", "a banana"], ["preparation", "peal it, eat it"], ["recipe_name", "banana"], ["tags", "frutta"], ["updated_at", "2014-06-17 18:21:05.454910"], ["user", "kong"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.6ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 79  [["current_sign_in_at", "2014-06-17 18:21:05.475112"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 18:21:05.475112"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 18:21:05.475804"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 79  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.0ms)
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms)
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 79  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms)
+Started GET "/recipes/71" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"71"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 71 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 71  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 71 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 79  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/show.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.7ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT  "comments".* FROM "comments"  WHERE "comments"."id" = 1  ORDER BY created_at ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'pippo' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-17 18:21:05.545892"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$EC3Rp4vl77JNDJ8H7uJJz.Kde709hPxXCww.vwLEUn6XPrl6Dn7Ta"], ["updated_at", "2014-06-17 18:21:05.545892"], ["username", "pippo"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 80[0m  [["current_sign_in_at", "2014-06-17 18:21:05.566346"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 18:21:05.566346"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 18:21:05.567000"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 80  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 4ms (Views: 2.8ms | ActiveRecord: 0.3ms)
+Started GET "/users/edit" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 80  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.haml within layouts/application (12.9ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.2ms)
+Started PUT "/users" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"elvis@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "image_cache"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 80  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 80]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'elvis@example.com' AND "users"."id" != 80) LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."username" = 'pippo' AND "users"."id" != 80) LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "email" = $1, "encrypted_password" = $2, "updated_at" = $3 WHERE "users"."id" = 80  [["email", "elvis@example.com"], ["encrypted_password", "$2a$04$srNvlqBgDaa87zP5t6pcXunifjTHRfUB/HrCi4wPsmqWcf.6lipbC"], ["updated_at", "2014-06-17 18:21:05.613146"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 14ms (ActiveRecord: 1.5ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 80  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+  [1m[36m (0.2ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'pippo' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-17 18:21:05.633239"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$c.Vjt3GA3Rn7WoNyP0MEr.P6d9h5aInSJq.pP6ceGwSRR5D6q/Ro."], ["updated_at", "2014-06-17 18:21:05.633239"], ["username", "pippo"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 81  [["current_sign_in_at", "2014-06-17 18:21:05.654528"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 18:21:05.654528"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 18:21:05.655003"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.7ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 81  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (0.8ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.2ms)
+Started GET "/users/edit" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 81  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.haml within layouts/application (6.0ms)
+Completed 200 OK in 9ms (Views: 7.6ms | ActiveRecord: 0.3ms)
+Started PUT "/users" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "image_cache"=>""}, "commit"=>"Update"}
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 81  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 81]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."username" = 'pippo' AND "users"."id" != 81) LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  ROLLBACK TO SAVEPOINT active_record_1
+  Rendered devise/registrations/edit.html.haml within layouts/application (7.5ms)
+Completed 200 OK in 18ms (Views: 9.0ms | ActiveRecord: 0.9ms)
+  [1m[36m (0.3ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'pippo' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-17 18:21:05.761075"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$SLBHWw8EjhSMLd3JNE9.Ve54A8HQDHKA8M6txPHleKctwT/xMOq32"], ["updated_at", "2014-06-17 18:21:05.761075"], ["username", "pippo"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 82  [["current_sign_in_at", "2014-06-17 18:21:05.780510"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 18:21:05.780510"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 18:21:05.781127"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 82  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (0.9ms)
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.3ms)
+Started GET "/users/edit" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 82  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered devise/registrations/edit.html.haml within layouts/application (6.8ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.3ms)
+Started PUT "/users" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"elvis@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "image_cache"=>""}, "commit"=>"Update"}
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 82  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1[0m  [["id", 82]]
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'elvis@example.com' AND "users"."id" != 82) LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."username" = 'pippo' AND "users"."id" != 82) LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mROLLBACK TO SAVEPOINT active_record_1[0m
+  Rendered devise/registrations/edit.html.haml within layouts/application (5.7ms)
+Completed 200 OK in 16ms (Views: 7.1ms | ActiveRecord: 1.2ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mUser Exists (0.3ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."username" = 'pippo' LIMIT 1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["created_at", "2014-06-17 18:21:05.843090"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$UdvTtgprs7WFnzUlLgq5I.rLtvP4rlOV4QafUxyepwM1E1C8h5gc6"], ["updated_at", "2014-06-17 18:21:05.843090"], ["username", "pippo"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.5ms)
+Completed 200 OK in 2ms (Views: 1.9ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (4.5ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 83[0m  [["current_sign_in_at", "2014-06-17 18:21:05.865698"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 18:21:05.865698"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 18:21:05.866302"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 83  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+Started GET "/users/edit" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 83  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered devise/registrations/edit.html.haml within layouts/application (5.5ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.3ms)
+Started PUT "/users" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::RegistrationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"elvis@example.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]", "current_password"=>"[FILTERED]", "image_cache"=>""}, "commit"=>"Update"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 83  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = $1 LIMIT 1  [["id", 83]]
+  [1m[36mUser Exists (0.2ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE ("users"."email" = 'elvis@example.com' AND "users"."id" != 83) LIMIT 1[0m
+  [1m[35mUser Exists (0.3ms)[0m  SELECT  1 AS one FROM "users"  WHERE ("users"."username" = 'pippo' AND "users"."id" != 83) LIMIT 1
+  Rendered devise/registrations/edit.html.haml within layouts/application (7.6ms)
+Completed 200 OK in 17ms (Views: 9.3ms | ActiveRecord: 1.0ms)
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mUser Exists (0.2ms)[0m  SELECT  1 AS one FROM "users"  WHERE "users"."email" = 'joe@example.com' LIMIT 1
+  [1m[36mUser Exists (0.1ms)[0m  [1mSELECT  1 AS one FROM "users"  WHERE "users"."username" = 'kong' LIMIT 1[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "users" ("created_at", "email", "encrypted_password", "updated_at", "username") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["created_at", "2014-06-17 18:21:05.928524"], ["email", "joe@example.com"], ["encrypted_password", "$2a$04$Pk9aqVcq31z87qAwu6DAtOLjWptFXhkMDqcWdH4yWK0RNW8ac3y5m"], ["updated_at", "2014-06-17 18:21:05.928524"], ["username", "kong"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "recipes" ("created_at", "description", "image", "ingredients", "preparation", "recipe_name", "tags", "updated_at", "user") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9) RETURNING "id"[0m  [["created_at", "2014-06-17 18:21:05.930388"], ["description", "bona"], ["image", nil], ["ingredients", "a banana"], ["preparation", "peal it, eat it"], ["recipe_name", "banana"], ["tags", "frutta"], ["updated_at", "2014-06-17 18:21:05.930388"], ["user", "kong"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  Rendered home/index.html.haml within layouts/application (0.4ms)
+Completed 200 OK in 2ms (Views: 1.5ms | ActiveRecord: 0.0ms)
+Started GET "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#new as HTML
+  Rendered devise/shared/_links.erb (0.2ms)
+  Rendered devise/sessions/new.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 6ms (Views: 5.0ms | ActiveRecord: 0.0ms)
+Started POST "/users/sign_in" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by Devise::SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "user"=>{"email"=>"joe@example.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."email" = 'joe@example.com'  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  SAVEPOINT active_record_1
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "users" SET "current_sign_in_at" = $1, "current_sign_in_ip" = $2, "last_sign_in_at" = $3, "last_sign_in_ip" = $4, "sign_in_count" = $5, "updated_at" = $6 WHERE "users"."id" = 84[0m  [["current_sign_in_at", "2014-06-17 18:21:05.949500"], ["current_sign_in_ip", "127.0.0.1"], ["last_sign_in_at", "2014-06-17 18:21:05.949500"], ["last_sign_in_ip", "127.0.0.1"], ["sign_in_count", 1], ["updated_at", "2014-06-17 18:21:05.950186"]]
+  [1m[35m (0.1ms)[0m  RELEASE SAVEPOINT active_record_1
+Redirected to http://www.example.com/
+Completed 302 Found in 7ms (ActiveRecord: 1.0ms)
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 84  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered home/index.html.haml within layouts/application (1.1ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.3ms)
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 84  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (2.6ms)
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.5ms)
+Started GET "/recipes/72/edit" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"72"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 72 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 84  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/edit.html.haml within layouts/application (5.3ms)
+Completed 200 OK in 8ms (Views: 6.9ms | ActiveRecord: 0.5ms)
+Started PATCH "/recipes/72" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "recipe"=>{"recipe_name"=>"banana pudding", "description"=>"bona", "ingredients"=>"put some pudding on your banana", "preparation"=>"peal it, eat it", "tags"=>"frutta", "user"=>"kong"}, "commit"=>"Update Recipe!", "id"=>"72"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1  [["id", 72]]
+  [1m[36m (0.1ms)[0m  [1mSAVEPOINT active_record_1[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "recipes" SET "ingredients" = $1, "recipe_name" = $2, "updated_at" = $3 WHERE "recipes"."id" = 72  [["ingredients", "put some pudding on your banana"], ["recipe_name", "banana pudding"], ["updated_at", "2014-06-17 18:21:05.984432"]]
+  [1m[36m (0.1ms)[0m  [1mRELEASE SAVEPOINT active_record_1[0m
+Redirected to http://www.example.com/recipes/72
+Completed 302 Found in 4ms (ActiveRecord: 0.7ms)
+Started GET "/recipes/72" for 127.0.0.1 at 2014-06-17 13:21:05 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"72"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 72 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 72  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 72 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 84  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/show.html.haml within layouts/application (3.9ms)
+Completed 200 OK in 8ms (Views: 5.2ms | ActiveRecord: 0.7ms)
+  [1m[35m (0.2ms)[0m  ROLLBACK
