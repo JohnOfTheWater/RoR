@@ -17,6 +17,12 @@ var $commenter_pic = $('<div>');
 var $ingredients = $('<div>');
 var $preparation = $('<div>');
 var $prep_title = $('<div>');
+var $ready_in = $('<div>');
+var $clock = $('<div>');
+var $hr1 = $('<div>');
+var $servings = $('<div>');
+var $servings_title = $('<div>');
+var $hr2 = $('<div>');
 
 var comments;
 if ('<%=@recipe.commented%>' == 'yes'){
@@ -38,6 +44,12 @@ $close.addClass('close_recipe').text('close[x]');
 $ingredients.html("<%= j render('ingredients.html.haml') %>").addClass('r_ing');
 $preparation.addClass('r_prep').text('<%=@recipe.preparation%>');
 $prep_title.addClass('r_prep_title').text('Preparation:');
+$ready_in.addClass('r_ready').text('Ready In: '+'<%=@recipe.ready_in%>');
+$clock.addClass('r_clock').css('background', 'url('+'http://evernode.delacqua.us/img/johngmailcom/john/8902395-17hct.png'+')').css('background-size', 'cover');
+$hr1.addClass('r_hr1');
+$hr2.addClass('r_hr2');
+$servings_title.addClass('r_servings_title').text('Servings:');
+$servings.addClass('r_servings').text('<%=@recipe.servings%>');
 
 $('#recipe_wrap').append($recipeName);
 $('#recipe_wrap').append($recipePic);
@@ -48,4 +60,10 @@ $('#recipe_wrap').append($close);
 $('#recipe_wrap').append($ingredients);
 $('#recipe_wrap').append($prep_title);
 $prep_title.append($preparation);
+$('#recipe_wrap').append($clock);
+$('#recipe_wrap').append($ready_in);
+$('#recipe_wrap').append($hr1);
+$('#recipe_wrap').append($hr2);
+$('#recipe_wrap').append($servings_title);
+$('#recipe_wrap').append($servings);
 

@@ -27,4 +27,20 @@ feature "User edits account" do
     page.should have_button("Comment")
   end
 
+  scenario "change servings and ready time" do
+    visit recipes_path
+    click_link "Edit"
+    fill_in "recipe[recipe_name]", with: "banana pudding"
+    fill_in "recipe[ingredients]", with: "put some pudding on your banana"
+    fill_in "recipe[ready_in]", with: "30 min"
+    fill_in "recipe[servings]", with: "3"
+    click_button "Update Recipe!"
+    #save_and_open_page
+    page.should have_content "Recipe updated successfully"
+
+    page.should_not have_button("Update Recipe!")
+    page.should have_content "Recipe updated successfully"
+    page.should have_button("Comment")
+  end
+
 end

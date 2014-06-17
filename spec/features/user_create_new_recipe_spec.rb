@@ -25,4 +25,20 @@ feature "New recipe" do
     page.should have_content "Recipes"
   end
 
+  scenario "user creates a new recipe" do
+    click_link "Add a Recipe"
+    fill_in "recipe[recipe_name]", with: "body for test!"
+    fill_in "recipe[description]", with: "Text input with body for test!"
+    fill_in "recipe[ingredients]", with: "Text input with body for test!"
+    fill_in "recipe[preparation]", with: "Text input with body for test!"
+    fill_in "recipe[tags]", with: "Text input with body for test!"
+    fill_in "recipe[ready_in]", with: "30 min"
+    fill_in "recipe[servings]", with: "4"
+    #save_and_open_page
+    click_button "Add Recipe!"
+    page.should have_content "Recipe created successfully"
+    current_path.should == recipes_path
+    page.should have_content "Recipes"
+  end
+
 end

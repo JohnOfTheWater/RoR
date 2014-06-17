@@ -219,6 +219,53 @@ font-size: 30px;
   border: 1px solid;
 }
 
+.r_ready {
+  position: absolute;
+top: 365px;
+left: 950px;
+width: 90px;
+text-align: center;
+}
+
+.r_clock {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  top: 367px;
+  left: 1040px;
+}
+
+.r_hr1 {
+  border-top: 1px solid gray;
+  position: absolute;
+  top: 440px;
+  left: 940px;
+  width: 170px;
+}
+
+.r_hr2 {
+  border-top: 1px solid gray;
+  position: absolute;
+  top: 530px;
+  left: 940px;
+  width: 170px;
+}
+
+.r_servings_title {
+position: absolute;
+top: 460px;
+left: 978px;
+font-size: 17px;
+}
+
+.r_servings {
+  position: absolute;
+  top: 485px;
+  left: 1008px;
+  font-size: 19px;
+  color: crimson;
+}
+
 .close_recipe {
 position: absolute;
 top: 1px;

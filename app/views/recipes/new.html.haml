@@ -4,13 +4,17 @@
   = form_for(:recipe, html:  {:multipart => true}, :url => {:action => 'create'}) do |f|
     %table{:summary => "Recipe form field"}
       %h2#new_name Recipe Name
-      = f.text_field(:recipe_name, placeholder: "Recipe Name", maxlength: 100)
+      = f.text_field(:recipe_name, placeholder: "Recipe Name", maxlength: 100, autofocus: "true")
       %h2#new_desc Description
       = f.text_area(:description, placeholder: "a brief description of this recipe", maxlength: 110)
       %h2#new_ingr Ingredients
       = f.text_area(:ingredients, placeholder: "- stuffing with more stuffing  - stuffing with more stuffing  - stuffing with more stuffing  ")
       %h2#new_prep Preparation
       = f.text_area(:preparation, maxlength: 2000)
+      %h2#new_time Ready In
+      = f.text_field(:ready_in, maxlength: 30, placeholder: "30 min")
+      %h2#new_servings Servings
+      = f.text_field(:servings, maxlength: 30, placeholder: "2")
       %h2#new_tags Tags
       = f.text_field(:tags, maxlength: 30)
       %h2#new_image Image

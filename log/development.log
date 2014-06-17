@@ -56782,3 +56782,1654 @@ Processing by RecipesController#show as JS
   Rendered recipes/_ingredients.html.haml (0.1ms)
   Rendered recipes/show.js.erb (1.3ms)
 Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes/10" for 127.0.0.1 at 2014-06-17 13:23:19 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"10"}
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (1.3ms)
+  Rendered recipes/show.js.erb (5.5ms)
+Completed 200 OK in 54ms (Views: 12.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:23:28 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 45ms (Views: 42.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 13:23:28 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 13:23:28 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 13:23:28 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 13:23:28 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 13:23:28 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 13:23:28 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 13:23:28 -0500
+
+
+Started GET "/recipes/16" for 127.0.0.1 at 2014-06-17 13:24:13 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"16"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 16 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 16  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 16 LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (1.4ms)
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/13" for 127.0.0.1 at 2014-06-17 13:29:02 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"13"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (1.5ms)
+Completed 200 OK in 10ms (Views: 5.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-17 13:31:51 -0500
+Processing by HomeController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered home/index.html.haml within layouts/application (1.2ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 13:31:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 13:31:51 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 13:31:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 13:31:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 13:31:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 13:31:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 13:31:52 -0500
+
+
+Started GET "/recipes/11" for 127.0.0.1 at 2014-06-17 13:37:10 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"11"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.2ms)
+  Rendered recipes/show.js.erb (1.4ms)
+Completed 200 OK in 9ms (Views: 4.5ms | ActiveRecord: 0.6ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddServingsAndReadyInColumns (20140617185154)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (1.7ms)[0m  [1mALTER TABLE "recipes" ADD COLUMN "servings" character varying(255) DEFAULT '2'[0m
+PG::DuplicateColumn: ERROR:  column "servings" of relation "recipes" already exists
+: ALTER TABLE "recipes" ADD COLUMN "servings" character varying(255) DEFAULT '2'
+  [1m[35m (0.1ms)[0m  ROLLBACK
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddServingsAndReadyInColumns (20140617185154)
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36m (6.5ms)[0m  [1mALTER TABLE "recipes" ADD COLUMN "ready_in" character varying(255)[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ($1)  [["version", "20140617185154"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1[0m
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:09:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (1.0ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.8ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (43.2ms)
+Completed 200 OK in 90ms (Views: 71.5ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:09:57 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:09:57 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:09:57 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:09:57 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:09:57 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:09:57 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:09:57 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-17 14:09:57 -0500
+
+
+Started GET "/recipes/5/edit" for 127.0.0.1 at 2014-06-17 14:09:59 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/edit.html.haml within layouts/application (32.4ms)
+Completed 200 OK in 40ms (Views: 37.2ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/recipes/5" for 127.0.0.1 at 2014-06-17 14:10:14 -0500
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Md9W4lTIh45SRfXhEwKuTBKLTw1dtwvYCQ3kS5NIyUs=", "recipe"=>{"recipe_name"=>"banana", "description"=>"Returns a copy of str with all lowercase letters replaced with their uppercase now", "ingredients"=>"- a banana\r\n- a banana\r\n- a banana\r\n- another banana", "preparation"=>"Heat vegetable oil in a large skillet over medium heat. Pan-fry chicken until golden brown on both sides, 5 to 7 minutes; transfer to a plate. Melt butter in the same skillet; cook and stir remaining 2 tablespoons flour in butter for 5 minutes, then add chicken broth and lemon juice. Simmer until thickened, about 10 minutes. Return chicken to the skillet. Continue simmering until chicken is no longer pink in the center, about 15 more minutes... basically peal it, eat it!", "ready_in"=>"1 min", "servings"=>"2", "tags"=>"veeeery hard", "user"=>"giova"}, "commit"=>"Update Recipe!", "id"=>"5"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "recipes" SET "ready_in" = $1, "updated_at" = $2 WHERE "recipes"."id" = 5  [["ready_in", "1 min"], ["updated_at", "2014-06-17 19:10:14.098651"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/recipes/5
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes/5" for 127.0.0.1 at 2014-06-17 14:10:14 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/show.html.haml within layouts/application (19.6ms)
+Completed 200 OK in 38ms (Views: 24.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:10:14 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:10:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:10:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:10:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:10:14 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:10:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:10:14 -0500
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:10:17 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (19.6ms)
+Completed 200 OK in 27ms (Views: 24.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/5" for 127.0.0.1 at 2014-06-17 14:10:20 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (1.1ms)
+  Rendered recipes/show.js.erb (4.7ms)
+Completed 200 OK in 12ms (Views: 7.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes/6/edit" for 127.0.0.1 at 2014-06-17 14:10:24 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 17ms (Views: 9.1ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/recipes/6" for 127.0.0.1 at 2014-06-17 14:10:43 -0500
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Md9W4lTIh45SRfXhEwKuTBKLTw1dtwvYCQ3kS5NIyUs=", "recipe"=>{"recipe_name"=>"banana pudding", "description"=>"You are misunderstanding what the parameter as is for, its intended", "ingredients"=>"- 3 ripe bananas, peeled and sliced into 1/4 inch rounds\r\n- 1 tablespoon freshly squeezed lemon juice\r\n-1/2 cup granulated sugar, plus 2 tablespoons", "preparation"=>"Heat vegetable oil in a large skillet over medium heat. Pan-fry chicken until golden brown on both sides, 5 to 7 minutes; transfer to a plate. Melt butter in the same skillet; cook and stir remaining 2 tablespoons flour in butter for 5 minutes, then add chicken broth and lemon juice. Simmer until thickened, about 10 minutes. Return chicken to the skillet. Continue simmering until chicken is no longer pink in the center, about 15 more minutes... basically peal it, eat it!", "ready_in"=>"30 min", "servings"=>"2", "tags"=>"easy, one pot", "user"=>"giova"}, "commit"=>"Update Recipe!", "id"=>"6"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "recipes" SET "ready_in" = $1, "updated_at" = $2 WHERE "recipes"."id" = 6[0m  [["ready_in", "30 min"], ["updated_at", "2014-06-17 19:10:43.547101"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/recipes/6
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/6" for 127.0.0.1 at 2014-06-17 14:10:43 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 6 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 6  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 6  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 6  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 6  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 6 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/show.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 16ms (Views: 11.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:10:43 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:10:43 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:10:43 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:10:43 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:10:43 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:10:43 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:10:43 -0500
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:10:46 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (12.0ms)
+Completed 200 OK in 19ms (Views: 16.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:11:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (37.4ms)
+Completed 200 OK in 82ms (Views: 65.6ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:11:40 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:11:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:11:40 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:11:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:11:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:11:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:11:40 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-17 14:11:40 -0500
+
+
+Started GET "/recipes/6/edit" for 127.0.0.1 at 2014-06-17 14:11:43 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 6 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/edit.html.haml within layouts/application (31.7ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/10/edit" for 127.0.0.1 at 2014-06-17 14:11:50 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/edit.html.haml within layouts/application (4.0ms)
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/recipes/10" for 127.0.0.1 at 2014-06-17 14:11:59 -0500
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Md9W4lTIh45SRfXhEwKuTBKLTw1dtwvYCQ3kS5NIyUs=", "recipe"=>{"recipe_name"=>"pizza", "description"=>"You are misunderstanding what the parameter as is for, its intended stuff and more stuff", "ingredients"=>"- lot of stuff!\r\n- more stuff\r\n- and stuff", "preparation"=>"Heat vegetable oil in a large skillet over medium heat. Pan-fry chicken until golden brown on both sides, 5 to 7 minutes; transfer to a plate. Melt butter in the same skillet; cook and stir remaining 2 tablespoons flour in butter for 5 minutes, then add chicken broth and lemon juice. Simmer until thickened, about 10 minutes. Return chicken to the skillet. Continue simmering until chicken is no longer pink in the center, about 15 more minutes, or...just put it in the oven", "ready_in"=>"30 min", "servings"=>"2", "tags"=>"bona!", "user"=>"giova"}, "commit"=>"Update Recipe!", "id"=>"10"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "recipes" SET "ready_in" = $1, "updated_at" = $2 WHERE "recipes"."id" = 10  [["ready_in", "30 min"], ["updated_at", "2014-06-17 19:11:59.536129"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/recipes/10
+Completed 302 Found in 9ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/recipes/10" for 127.0.0.1 at 2014-06-17 14:11:59 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/show.html.haml within layouts/application (19.7ms)
+Completed 200 OK in 39ms (Views: 24.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:11:59 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:11:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:11:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:11:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:11:59 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:11:59 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:11:59 -0500
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:12:01 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (19.4ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/11/edit" for 127.0.0.1 at 2014-06-17 14:12:03 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (9.4ms)
+Completed 200 OK in 17ms (Views: 14.5ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/recipes/11" for 127.0.0.1 at 2014-06-17 14:12:10 -0500
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Md9W4lTIh45SRfXhEwKuTBKLTw1dtwvYCQ3kS5NIyUs=", "recipe"=>{"recipe_name"=>"veggie enchiladas", "description"=>"You are misunderstanding what the parameter as is for, its intended", "ingredients"=>"- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!", "preparation"=>"Heat vegetable oil in a large skillet over medium heat. Pan-fry chicken until golden brown on both sides, 5 to 7 minutes; transfer to a plate. Melt butter in the same skillet; cook and stir remaining 2 tablespoons flour in butter for 5 minutes, then add chicken broth and lemon juice. Simmer until thickened, about 10 minutes. Return chicken to the skillet. Continue simmering until chicken is no longer pink in the center, about 15 more minutes.", "ready_in"=>"30 min", "servings"=>"2", "tags"=>"bone!", "user"=>"giova"}, "commit"=>"Update Recipe!", "id"=>"11"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "recipes" SET "ready_in" = $1, "updated_at" = $2 WHERE "recipes"."id" = 11[0m  [["ready_in", "30 min"], ["updated_at", "2014-06-17 19:12:10.985440"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/recipes/11
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/11" for 127.0.0.1 at 2014-06-17 14:12:10 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/show.html.haml within layouts/application (7.2ms)
+Completed 200 OK in 17ms (Views: 11.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:12:11 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:12:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:11 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:11 -0500
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:12:13 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes/12/edit" for 127.0.0.1 at 2014-06-17 14:12:15 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/edit.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 15ms (Views: 12.3ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/recipes/12" for 127.0.0.1 at 2014-06-17 14:12:22 -0500
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Md9W4lTIh45SRfXhEwKuTBKLTw1dtwvYCQ3kS5NIyUs=", "recipe"=>{"recipe_name"=>"japanese tiramisu", "description"=>"You are misunderstanding what the parameter as is for, its intended", "ingredients"=>"- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!\r\n\r\n- lot of stuff!", "preparation"=>"Heat vegetable oil in a large skillet over medium heat. Pan-fry chicken until golden brown on both sides, 5 to 7 minutes; transfer to a plate. Melt butter in the same skillet; cook and stir remaining 2 tablespoons flour in butter for 5 minutes, then add chicken broth and lemon juice. Simmer until thickened, about 10 minutes. Return chicken to the skillet. Continue simmering until chicken is no longer pink in the center, about 15 more minutes, or...buy it in Japan!", "ready_in"=>"30 min", "servings"=>"2", "tags"=>"bonissimo", "user"=>"giova"}, "commit"=>"Update Recipe!", "id"=>"12"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "recipes" SET "ready_in" = $1, "updated_at" = $2 WHERE "recipes"."id" = 12  [["ready_in", "30 min"], ["updated_at", "2014-06-17 19:12:22.568934"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/recipes/12
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2014-06-17 14:12:22 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/show.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 16ms (Views: 11.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:12:22 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:22 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:12:22 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:22 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:22 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:22 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:22 -0500
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:12:25 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (12.9ms)
+Completed 200 OK in 19ms (Views: 17.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/13/edit" for 127.0.0.1 at 2014-06-17 14:12:29 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (4.4ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/recipes/13" for 127.0.0.1 at 2014-06-17 14:12:35 -0500
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Md9W4lTIh45SRfXhEwKuTBKLTw1dtwvYCQ3kS5NIyUs=", "recipe"=>{"recipe_name"=>"risotto with mushrooms and pees", "description"=>"Returns a copy of str with all lowercase letters replaced with their uppercase", "ingredients"=>"- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!", "preparation"=>"Heat vegetable oil in a large skillet over medium heat. Pan-fry chicken until golden brown on both sides, 5 to 7 minutes; transfer to a plate. Melt butter in the same skillet; cook and stir remaining 2 tablespoons flour in butter for 5 minutes, then add chicken broth and lemon juice. Simmer until thickened, about 10 minutes. Return chicken to the skillet. Continue simmering until chicken is no longer pink in the center, about 15 more minutes, or...let honey cheeks doing it!", "ready_in"=>"30 min", "servings"=>"2", "tags"=>"spettacolare", "user"=>"giova"}, "commit"=>"Update Recipe!", "id"=>"13"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "ready_in" = $1, "updated_at" = $2 WHERE "recipes"."id" = 13[0m  [["ready_in", "30 min"], ["updated_at", "2014-06-17 19:12:35.833552"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/recipes/13
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/13" for 127.0.0.1 at 2014-06-17 14:12:35 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/show.html.haml within layouts/application (10.3ms)
+Completed 200 OK in 20ms (Views: 15.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:12:35 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:35 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:35 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:12:35 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:35 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:35 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:12:35 -0500
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:12:40 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (11.8ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/13" for 127.0.0.1 at 2014-06-17 14:12:43 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"13"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (1.0ms)
+  Rendered recipes/show.js.erb (4.8ms)
+Completed 200 OK in 12ms (Views: 7.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes/13/edit" for 127.0.0.1 at 2014-06-17 14:12:47 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1
+  [1m[36mUser Load (0.5ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/edit.html.haml within layouts/application (5.1ms)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/14" for 127.0.0.1 at 2014-06-17 14:12:50 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"14"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 14 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 14  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 14 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.2ms)
+  Rendered recipes/show.js.erb (1.4ms)
+Completed 200 OK in 8ms (Views: 4.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/14/edit" for 127.0.0.1 at 2014-06-17 14:12:54 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 14 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 13ms (Views: 10.4ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/recipes/14" for 127.0.0.1 at 2014-06-17 14:13:01 -0500
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Md9W4lTIh45SRfXhEwKuTBKLTw1dtwvYCQ3kS5NIyUs=", "recipe"=>{"recipe_name"=>"veggie burger with avocado", "description"=>"Returns a copy of str with all lowercase letters replaced with their uppercase", "ingredients"=>"- veggie patty \r\n- avocado!\r\n- onions\r\n- humus\r\n- buns\r\n- pesto", "preparation"=>"Heat vegetable oil in a large skillet over medium heat. Pan-fry chicken until golden brown on both sides, 5 to 7 minutes; transfer to a plate. Melt butter in the same skillet; cook and stir remaining 2 tablespoons flour in butter for 5 minutes, then add chicken broth and lemon juice. Simmer until thickened, about 10 minutes. Return chicken to the skillet. Continue simmering until chicken is no longer pink in the center, about 15 more minutes, or...put everything together", "ready_in"=>"30 min", "servings"=>"2", "tags"=>"che bellezza", "user"=>"giova"}, "commit"=>"Update Recipe!", "id"=>"14"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 14]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "recipes" SET "ready_in" = $1, "updated_at" = $2 WHERE "recipes"."id" = 14[0m  [["ready_in", "30 min"], ["updated_at", "2014-06-17 19:13:01.222676"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/recipes/14
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/14" for 127.0.0.1 at 2014-06-17 14:13:01 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 14 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 14  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 14 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/show.html.haml within layouts/application (7.3ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:13:01 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:13:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:13:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:13:01 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:13:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:13:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:13:01 -0500
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:13:39 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/14/edit" for 127.0.0.1 at 2014-06-17 14:13:42 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 14 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (15.8ms)
+Completed 200 OK in 25ms (Views: 22.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/recipes/14/edit" for 127.0.0.1 at 2014-06-17 14:13:47 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 14 LIMIT 1[0m
+  [1m[35mUser Load (0.5ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (5.4ms)
+Completed 200 OK in 14ms (Views: 12.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/15/edit" for 127.0.0.1 at 2014-06-17 14:13:51 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 15 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (4.6ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/14/edit" for 127.0.0.1 at 2014-06-17 14:13:59 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 14 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 12ms (Views: 9.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/13" for 127.0.0.1 at 2014-06-17 14:14:03 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"13"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.2ms)
+  Rendered recipes/show.js.erb (1.5ms)
+Completed 200 OK in 10ms (Views: 5.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:14:09 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:14:09 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:09 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:14:09 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:09 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:09 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:09 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:09 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-17 14:14:09 -0500
+
+
+Started GET "/recipes/14/edit" for 127.0.0.1 at 2014-06-17 14:14:11 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 14 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (4.1ms)
+Completed 200 OK in 11ms (Views: 9.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/15/edit" for 127.0.0.1 at 2014-06-17 14:14:14 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 15 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 12ms (Views: 9.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/14/edit" for 127.0.0.1 at 2014-06-17 14:14:23 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 14 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 12ms (Views: 9.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:14:25 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (12.5ms)
+Completed 200 OK in 20ms (Views: 18.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/14/edit" for 127.0.0.1 at 2014-06-17 14:14:27 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"14"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 14 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (4.2ms)
+Completed 200 OK in 15ms (Views: 12.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:14:28 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (13.0ms)
+Completed 200 OK in 20ms (Views: 18.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/16/edit" for 127.0.0.1 at 2014-06-17 14:14:30 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 16 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 13ms (Views: 10.7ms | ActiveRecord: 0.8ms)
+
+
+Started PATCH "/recipes/16" for 127.0.0.1 at 2014-06-17 14:14:38 -0500
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Md9W4lTIh45SRfXhEwKuTBKLTw1dtwvYCQ3kS5NIyUs=", "recipe"=>{"recipe_name"=>"fried zucchini flowers", "description"=>"Returns a copy of str with all lowercase letters replaced with their uppercase", "ingredients"=>"- zucchini flowers\r\n- stuff 1\r\n- stuff 2\r\n- stuff 3", "preparation"=>"Heat vegetable oil in a large skillet over medium heat. Pan-fry chicken until golden brown on both sides, 5 to 7 minutes; transfer to a plate. Melt butter in the same skillet; cook and stir remaining 2 tablespoons flour in butter for 5 minutes, then add chicken broth and lemon juice. Simmer until thickened, about 10 minutes. Return chicken to the skillet. Continue simmering until chicken is no longer pink in the center, about 15 more minutes... basically fry them all!", "ready_in"=>"30 min", "servings"=>"2", "tags"=>"awesome!", "user"=>"giova"}, "commit"=>"Update Recipe!", "id"=>"16"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "recipes" SET "ready_in" = $1, "updated_at" = $2 WHERE "recipes"."id" = 16[0m  [["ready_in", "30 min"], ["updated_at", "2014-06-17 19:14:38.877350"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/recipes/16
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/16" for 127.0.0.1 at 2014-06-17 14:14:38 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"16"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 16 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 16  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 16 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/show.html.haml within layouts/application (7.0ms)
+Completed 200 OK in 15ms (Views: 11.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:14:38 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:38 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:14:38 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:38 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:38 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:38 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:38 -0500
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:14:41 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (12.0ms)
+Completed 200 OK in 18ms (Views: 16.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/15/edit" for 127.0.0.1 at 2014-06-17 14:14:43 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 15 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (4.7ms)
+Completed 200 OK in 14ms (Views: 11.4ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/recipes/15" for 127.0.0.1 at 2014-06-17 14:14:51 -0500
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Md9W4lTIh45SRfXhEwKuTBKLTw1dtwvYCQ3kS5NIyUs=", "recipe"=>{"recipe_name"=>"pappardelle al pesto", "description"=>"Returns a copy of str with all lowercase letters replaced with their uppercase", "ingredients"=>"- pappardelle\r\n- pesto\r\n- pomodori secchi", "preparation"=>"Heat vegetable oil in a large skillet over medium heat. Pan-fry chicken until golden brown on both sides, 5 to 7 minutes; transfer to a plate. Melt butter in the same skillet; cook and stir remaining 2 tablespoons flour in butter for 5 minutes, then add chicken broth and lemon juice. Simmer until thickened, about 10 minutes. Return chicken to the skillet. Continue simmering until chicken is no longer pink in the center, about 15 more minutes and cook everything", "ready_in"=>"30 min", "servings"=>"2", "tags"=>"na meraviglia", "user"=>"giova"}, "commit"=>"Update Recipe!", "id"=>"15"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "ready_in" = $1, "updated_at" = $2 WHERE "recipes"."id" = 15[0m  [["ready_in", "30 min"], ["updated_at", "2014-06-17 19:14:51.636026"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/recipes/15
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/15" for 127.0.0.1 at 2014-06-17 14:14:51 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"15"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 15 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 15  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 15 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/show.html.haml within layouts/application (7.4ms)
+Completed 200 OK in 16ms (Views: 12.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:14:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:14:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:51 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:14:51 -0500
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:14:54 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (19.1ms)
+Completed 200 OK in 25ms (Views: 23.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/new" for 127.0.0.1 at 2014-06-17 14:15:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#new as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/new.html.haml within layouts/application (32.9ms)
+Completed 200 OK in 83ms (Views: 64.3ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:15:47 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:15:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:15:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:15:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:15:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:15:47 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:15:47 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-17 14:15:47 -0500
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:16:18 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.7ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (16.4ms)
+Completed 200 OK in 22ms (Views: 20.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/recipes/6/edit" for 127.0.0.1 at 2014-06-17 14:16:19 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 6 LIMIT 1[0m
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (30.4ms)
+Completed 200 OK in 39ms (Views: 36.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:16:21 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:19:26 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (14.1ms)
+Completed 200 OK in 20ms (Views: 19.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:19:26 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:19:26 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:19:26 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:19:26 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:19:26 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:19:26 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:19:26 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-17 14:19:26 -0500
+
+
+Started GET "/recipes/5" for 127.0.0.1 at 2014-06-17 14:19:30 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1[0m
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (1.0ms)
+  Rendered recipes/show.js.erb (5.1ms)
+Completed 200 OK in 25ms (Views: 8.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:26:11 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (11.0ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:26:11 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:26:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:26:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:26:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:26:11 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:26:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:26:11 -0500
+
+
+Started GET "/recipes/5" for 127.0.0.1 at 2014-06-17 14:26:14 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.0ms)
+Completed 200 OK in 9ms (Views: 4.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:27:23 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (11.8ms)
+Completed 200 OK in 63ms (Views: 61.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:27:23 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:27:23 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:27:23 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:27:23 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:27:23 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:27:23 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:27:23 -0500
+
+
+Started GET "/recipes/5" for 127.0.0.1 at 2014-06-17 14:27:27 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"5"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (1.2ms)
+Completed 200 OK in 8ms (Views: 4.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:29:37 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (11.5ms)
+Completed 200 OK in 18ms (Views: 16.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:29:37 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:29:37 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:29:37 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:29:37 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:29:37 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:29:37 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:29:37 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-17 14:29:37 -0500
+
+
+Started GET "/recipes/6" for 127.0.0.1 at 2014-06-17 14:29:39 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"6"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 6 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 6  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 6  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 6  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 6  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 6 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.0ms)
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:37:14 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (10.1ms)
+Completed 200 OK in 58ms (Views: 56.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:37:14 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:37:14 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:37:14 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:37:14 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:37:14 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:37:14 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:37:14 -0500
+
+
+Started GET "/recipes/10" for 127.0.0.1 at 2014-06-17 14:37:16 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (1.2ms)
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:38:11 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (12.2ms)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:38:11 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:38:11 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:38:11 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:38:11 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:38:11 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:38:11 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:38:11 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-17 14:38:12 -0500
+
+
+Started GET "/recipes/10" for 127.0.0.1 at 2014-06-17 14:38:13 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"10"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (1.2ms)
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:40:51 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (10.9ms)
+Completed 200 OK in 16ms (Views: 15.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:40:51 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:40:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:40:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:40:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:40:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:40:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:40:51 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-17 14:40:51 -0500
+
+
+Started GET "/recipes/11" for 127.0.0.1 at 2014-06-17 14:40:53 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"11"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.0ms)
+Completed 200 OK in 9ms (Views: 4.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:42:59 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (10.4ms)
+Completed 200 OK in 16ms (Views: 14.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:42:59 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:42:59 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:42:59 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:42:59 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:42:59 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:43:00 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:43:00 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-17 14:43:00 -0500
+
+
+Started GET "/recipes/11" for 127.0.0.1 at 2014-06-17 14:43:02 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"11"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.2ms)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:46:18 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (10.7ms)
+Completed 200 OK in 68ms (Views: 66.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:46:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:46:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:46:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:46:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:46:18 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:46:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:46:18 -0500
+
+
+Started GET "/recipes/11" for 127.0.0.1 at 2014-06-17 14:46:20 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"11"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (1.2ms)
+Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes/13/edit" for 127.0.0.1 at 2014-06-17 14:48:12 -0500
+Processing by RecipesController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/edit.html.haml within layouts/application (4.3ms)
+Completed 200 OK in 13ms (Views: 10.2ms | ActiveRecord: 0.7ms)
+
+
+Started PATCH "/recipes/13" for 127.0.0.1 at 2014-06-17 14:48:21 -0500
+Processing by RecipesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Md9W4lTIh45SRfXhEwKuTBKLTw1dtwvYCQ3kS5NIyUs=", "recipe"=>{"recipe_name"=>"risotto with mushrooms and pees", "description"=>"Returns a copy of str with all lowercase letters replaced with their uppercase", "ingredients"=>"- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!\r\n- lot of stuff!", "preparation"=>"Heat vegetable oil in a large skillet over medium heat. Pan-fry chicken until golden brown on both sides, 5 to 7 minutes; transfer to a plate. Melt butter in the same skillet; cook and stir remaining 2 tablespoons flour in butter for 5 minutes, then add chicken broth and lemon juice. Simmer until thickened, about 10 minutes. Return chicken to the skillet. Continue simmering until chicken is no longer pink in the center, about 15 more minutes, or...let honey cheeks doing it!", "ready_in"=>"120 min", "servings"=>"2", "tags"=>"spettacolare", "user"=>"giova"}, "commit"=>"Update Recipe!", "id"=>"13"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = $1 LIMIT 1[0m  [["id", 13]]
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "ready_in" = $1, "updated_at" = $2 WHERE "recipes"."id" = 13[0m  [["ready_in", "120 min"], ["updated_at", "2014-06-17 19:48:21.751329"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+Redirected to http://127.0.0.1:3000/recipes/13
+Completed 302 Found in 9ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes/13" for 127.0.0.1 at 2014-06-17 14:48:21 -0500
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/show.html.haml within layouts/application (19.5ms)
+Completed 200 OK in 29ms (Views: 24.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:48:21 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:48:21 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:48:21 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:48:21 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:48:21 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:48:21 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:48:21 -0500
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:48:24 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (14.2ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/13" for 127.0.0.1 at 2014-06-17 14:48:25 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"13"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (1.3ms)
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:52:01 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (11.7ms)
+Completed 200 OK in 17ms (Views: 16.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:52:01 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:52:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:52:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:52:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:52:01 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:52:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:52:01 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-17 14:52:02 -0500
+
+
+Started GET "/recipes/13" for 127.0.0.1 at 2014-06-17 14:52:04 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"13"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 13  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 13 LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.8ms)
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:55:49 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (11.1ms)
+Completed 200 OK in 65ms (Views: 63.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:55:49 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:55:49 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:55:49 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:55:49 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:55:49 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:55:49 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:55:49 -0500
+
+
+Started GET "/recipes/16" for 127.0.0.1 at 2014-06-17 14:55:52 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"16"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 16 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 16  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 16 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (1.2ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:57:00 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (10.5ms)
+Completed 200 OK in 16ms (Views: 15.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:57:01 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:57:01 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:57:01 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:57:01 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:57:01 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:57:01 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:57:01 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-17 14:57:01 -0500
+
+
+Started GET "/recipes/11" for 127.0.0.1 at 2014-06-17 14:57:03 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"11"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.1ms)
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-17 14:58:07 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (10.0ms)
+Completed 200 OK in 63ms (Views: 61.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-17 14:58:07 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-17 14:58:07 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-17 14:58:07 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-17 14:58:07 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-17 14:58:07 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-17 14:58:07 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-17 14:58:07 -0500
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2014-06-17 14:58:08 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"12"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (1.2ms)
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 0.5ms)
