@@ -6,7 +6,8 @@
   %h1#full_name= @recipe.recipe_name
   %h3#full_desc
     INGREDIENTS
-  %p.full_desc= @recipe.ingredients
+  - @ingredients.each do |ing|
+    %p.ing= '- ' + ing
   %h3#full_prep
     PREPARATION
   %p.full_prep= @recipe.preparation

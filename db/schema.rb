@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140615133500) do
+ActiveRecord::Schema.define(version: 20140617023329) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -44,7 +44,9 @@ ActiveRecord::Schema.define(version: 20140615133500) do
     t.string   "image"
     t.integer  "servings",                 default: 2
     t.integer  "rating"
-    t.string   "ingredients",              default: "lot of stuff!"
+    t.string   "ingredients"
+    t.string   "favorite",                 default: "no"
+    t.string   "commented",                default: "no"
   end
 
   create_table "users", force: true do |t|

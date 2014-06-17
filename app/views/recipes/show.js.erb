@@ -3,7 +3,6 @@
 $('#recipe_wrap div').remove();
 $('#recipe_wrap').hide();
 $('#recipe_wrap').fadeIn(500);
-//$('body').css('background', 'url('+'<%=@recipe.image%>'+')').css('background-size', 'cover');
 
 
 var $recipeName = $('<div>');
@@ -12,22 +11,40 @@ var $close = $('<div>');
 var $comments = $('<div>');
 var $from = $('<div>');
 var $from_pic = $('<div>');
-//var image = "'<%=@recipe.image%>'";
-//var comments = '<%=@comments%>';
-console.log(<%=@comments.length%>);
-var i = <%=@comments.length%>;
-console.log(i);
+var $comments = $('<div>');
+var $commenter = $('<div>');
+var $commenter_pic = $('<div>');
+var $ingredients = $('<div>');
+
+var comments;
+if ('<%=@recipe.commented%>' == 'yes'){
+  comments = '<%=@comments%>';
+  commenter = '<%=@commenter%>';
+  commenter_pic = '<%=@commenter_pic%>';
+  $comments.addClass('comments').text('Last comment: ' + comments)
+  $commenter.addClass('commenter').text('User: ' + commenter)
+  $commenter_pic.addClass('from_pic').css('background', 'url('+commenter_pic+')').css('background-size', 'cover');
+  //console.log(comments);
+  //console.log(commenter);
+  //console.log(commenter_pic);
+  //console.log('<%=@recipe.image%>');
+}else{
+  comments = 'no comments';
+  $comments.addClass('comments').text('Add a comment for this recipe');
+  //console.log(comments);
+}
+
+
 $recipeName.addClass('r_name').text('<%=@recipe.recipe_name%>');
 $recipePic.addClass('r_pic').css('background', 'url('+'<%=@recipe.image%>'+')').css('background-size', 'cover');
 $close.addClass('close_recipe').text('close[x]');
-$comments.addClass('comments').text('Last comment: '+'<%=@comments[-1].comment%>');
-$from.addClass('from').text('from: '+'<%=@comments[0].username%>');
-$from_pic.addClass('from_pic').css('background', 'url('+'<%=@comments[0].user_image%>'+')').css('background-size', 'cover');
+$ingredients.html("<%= j render('ingredients.html.haml') %>").addClass('r_ing');
 
 $('#recipe_wrap').append($recipeName);
 $('#recipe_wrap').append($recipePic);
 $('#recipe_wrap').append($close);
 $('#recipe_wrap').append($comments);
-$('#recipe_wrap').append($from);
-$('#recipe_wrap').append($from_pic);
+$('#recipe_wrap').append($commenter);
+$('#recipe_wrap').append($commenter_pic);
+$('#recipe_wrap').append($ingredients);
 

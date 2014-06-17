@@ -7,6 +7,7 @@ class CommentsController < ApplicationController
   def create
     recipe = Recipe.find(params[:recipe_id])
     comment = recipe.comments.build(comment_params)
+    Recipe.find(params[:recipe_id]).update_attributes(:commented => 'yes')
     comment.user = current_user
     if comment.save
       flash[:notice] = "Your comment has been created"
