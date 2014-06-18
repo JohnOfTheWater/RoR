@@ -67301,3 +67301,1393 @@ Processing by RecipesController#index as HTML
   [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
   Rendered recipes/index.html.haml within layouts/application (12.1ms)
 Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.7ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT "users".* FROM "users"
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "fav_recipes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2014-06-18 20:46:04.334826"], ["updated_at", "2014-06-18 20:46:04.334826"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mFavRecipe Load (0.4ms)[0m  SELECT "fav_recipes".* FROM "fav_recipes"
+  [1m[36m (0.4ms)[0m  [1mSELECT COUNT(*) FROM "fav_recipes"[0m
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 15:49:38 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.7ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (40.4ms)
+Completed 200 OK in 91ms (Views: 73.7ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 15:49:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 15:49:39 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 15:49:39 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 15:49:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 15:49:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 15:49:39 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 15:49:39 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 15:49:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 15:49:39 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 15:49:39 -0500
+
+
+Started GET "/recipes/10" for 127.0.0.1 at 2014-06-18 15:49:40 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"10"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (1.0ms)
+  Rendered recipes/show.js.erb (6.8ms)
+Completed 200 OK in 23ms (Views: 9.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/Recipes/add_to_fav/10?username=giova" for 127.0.0.1 at 2014-06-18 15:49:43 -0500
+Processing by RecipesController#add_to_fav as JS
+  Parameters: {"username"=>"giova", "id"=>"10"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 10[0m  [["favorite", "yes"], ["updated_at", "2014-06-18 20:49:43.826478"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fav_recipes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2014-06-18 20:49:43.840156"], ["updated_at", "2014-06-18 20:49:43.840156"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fav_recipes" SET "updated_at" = $1, "user" = $2 WHERE "fav_recipes"."id" = 3  [["updated_at", "2014-06-18 20:49:43.848012"], ["user", "giova"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  Rendered recipes/add_to_fav.js.erb (0.8ms)
+Completed 200 OK in 31ms (Views: 3.6ms | ActiveRecord: 6.3ms)
+  [1m[35m (0.4ms)[0m  SELECT COUNT(*) FROM "fav_recipes"
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+  [1m[35mFavRecipe Load (0.5ms)[0m  SELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT "fav_recipes".* FROM "fav_recipes"  WHERE "fav_recipes"."id" = 3[0m
+  [1m[35mFavRecipe Load (0.7ms)[0m  SELECT "fav_recipes".* FROM "fav_recipes"  WHERE "fav_recipes"."id" = 3 AND "fav_recipes"."user" = 'giova'
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT "fav_recipes".* FROM "fav_recipes"  WHERE "fav_recipes"."id" = 3 AND "fav_recipes"."user" = 'france'[0m
+  [1m[35mFavRecipe Load (0.4ms)[0m  SELECT "fav_recipes".* FROM "fav_recipes"
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "fav_recipes" WHERE "fav_recipes"."id" = $1[0m  [["id", 3]]
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "fav_recipes" WHERE "fav_recipes"."id" = $1[0m  [["id", 2]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "fav_recipes" WHERE "fav_recipes"."id" = $1[0m  [["id", 1]]
+  [1m[35m (1.7ms)[0m  COMMIT
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 16:05:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (41.8ms)
+Completed 200 OK in 93ms (Views: 76.1ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:05:47 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:05:47 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 16:05:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 16:05:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 16:05:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 16:05:47 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 16:05:47 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 16:05:47 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 16:05:47 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 16:05:47 -0500
+
+
+Started GET "/recipes/5" for 127.0.0.1 at 2014-06-18 16:05:50 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"5"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1
+  [1m[36mComment Load (0.5ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 5  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 5 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (1.0ms)
+  Rendered recipes/show.js.erb (6.7ms)
+Completed 200 OK in 24ms (Views: 9.3ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/recipes/6" for 127.0.0.1 at 2014-06-18 16:05:55 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"6"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 6 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 6  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 6  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 6  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 6  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 6 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.7ms)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/10" for 127.0.0.1 at 2014-06-18 16:05:59 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"10"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 10  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 10 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.7ms)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/recipes/11" for 127.0.0.1 at 2014-06-18 16:06:03 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"11"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1[0m
+  [1m[35mComment Load (0.3ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.9ms)
+Completed 200 OK in 11ms (Views: 6.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2014-06-18 16:06:08 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"12"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (3.0ms)
+Completed 200 OK in 11ms (Views: 6.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/Recipes/add_to_fav/12?username=giova" for 127.0.0.1 at 2014-06-18 16:06:11 -0500
+Processing by RecipesController#add_to_fav as JS
+  Parameters: {"username"=>"giova", "id"=>"12"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 12[0m  [["favorite", "yes"], ["updated_at", "2014-06-18 21:06:11.626736"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "fav_recipes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2014-06-18 21:06:11.640543"], ["updated_at", "2014-06-18 21:06:11.640543"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 4  [["id", 12], ["updated_at", "2014-06-18 21:06:11.649267"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fav_recipes" SET "updated_at" = $1, "user" = $2 WHERE "fav_recipes"."id" = 12[0m  [["updated_at", "2014-06-18 21:06:11.650943"], ["user", "giova"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  Rendered recipes/add_to_fav.js.erb (0.8ms)
+Completed 200 OK in 33ms (Views: 3.8ms | ActiveRecord: 6.8ms)
+  [1m[35mFavRecipe Load (0.4ms)[0m  SELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2014-06-18 16:06:38 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"12"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.7ms)
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/Recipes/remove_from_fav/12?username=giova" for 127.0.0.1 at 2014-06-18 16:06:41 -0500
+Processing by RecipesController#remove_from_fav as JS
+  Parameters: {"username"=>"giova", "id"=>"12"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 12  [["favorite", "no"], ["updated_at", "2014-06-18 21:06:41.759914"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Load (0.6ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1
+Completed 500 Internal Server Error in 7ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/recipes_controller.rb:78:in `remove_from_fav'
+
+
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (20.3ms)
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 16:09:46 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.5ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (12.7ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:09:46 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:09:46 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 16:09:47 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 16:09:47 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 16:09:47 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 16:09:47 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 16:09:47 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 16:09:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 16:09:52 -0500
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 16:10:04 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (43.8ms)
+Completed 200 OK in 94ms (Views: 77.2ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:10:04 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:10:04 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 16:10:04 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 16:10:04 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 16:10:04 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 16:10:04 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 16:10:04 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 16:10:04 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 16:10:04 -0500
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2014-06-18 16:10:06 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"12"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (1.1ms)
+  Rendered recipes/show.js.erb (6.6ms)
+Completed 200 OK in 23ms (Views: 9.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/recipes/11" for 127.0.0.1 at 2014-06-18 16:10:14 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"11"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 11  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 11 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.8ms)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 0.8ms)
+  [1m[35mFavRecipe Load (0.4ms)[0m  SELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1
+
+
+Started GET "/recipes/12" for 127.0.0.1 at 2014-06-18 16:10:49 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"12"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1
+  [1m[36mComment Load (0.3ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 12  ORDER BY created_at ASC
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.9ms)
+Completed 200 OK in 11ms (Views: 5.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/Recipes/add_to_fav/12?username=giova" for 127.0.0.1 at 2014-06-18 16:10:51 -0500
+Processing by RecipesController#add_to_fav as JS
+  Parameters: {"username"=>"giova", "id"=>"12"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 12[0m  [["favorite", "yes"], ["updated_at", "2014-06-18 21:10:51.337122"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "fav_recipes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2014-06-18 21:10:51.353577"], ["updated_at", "2014-06-18 21:10:51.353577"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 5  [["id", 12], ["updated_at", "2014-06-18 21:10:51.362759"]]
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "fav_recipes_pkey"
+DETAIL:  Key (id)=(12) already exists.
+: UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 5
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 33ms
+
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "fav_recipes_pkey"
+DETAIL:  Key (id)=(12) already exists.
+: UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 5):
+  app/controllers/recipes_controller.rb:67:in `add_to_fav'
+
+
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (13.5ms)
+
+
+Started GET "/Recipes/add_to_fav/12?username=giova" for 127.0.0.1 at 2014-06-18 16:10:53 -0500
+Processing by RecipesController#add_to_fav as JS
+  Parameters: {"username"=>"giova", "id"=>"12"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35m (0.1ms)[0m  COMMIT
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 12 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fav_recipes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2014-06-18 21:10:53.028885"], ["updated_at", "2014-06-18 21:10:53.028885"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 6  [["id", 12], ["updated_at", "2014-06-18 21:10:53.031212"]]
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "fav_recipes_pkey"
+DETAIL:  Key (id)=(12) already exists.
+: UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 6
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 9ms
+
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "fav_recipes_pkey"
+DETAIL:  Key (id)=(12) already exists.
+: UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 6):
+  app/controllers/recipes_controller.rb:67:in `add_to_fav'
+
+
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (14.3ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 16:11:34 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (11.4ms)
+Completed 200 OK in 17ms (Views: 16.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:11:34 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:11:34 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 16:11:34 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 16:11:34 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 16:11:34 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 16:11:34 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 16:11:34 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 16:11:34 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 16:11:34 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 16:11:35 -0500
+
+
+Started GET "/recipes/16" for 127.0.0.1 at 2014-06-18 16:11:37 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"16"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 16 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 16  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 16 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.7ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/recipes/15" for 127.0.0.1 at 2014-06-18 16:11:43 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"15"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 15 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 15  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 15 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.9ms)
+Completed 200 OK in 9ms (Views: 6.1ms | ActiveRecord: 0.8ms)
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+  [1m[35mFavRecipe Load (0.4ms)[0m  SELECT "fav_recipes".* FROM "fav_recipes"
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "fav_recipes" WHERE "fav_recipes"."id" = $1[0m  [["id", 12]]
+  [1m[35m (2.6ms)[0m  COMMIT
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "fav_recipes" WHERE "fav_recipes"."id" = $1[0m  [["id", 6]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "fav_recipes" WHERE "fav_recipes"."id" = $1[0m  [["id", 5]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1[0m
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 22  [["favorite", "no"], ["updated_at", "2014-06-18 21:13:19.031031"]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 16:13:39 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (11.9ms)
+Completed 200 OK in 18ms (Views: 17.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:13:39 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:13:39 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 16:13:39 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 16:13:39 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 16:13:39 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 16:13:39 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 16:13:39 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 16:13:39 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 16:13:39 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 16:13:40 -0500
+
+
+Started GET "/recipes/22" for 127.0.0.1 at 2014-06-18 16:13:41 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"22"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.6ms)
+Completed 200 OK in 9ms (Views: 5.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/Recipes/add_to_fav/22?username=giova" for 127.0.0.1 at 2014-06-18 16:13:44 -0500
+Processing by RecipesController#add_to_fav as JS
+  Parameters: {"username"=>"giova", "id"=>"22"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 22[0m  [["favorite", "yes"], ["updated_at", "2014-06-18 21:13:44.778111"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fav_recipes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2014-06-18 21:13:44.787916"], ["updated_at", "2014-06-18 21:13:44.787916"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 7  [["id", 22], ["updated_at", "2014-06-18 21:13:44.789947"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fav_recipes" SET "updated_at" = $1, "user" = $2 WHERE "fav_recipes"."id" = 22[0m  [["updated_at", "2014-06-18 21:13:44.791933"], ["user", "giova"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  Rendered recipes/add_to_fav.js.erb (1.0ms)
+Completed 200 OK in 22ms (Views: 4.5ms | ActiveRecord: 5.1ms)
+  [1m[36mFavRecipe Load (0.3ms)[0m  [1mSELECT "fav_recipes".* FROM "fav_recipes"[0m
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 16:14:18 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 17ms (Views: 15.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:14:18 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 16:14:18 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 16:14:18 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:14:18 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 16:14:18 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 16:14:18 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 16:14:18 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 16:14:18 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 16:14:18 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 16:14:19 -0500
+
+
+Started GET "/recipes/22" for 127.0.0.1 at 2014-06-18 16:14:22 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"22"}
+  [1m[36mRecipe Load (0.2ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35mComment Load (0.4ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (0.2ms)
+  Rendered recipes/show.js.erb (3.4ms)
+Completed 200 OK in 12ms (Views: 6.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/Recipes/remove_from_fav/22?username=giova" for 127.0.0.1 at 2014-06-18 16:14:26 -0500
+Processing by RecipesController#remove_from_fav as JS
+  Parameters: {"username"=>"giova", "id"=>"22"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 22  [["favorite", "no"], ["updated_at", "2014-06-18 21:14:26.876663"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+Completed 500 Internal Server Error in 7ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/recipes_controller.rb:78:in `remove_from_fav'
+
+
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (13.4ms)
+  [1m[36mRecipe Load (0.7ms)[0m  [1mSELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1[0m
+  [1m[35mFavRecipe Load (0.7ms)[0m  SELECT "fav_recipes".* FROM "fav_recipes"
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1[0m
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 16:47:52 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.9ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (40.4ms)
+Completed 200 OK in 89ms (Views: 72.1ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:47:52 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 16:47:52 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 16:47:52 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:47:52 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 16:47:52 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 16:47:52 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 16:47:52 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 16:47:52 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 16:47:52 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 16:47:53 -0500
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 16:47:58 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:47:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 16:47:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 16:47:58 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 16:47:58 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 16:47:58 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:47:58 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 16:47:58 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 16:47:58 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 16:47:58 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 16:47:59 -0500
+
+
+Started GET "/recipes/22" for 127.0.0.1 at 2014-06-18 16:49:21 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"22"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (1.0ms)
+  Rendered recipes/show.js.erb (6.7ms)
+Completed 200 OK in 23ms (Views: 9.3ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/Recipes/add_to_fav/22?username=giova" for 127.0.0.1 at 2014-06-18 16:49:29 -0500
+Processing by RecipesController#add_to_fav as JS
+  Parameters: {"username"=>"giova", "id"=>"22"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 22[0m  [["favorite", "yes"], ["updated_at", "2014-06-18 21:49:29.285098"]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "fav_recipes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2014-06-18 21:49:29.298438"], ["updated_at", "2014-06-18 21:49:29.298438"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 8  [["id", 22], ["updated_at", "2014-06-18 21:49:29.314009"]]
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "fav_recipes_pkey"
+DETAIL:  Key (id)=(22) already exists.
+: UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 8
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 35ms
+
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "fav_recipes_pkey"
+DETAIL:  Key (id)=(22) already exists.
+: UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 8):
+  app/controllers/recipes_controller.rb:67:in `add_to_fav'
+
+
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (16.3ms)
+  [1m[35mFavRecipe Load (0.5ms)[0m  SELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "fav_recipes" WHERE "fav_recipes"."id" = $1  [["id", 22]]
+  [1m[36m (2.4ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 22[0m  [["favorite", "no"], ["updated_at", "2014-06-18 21:50:16.491986"]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1[0m
+  [1m[35mFavRecipe Load (0.4ms)[0m  SELECT "fav_recipes".* FROM "fav_recipes"
+  [1m[36mFavRecipe Load (0.5ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "fav_recipes" WHERE "fav_recipes"."id" = $1[0m  [["id", 8]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36mFavRecipe Load (0.3ms)[0m  [1mSELECT "fav_recipes".* FROM "fav_recipes"[0m
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 16:50:50 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (11.7ms)
+Completed 200 OK in 19ms (Views: 17.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:50:51 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 16:50:51 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 16:50:51 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:50:51 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 16:50:51 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 16:50:51 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 16:50:51 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 16:50:51 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 16:50:51 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 16:50:51 -0500
+
+
+Started GET "/recipes/22" for 127.0.0.1 at 2014-06-18 16:50:53 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"22"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.7ms)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/Recipes/add_to_fav/22?username=giova" for 127.0.0.1 at 2014-06-18 16:50:54 -0500
+Processing by RecipesController#add_to_fav as JS
+  Parameters: {"username"=>"giova", "id"=>"22"}
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 22[0m  [["favorite", "yes"], ["updated_at", "2014-06-18 21:50:54.954329"]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "fav_recipes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2014-06-18 21:50:54.959314"], ["updated_at", "2014-06-18 21:50:54.959314"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 9  [["id", 22], ["updated_at", "2014-06-18 21:50:54.961144"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fav_recipes" SET "updated_at" = $1, "user" = $2 WHERE "fav_recipes"."id" = 22[0m  [["updated_at", "2014-06-18 21:50:54.962678"], ["user", "giova"]]
+  [1m[35m (0.2ms)[0m  COMMIT
+  Rendered recipes/add_to_fav.js.erb (0.9ms)
+Completed 200 OK in 16ms (Views: 3.7ms | ActiveRecord: 4.4ms)
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1[0m
+  [1m[35mFavRecipe Load (0.4ms)[0m  SELECT "fav_recipes".* FROM "fav_recipes"
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1[0m
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 16:56:05 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.8ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (42.0ms)
+Completed 200 OK in 95ms (Views: 76.8ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:56:06 -0500
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 16:56:06 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 16:56:06 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 16:56:06 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 16:56:06 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 16:56:06 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 16:56:06 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 16:56:06 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 16:56:06 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 16:56:06 -0500
+
+
+Started GET "/recipes/22" for 127.0.0.1 at 2014-06-18 16:56:12 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"22"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (1.0ms)
+  Rendered recipes/show.js.erb (7.1ms)
+Completed 200 OK in 27ms (Views: 10.6ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/Recipes/remove_from_fav/22?username=giova" for 127.0.0.1 at 2014-06-18 16:56:13 -0500
+Processing by RecipesController#remove_from_fav as JS
+  Parameters: {"username"=>"giova", "id"=>"22"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 22[0m  [["favorite", "no"], ["updated_at", "2014-06-18 21:56:13.997288"]]
+  [1m[35m (2.4ms)[0m  COMMIT
+Completed 500 Internal Server Error in 15ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/recipes_controller.rb:77:in `remove_from_fav'
+
+
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.7ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (17.3ms)
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT "fav_recipes".* FROM "fav_recipes"[0m
+  [1m[35mFavRecipe Load (0.6ms)[0m  SELECT "fav_recipes".* FROM "fav_recipes"  WHERE "fav_recipes"."id" = 22 AND "fav_recipes"."user" = 'giova'
+  [1m[36mRecipe Load (0.4ms)[0m  [1mSELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1[0m
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 17:01:40 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.7ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (39.1ms)
+Completed 200 OK in 89ms (Views: 72.7ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 17:01:40 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 17:01:40 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 17:01:40 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 17:01:40 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 17:01:40 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 17:01:40 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 17:01:40 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 17:01:40 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 17:01:40 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 17:01:41 -0500
+
+
+Started GET "/recipes/22" for 127.0.0.1 at 2014-06-18 17:01:43 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"22"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (1.1ms)
+  Rendered recipes/show.js.erb (7.1ms)
+Completed 200 OK in 24ms (Views: 9.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/Recipes/add_to_fav/22?username=giova" for 127.0.0.1 at 2014-06-18 17:01:45 -0500
+Processing by RecipesController#add_to_fav as JS
+  Parameters: {"username"=>"giova", "id"=>"22"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 22[0m  [["favorite", "yes"], ["updated_at", "2014-06-18 22:01:45.149496"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "fav_recipes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"[0m  [["created_at", "2014-06-18 22:01:45.163089"], ["updated_at", "2014-06-18 22:01:45.163089"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 10  [["id", 22], ["updated_at", "2014-06-18 22:01:45.173761"]]
+PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "fav_recipes_pkey"
+DETAIL:  Key (id)=(22) already exists.
+: UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 10
+  [1m[36m (0.1ms)[0m  [1mROLLBACK[0m
+Completed 500 Internal Server Error in 30ms
+
+ActiveRecord::RecordNotUnique (PG::UniqueViolation: ERROR:  duplicate key value violates unique constraint "fav_recipes_pkey"
+DETAIL:  Key (id)=(22) already exists.
+: UPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 10):
+  app/controllers/recipes_controller.rb:67:in `add_to_fav'
+
+
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.5ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.8ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (17.7ms)
+  [1m[35mFavRecipe Load (0.5ms)[0m  SELECT "fav_recipes".* FROM "fav_recipes"  WHERE "fav_recipes"."id" = 22 AND "fav_recipes"."user" = 'giova'
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT "fav_recipes".* FROM "fav_recipes"[0m
+  [1m[35mFavRecipe Load (0.4ms)[0m  SELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "fav_recipes" WHERE "fav_recipes"."id" = $1[0m  [["id", 22]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+  [1m[35mFavRecipe Load (0.5ms)[0m  SELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "fav_recipes" WHERE "fav_recipes"."id" = $1[0m  [["id", 10]]
+  [1m[35m (2.3ms)[0m  COMMIT
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 17:16:45 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.6ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.6ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (40.3ms)
+Completed 200 OK in 91ms (Views: 73.8ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 17:16:45 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 17:16:45 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 17:16:45 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 17:16:45 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 17:16:45 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 17:16:45 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 17:16:45 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 17:16:45 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 17:16:45 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 17:16:46 -0500
+
+
+Started GET "/recipes/22" for 127.0.0.1 at 2014-06-18 17:16:58 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"22"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36mComment Load (0.4ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (1.1ms)
+  Rendered recipes/show.js.erb (6.9ms)
+Completed 200 OK in 24ms (Views: 9.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/recipes/14" for 127.0.0.1 at 2014-06-18 17:17:11 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"14"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 14 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 14  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 14 LIMIT 1[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.7ms)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.7ms)
+  [1m[36mRecipe Load (0.5ms)[0m  [1mSELECT  "recipes".* FROM "recipes"   ORDER BY "recipes"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mUPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 22[0m  [["favorite", "no"], ["updated_at", "2014-06-18 22:17:29.128723"]]
+  [1m[35m (1.9ms)[0m  COMMIT
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 17:17:31 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (11.3ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 17:17:31 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 17:17:31 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 17:17:31 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 17:17:31 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 17:17:31 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 17:17:31 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 17:17:31 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 17:17:31 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 17:17:31 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 17:17:31 -0500
+
+
+Started GET "/recipes/22" for 127.0.0.1 at 2014-06-18 17:17:34 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"22"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.8ms)
+Completed 200 OK in 11ms (Views: 5.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/Recipes/add_to_fav/22?username=giova" for 127.0.0.1 at 2014-06-18 17:17:36 -0500
+Processing by RecipesController#add_to_fav as JS
+  Parameters: {"username"=>"giova", "id"=>"22"}
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 22  [["favorite", "yes"], ["updated_at", "2014-06-18 22:17:36.111998"]]
+  [1m[36m (1.9ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "fav_recipes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2014-06-18 22:17:36.125083"], ["updated_at", "2014-06-18 22:17:36.125083"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 11[0m  [["id", 22], ["updated_at", "2014-06-18 22:17:36.133485"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fav_recipes" SET "updated_at" = $1, "user" = $2 WHERE "fav_recipes"."id" = 22  [["updated_at", "2014-06-18 22:17:36.135333"], ["user", "giova"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  Rendered recipes/add_to_fav.js.erb (0.9ms)
+Completed 200 OK in 32ms (Views: 3.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/Recipes/remove_from_fav/22" for 127.0.0.1 at 2014-06-18 17:17:47 -0500
+Processing by RecipesController#remove_from_fav as JS
+  Parameters: {"id"=>"22"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 22  [["favorite", "no"], ["updated_at", "2014-06-18 22:17:47.771911"]]
+  [1m[36m (2.3ms)[0m  [1mCOMMIT[0m
+Completed 500 Internal Server Error in 6ms
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/recipes_controller.rb:78:in `remove_from_fav'
+
+
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.7ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.6ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (21.9ms)
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 17:20:43 -0500
+Processing by RecipesController#index as HTML
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT "recipes".* FROM "recipes"   ORDER BY id asc[0m
+  Rendered recipes/index.html.haml within layouts/application (31.6ms)
+Completed 200 OK in 42ms (Views: 33.5ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 17:20:43 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 17:20:43 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 17:20:43 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 17:20:43 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 17:20:43 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 17:20:43 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 17:20:43 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 17:20:43 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 17:20:43 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 17:20:43 -0500
+
+
+Started GET "/recipes/22" for 127.0.0.1 at 2014-06-18 17:20:45 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"22"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36mComment Load (0.2ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35mUser Load (0.3ms)[0m  SELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.9ms)
+Completed 200 OK in 18ms (Views: 5.2ms | ActiveRecord: 2.0ms)
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "fav_recipes" WHERE "fav_recipes"."id" = $1[0m  [["id", 22]]
+  [1m[35m (1.8ms)[0m  COMMIT
+  [1m[36mFavRecipe Load (0.4ms)[0m  [1mSELECT  "fav_recipes".* FROM "fav_recipes"   ORDER BY "fav_recipes"."id" DESC LIMIT 1[0m
+
+
+Started GET "/recipes" for 127.0.0.1 at 2014-06-18 17:20:58 -0500
+Processing by RecipesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  [1m[35mRecipe Load (0.2ms)[0m  SELECT "recipes".* FROM "recipes"   ORDER BY id asc
+  Rendered recipes/index.html.haml within layouts/application (11.2ms)
+Completed 200 OK in 17ms (Views: 16.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/fav_recipes.css?body=1" for 127.0.0.1 at 2014-06-18 17:20:58 -0500
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-18 17:20:58 -0500
+
+
+Started GET "/assets/recipes.css?body=1" for 127.0.0.1 at 2014-06-18 17:20:58 -0500
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-18 17:20:58 -0500
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-18 17:20:58 -0500
+
+
+Started GET "/assets/turbolinks.js?body=1" for 127.0.0.1 at 2014-06-18 17:20:58 -0500
+
+
+Started GET "/assets/click_handlers.js?body=1" for 127.0.0.1 at 2014-06-18 17:20:58 -0500
+
+
+Started GET "/assets/fav_recipes.js?body=1" for 127.0.0.1 at 2014-06-18 17:20:58 -0500
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-18 17:20:58 -0500
+
+
+Started GET "/assets/9642395-kams4.png" for 127.0.0.1 at 2014-06-18 17:20:58 -0500
+
+
+Started GET "/recipes/22" for 127.0.0.1 at 2014-06-18 17:20:59 -0500
+Processing by RecipesController#show as JS
+  Parameters: {"id"=>"22"}
+  [1m[36mRecipe Load (0.3ms)[0m  [1mSELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "comments".* FROM "comments"  WHERE "comments"."recipe_id" = 22  ORDER BY created_at ASC[0m
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users"  WHERE "users"."id" = 1  ORDER BY "users"."id" ASC LIMIT 1[0m
+  Rendered recipes/_ingredients.html.haml (0.1ms)
+  Rendered recipes/show.js.erb (2.6ms)
+Completed 200 OK in 9ms (Views: 4.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/Recipes/add_to_fav/22?username=giova" for 127.0.0.1 at 2014-06-18 17:21:01 -0500
+Processing by RecipesController#add_to_fav as JS
+  Parameters: {"username"=>"giova", "id"=>"22"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 22  [["favorite", "yes"], ["updated_at", "2014-06-18 22:21:01.157433"]]
+  [1m[36m (2.2ms)[0m  [1mCOMMIT[0m
+  [1m[35mRecipe Load (0.4ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "fav_recipes" ("created_at", "updated_at") VALUES ($1, $2) RETURNING "id"  [["created_at", "2014-06-18 22:21:01.168454"], ["updated_at", "2014-06-18 22:21:01.168454"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mUPDATE "fav_recipes" SET "id" = $1, "updated_at" = $2 WHERE "fav_recipes"."id" = 12[0m  [["id", 22], ["updated_at", "2014-06-18 22:21:01.176030"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  UPDATE "fav_recipes" SET "updated_at" = $1, "user" = $2 WHERE "fav_recipes"."id" = 22  [["updated_at", "2014-06-18 22:21:01.177559"], ["user", "giova"]]
+  [1m[36m (0.2ms)[0m  [1mCOMMIT[0m
+  Rendered recipes/add_to_fav.js.erb (0.4ms)
+Completed 200 OK in 27ms (Views: 3.0ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/Recipes/remove_from_fav/22" for 127.0.0.1 at 2014-06-18 17:21:02 -0500
+Processing by RecipesController#remove_from_fav as JS
+  Parameters: {"id"=>"22"}
+  [1m[35mRecipe Load (0.3ms)[0m  SELECT  "recipes".* FROM "recipes"  WHERE "recipes"."id" = 22 LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "recipes" SET "favorite" = $1, "updated_at" = $2 WHERE "recipes"."id" = 22  [["favorite", "no"], ["updated_at", "2014-06-18 22:21:02.051877"]]
+  [1m[36m (1.8ms)[0m  [1mCOMMIT[0m
+  [1m[35mFavRecipe Load (0.4ms)[0m  SELECT  "fav_recipes".* FROM "fav_recipes"  WHERE "fav_recipes"."id" = 22 AND "fav_recipes"."user" IS NULL LIMIT 1
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `destroy' for nil:NilClass):
+  app/controllers/recipes_controller.rb:78:in `remove_from_fav'
+
+
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.5ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_trace.text.erb (0.4ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.text.erb (0.6ms)
+  Rendered /Users/Giovanni/.rvm/gems/ruby-2.1.1@squmblr/gems/actionpack-4.1.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb (13.1ms)

@@ -15,6 +15,7 @@ gem 'sass-rails', '~> 4.0.3'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 gem 'simple_form'
 gem 'turbolinks'
+gem 'pry'
 #gem 'rails_12factor'
 gem 'uglifier', '>= 1.3.0'
 # gem 'unicorn'

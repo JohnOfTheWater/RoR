@@ -63,6 +63,9 @@ class RecipesController < ApplicationController
   def add_to_fav
     recipe = Recipe.find_by_id(params[:id]).update_attributes(:favorite => "yes")
     @id = Recipe.find_by_id(params[:id]).id
+    fav_recipe = FavRecipe.create
+    fav_recipe.update_attributes(:id => (params[:id]))
+    fav_recipe.update_attributes(:user => (params[:username]))
     respond_to do |format|
       format.html
       format.js
@@ -71,6 +74,8 @@ class RecipesController < ApplicationController
 
   def remove_from_fav
     recipe = Recipe.find_by_id(params[:id]).update_attributes(:favorite => "no")
+    fav_recipe = FavRecipe.find_by(:id => params[:id], :user => params[:username])
+    fav_recipe.destroy
     @id = Recipe.find_by_id(params[:id]).id
     respond_to do |format|
       format.html
