@@ -1,0 +1,17 @@
+
+
+$('.r_add_to_fav_link').remove();
+$('.r_favorites_text').remove();
+$('.r_favorites').remove();
+
+var $add_to_favorites = $('<div>');
+var $add_to_favorites_text = $('<div>');
+var $link = '<%= link_to("", {:controller => 'Recipes', :action => 'add_to_fav', :id => @id, remote: true}, :class => 'r_add_to_fav_link')%>';
+
+$add_to_favorites.addClass('r_favorites').css('background', 'url('+'http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-3/256/add-to-favorites-icon.png'+')').css('background-size', 'cover');
+$add_to_favorites_text.addClass('r_favorites_text').text('Add to Favorites');
+
+$('#recipe_wrap').append($add_to_favorites_text);
+$('#recipe_wrap').append($add_to_favorites);
+$add_to_favorites.append($link);
+

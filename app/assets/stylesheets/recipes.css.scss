@@ -172,15 +172,18 @@ width: 300px;
   top: 70px;
   left: 180px;
   width: 1120px;
+  min-height: 680px;
   //height: 800px;
   box-shadow: 5px 5px 5px #1A1717;
   background-color: rgba(235, 229, 229, 0.9);
   border: 1px solid white;
   padding: 5px 0px 0px 5px;
+  border-radius: 5px;
 }
 
 .r_name {
 font-size: 30px;
+text-transform: capitalize;
 }
 
 .r_pic {
@@ -194,7 +197,11 @@ font-size: 30px;
   border-right: 1px solid gray;
   padding: 0px 35px 0px 10px;
   width: 330px;
-  margin-top: 5px;
+  margin-top: 15px;
+}
+
+.r_ing p{
+  font-size: 17px;
 }
 
 .r_prep_title {
@@ -251,6 +258,14 @@ text-align: center;
   width: 170px;
 }
 
+.r_hr3 {
+  border-top: 1px solid gray;
+  position: absolute;
+  top: 650px;
+  left: 940px;
+  width: 170px;
+}
+
 .r_servings_title {
 position: absolute;
 top: 460px;
@@ -264,6 +279,43 @@ font-size: 17px;
   left: 1008px;
   font-size: 19px;
   color: crimson;
+}
+
+.r_favorites_text {
+  width: 80px;
+  position: absolute;
+  top: 574px;
+  left: 950px;
+}
+
+.r_favorites {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 570px;
+  left: 1030px;
+}
+
+.r_by {
+  position: absolute;
+  top: 290px;
+  left: 330px;
+  font-size: 20px;
+}
+
+.r_rating {
+width: 200px;
+height: 40px;
+position: absolute;
+top: 35px;
+left: 320px;
+}
+
+.r_add_to_fav_link{
+//border: 1px solid;
+padding: 60px 0px 0px 130px;
+position: absolute;
+left: -80px;
 }
 
 .close_recipe {
@@ -281,12 +333,13 @@ font-family: 'Concert One', cursive;
 
 .comments{
   position: absolute;
-  top: 685px;
-  left: 913px;
+  top: 55px;
+  left: 521px;
   text-align: left;
-  border: 1px solid;
-  width: 210px;
-  height: 80px;
+  width: 100px;
+  height: 20px;
+  color: blue;
+  text-decoration: underline;
 }
 
 .commenter {
@@ -316,6 +369,12 @@ width: 240px;
   //position: relative;
   //top: -260px;
   //left: 350px;
+}
+
+#recipe_preparation {
+  width: 240px;
+  height: 300px;
+  font-size: 17px;
 }
 
 #new_ingr {

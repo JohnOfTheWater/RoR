@@ -19,5 +19,5 @@
         = link_to("Delete", {:action => 'delete', :id => recipe.id}, :class => 'action delete')
       - else
         = link_to("Show", {:action => 'show', :id => recipe.id, remote: true }, :class => 'action_show')
-        = link_to('Send message to '+recipe.user, '#')
+        = link_to('Write a Comment ', '#')
 #recipe_wrap
