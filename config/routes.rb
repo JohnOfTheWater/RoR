@@ -4,8 +4,13 @@ Rails.application.routes.draw do
   root to: "home#index"
 
   resources :recipes
+  resources :fav_recipes
 
   resources :recipes do
+    resources :comments
+  end
+
+  resources :fav_recipes do
     resources :comments
   end
 

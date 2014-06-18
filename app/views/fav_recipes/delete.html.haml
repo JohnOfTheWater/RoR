@@ -1,0 +1,6 @@
+= link_to("<< Back to Recipes List", {:action => 'index'}, :class => 'back_button')
+#delete_wrap
+  %h2 Delete Recipe
+  %p Are you sure you want to delete the recipe #{@recipe.recipe_name}?
+
+  = button_to('Delete Recipe', {:controller => 'FavRecipes', :action => 'destroy', :id => @recipe.id})

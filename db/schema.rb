@@ -11,17 +11,34 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140617185154) do
+ActiveRecord::Schema.define(version: 20140618190017) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "comments", force: true do |t|
-    t.string   "comment"
+    t.string   "comment",    limit: 1500
     t.integer  "recipe_id"
     t.integer  "user_id"
     t.string   "username"
     t.string   "user_image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "fav_recipes", force: true do |t|
+    t.string   "recipe_name", limit: 100
+    t.string   "description", limit: 110
+    t.string   "preparation", limit: 2000
+    t.string   "tags",        limit: 30
+    t.string   "user",        limit: 30
+    t.string   "image"
+    t.integer  "servings",                 default: 2
+    t.string   "favorite",                 default: "no"
+    t.string   "commented",                default: "no"
+    t.integer  "rating",                   default: 3
+    t.string   "ingredients"
+    t.string   "ready_in"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
