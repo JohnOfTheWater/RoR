@@ -28,6 +28,7 @@ var $add_to_fav_link = $('<a>');
 var $by = $('<div>');
 var $rating = $('<div>');
 var $comments = $('<a>');
+var $comments_count = $('<div>');
 
 var comments;
 if ('<%=@recipe.commented%>' == 'yes'){
@@ -54,7 +55,7 @@ if ('<%=@recipe.favorite%>' == 'no'){
   favorite_text = 'Remove from Favorites';
   $link = '<%= link_to("", {:controller => 'Recipes', :action => 'remove_from_fav', :id => @recipe.id, :username => current_user.username, remote: true}, :class => 'r_add_to_fav_link')%>';
 }
-
+console.log('comments num: '+'<%=@recipe.comments.count%>')
 
 $recipeName.addClass('r_name').text('<%=@recipe.recipe_name%>');
 $recipePic.addClass('r_pic').css('background', 'url('+'<%=@recipe.image%>'+')').css('background-size', 'cover');
@@ -73,8 +74,9 @@ $add_to_favorites.addClass('r_favorites').css('background', 'url('+favorite_icon
 $add_to_favorites_text.addClass('r_favorites_text').text(favorite_text);
 $by.addClass('r_by').text('By: '+'<%=@recipe.user%>');
 $rating.addClass('r_rating').css('background', 'url('+'http://www.cristinasbookreviews.com/wp-content/uploads/2012/08/5ib68lsmudvqqy.png'+')').css('background-size', 'cover');
-$comments.addClass('r_comments').text('(comments)');
+$comments.addClass('r_comments').text('comments');
 $add_to_fav_link.text('').attr('href', '#').attr('data-remote', 'true').addClass('r_add_to_fav_link');
+$comments_count.addClass('r_comments_count').text('('+'<%=@recipe.comments.count%>'+')');
 
 $('#recipe_wrap').append($recipeName);
 $('#recipe_wrap').append($recipePic);
@@ -98,4 +100,4 @@ $('#recipe_wrap').append($rating);
 $('#recipe_wrap').append($comments);
 $('#recipe_wrap').append($hr3);
 $add_to_favorites.append($link);
-
+$comments.append($comments_count);
