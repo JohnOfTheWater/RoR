@@ -74,7 +74,7 @@ class RecipesController < ApplicationController
 
   def remove_from_fav
     recipe = Recipe.find_by_id(params[:id]).update_attributes(:favorite => "no")
-    fav_recipe = FavRecipe.find_by(:id => params[:id], :user => params[:username])
+    fav_recipe = FavRecipe.where(:id => params[:id], :user => params[:username])[0]
     fav_recipe.destroy
     @id = Recipe.find_by_id(params[:id]).id
     respond_to do |format|
