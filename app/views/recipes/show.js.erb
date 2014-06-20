@@ -1,8 +1,8 @@
 $('#recipe_wrap div').remove();
 $('#recipe_wrap').hide();
-$('#recipe_wrap').fadeIn(500);
+$('#recipe_wrap').fadeIn(400);
 
-
+//-----create dom elements-------//
 var $recipeName = $('<div>');
 var $recipePic = $('<div>');
 var $close = $('<div>');
@@ -27,8 +27,9 @@ var $add_to_favorites_text = $('<div>');
 var $add_to_fav_link = $('<a>');
 var $by = $('<div>');
 var $rating = $('<div>');
-var $comments = $('<a>');
+var $comments = $('<div>');
 var $comments_count = $('<div>');
+var $all_comments = $('<div>');
 
 var comments;
 if ('<%=@recipe.commented%>' == 'yes'){
@@ -57,6 +58,7 @@ if ('<%=@recipe.favorite%>' == 'no'){
 }
 console.log('comments num: '+'<%=@recipe.comments.count%>')
 
+//-----give attributes to dom elements-------//
 $recipeName.addClass('r_name').text('<%=@recipe.recipe_name%>');
 $recipePic.addClass('r_pic').css('background', 'url('+'<%=@recipe.image%>'+')').css('background-size', 'cover');
 $close.addClass('close_recipe').text('close[x]');
@@ -77,7 +79,9 @@ $rating.addClass('r_rating').css('background', 'url('+'http://www.cristinasbookr
 $comments.addClass('r_comments').text('comments');
 $add_to_fav_link.text('').attr('href', '#').attr('data-remote', 'true').addClass('r_add_to_fav_link');
 $comments_count.addClass('r_comments_count').text('('+'<%=@recipe.comments.count%>'+')');
+$all_comments.html("<%= j render('comments.html.haml') %>").addClass('r_all_comments');
 
+//-----append dom elements-------//
 $('#recipe_wrap').append($recipeName);
 $('#recipe_wrap').append($recipePic);
 $('#recipe_wrap').append($close);
@@ -101,3 +105,4 @@ $('#recipe_wrap').append($comments);
 $('#recipe_wrap').append($hr3);
 $add_to_favorites.append($link);
 $comments.append($comments_count);
+$('#recipe_wrap').append($all_comments);
