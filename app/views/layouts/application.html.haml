@@ -12,6 +12,7 @@
         %li= link_to 'Recipes', recipes_path
         - if user_signed_in?
           %li= link_to("My Recipes", {:controller => 'Recipes', :action => 'my_recipes', :user => current_user.username}, :class => 'action my_recipes')
+          %li= link_to("Favorites", {:controller => 'FavRecipes', :action => 'index', :user => current_user.username})
           %li= link_to "Add a Recipe", new_recipe_path
         %ul.devise_navigation
           - if user_signed_in?

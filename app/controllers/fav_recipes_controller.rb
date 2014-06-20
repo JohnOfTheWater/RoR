@@ -2,7 +2,7 @@ class FavRecipesController < ApplicationController
   #layout false
 
   def index
-    @recipes = FavRecipe.all.order("id asc")
+    @recipes = FavRecipe.where(:user => params[:user])
   end
 
   def my_fav_recipes

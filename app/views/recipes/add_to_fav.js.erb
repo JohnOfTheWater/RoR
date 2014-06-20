@@ -6,7 +6,7 @@ $('.r_favorites').remove();
 
 var $remove_from_favorites = $('<div>');
 var $remove_from_favorites_text = $('<div>');
-var $link = '<%= link_to("", {:controller => 'Recipes', :action => 'remove_from_fav', :id => @id, :username => current_user.username, remote: true}, :class => 'r_add_to_fav_link')%>';
+var $link = '<%= link_to("", {:controller => 'Recipes', :action => 'remove_from_fav', :id => @recipe.id, :username => current_user.username, remote: true}, :class => 'r_add_to_fav_link')%>';
 
 $remove_from_favorites.addClass('r_favorites').css('background', 'url('+'http://files.softicons.com/download/business-icons/pretty-office-iii-icons-by-custom-icon-design/png/256/remove-from-favorites.png'+')').css('background-size', 'cover');
 $remove_from_favorites_text.addClass('r_favorites_text').text('Remove from Favorites');

@@ -120,6 +120,14 @@ width: 340px;
   font-family: 'Indie Flower', cursive;
 }
 
+.fav_tags {
+  text-align: left;
+  background: aliceblue;
+  margin: -4px 0px 5px 0px;
+  width: 200px;
+  font-family: 'Indie Flower', cursive;
+}
+
 #recipe_user {
 display: none;
 }
@@ -169,7 +177,7 @@ width: 300px;
   top: 100px;
   left: 740px;
   border: 2px solid;
-  padding: 0px 5px 5px 0px;
+  padding: 0px 5px 5px 5px;
   width: 396px;
 }
 
@@ -196,7 +204,7 @@ width: 300px;
 .com_comment {
   position: relative;
   border: 1px solid;
-  width: 340px;
+  width: 330px;
   top: -126px;
   left: 61px;
   min-height: 85px;
@@ -395,7 +403,7 @@ font-family: 'Concert One', cursive;
 
 .r_all_comments {
   border: 1px solid whitesmoke;
-  width: 402px;
+  width: 392px;
   background-color: rgba(235, 229, 229, 0.9);
   padding: 0px 10px 0px 10px;
   position: absolute;
@@ -407,7 +415,7 @@ font-family: 'Concert One', cursive;
 .close_comments {
 position: absolute;
 top: 1px;
-left: 354px;
+left: 344px;
 margin: 0px 0px 0px 0px;
 font-size: 16px;
 color: white;

@@ -3,13 +3,13 @@
   %h2 Update Recipe
   = simple_form_for(@recipe) do |f|
     %h2#update_name Recipe Name
-    = f.text_field(:recipe_name, as: :string, autofocus: "true")
+    = f.text_field(:recipe_name, as: :string, autofocus: "true", maxlength: 100)
     %h2#update_desc Description
-    = f.text_area(:description, as: :text)
+    = f.text_area(:description, as: :text, maxlength: 110)
     %h2#update_ing Ingredients
     = f.text_area(:ingredients, as: :text)
     %h2#update_prep Preparation
-    = f.text_area(:preparation)
+    = f.text_area(:preparation, maxlength: 2000)
     %h2#update_time Ready In
     = f.text_field(:ready_in, placeholder: "30 min")
     %h2#update_servings Servings
