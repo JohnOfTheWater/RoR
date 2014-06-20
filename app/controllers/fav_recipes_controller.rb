@@ -14,7 +14,7 @@ class FavRecipesController < ApplicationController
   end
 
   def show
-    @recipe = FavRecipe.find_by_id(params[:id])
+    @recipe = Recipe.find_by_id(params[:id])
     if Comment.all.where(:recipe_id => params[:id])[-1] == nil
       @comments = 'no comments'
       @commenter = ''
@@ -24,7 +24,7 @@ class FavRecipesController < ApplicationController
       @commenter = Comment.all.where(:recipe_id => params[:id])[-1].username
       @commenter_pic = Comment.all.where(:recipe_id => params[:id])[-1].user_image
     end
-    @ingredients = FavRecipe.find_by_id(params[:id]).ingredients.split('-')[1..-1]
+    @ingredients = Recipe.find_by_id(params[:id]).ingredients.split('-')[1..-1]
     respond_to do |format|
       format.html # show.html.haml
       format.js # show.js.erb
@@ -69,8 +69,10 @@ class FavRecipesController < ApplicationController
   end
 
   def remove_from_fav
-    recipe = FavRecipe.find_by_id(params[:id]).update_attributes(:favorite => "no")
-    @id = FavRecipe.find_by_id(params[:id]).id
+    recipe = Recipe.find_by_id(params[:id]).update_attributes(:favorite => "no")
+    fav_recipe = FavRecipe.where(:id => params[:id], :user => params[:username])[0]
+    fav_recipe.destroy
+    @recipe = Recipe.find_by_id(params[:id])
     respond_to do |format|
       format.html
       format.js

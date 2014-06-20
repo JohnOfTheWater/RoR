@@ -47,7 +47,7 @@ if ('<%=@recipe.commented%>' == 'yes'){
 var favorite_icon;
 var favorite_text;
 var $link;
-if ('<%=@recipe.favorite%>' == 'no'){
+if ('<%=@favorite%>' == 'no'){
   favorite_icon = 'http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-3/256/add-to-favorites-icon.png';
   favorite_text = 'Add to Favorites';
   $link = '<%= link_to("", {:controller => 'Recipes', :action => 'add_to_fav', :id => @recipe.id, :recipe_name => @recipe.recipe_name, :tags => @recipe.tags, :description => @recipe.description, :username => current_user.username, remote: true}, :class => 'r_add_to_fav_link')%>';
