@@ -13,6 +13,9 @@ describe Recipe do
         aaa.update_attributes(:recipe_name => "ciao")
         aaa.recipe_name.should == "ciao"
       end
+      it "should return the default recipe rating" do
+        aaa.rating.should == 3
+      end
       it "should not be named ciao" do
         y = Recipe.new
         y.update_attributes(:recipe_name => "lollo")

@@ -19,6 +19,7 @@ class RecipesController < ApplicationController
     final_rating = (rating+(params[:new_rating].to_i))/2
     final_rating = final_rating.to_i
     Recipe.find_by_id(params[:id]).update_attributes(:rating => final_rating)
+    @rating = final_rating
   end
 
   def show

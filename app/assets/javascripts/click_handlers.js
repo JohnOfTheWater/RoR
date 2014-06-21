@@ -11,6 +11,7 @@
     $('#recipe_wrap').on('click', '.close_recipe', close_recipe);
     $('#recipe_wrap').on('click', '.comments', showComments);
     $('#recipe_wrap').on('click', '.close_comments', closeComments);
+    $('#recipe_wrap').on('click', '.r_rating', showRatings);
   }
 
   function close_recipe(){
@@ -24,6 +25,10 @@
 
   function closeComments(){
     $('.r_all_comments').animate({left: '-850px'},1000);
+  }
+
+  function showRatings(){
+    $('.r_ratings').fadeToggle(300);
   }
 
 

@@ -285,7 +285,7 @@ text-transform: capitalize;
 .r_ready {
   position: absolute;
 top: 365px;
-left: 950px;
+left: 960px;
 width: 90px;
 text-align: center;
 }
@@ -295,7 +295,7 @@ text-align: center;
   width: 35px;
   position: absolute;
   top: 367px;
-  left: 1040px;
+  left: 1050px;
 }
 
 .r_hr1 {
@@ -384,11 +384,11 @@ left: 320px;
 
 .r_5_star{
   position: absolute;
-  top: 4px;
+  top: 0px;
   left: -2px;
-  //border: 1px solid;
-  padding: 0px 180px 0px 0px;
-  height: 20px;
+  padding: 5px 185px 0px 0px;
+  height: 25px;
+  border-radius: 5px;
 }
 
 .r_5_star:hover{
@@ -397,10 +397,11 @@ left: 320px;
 
 .r_4_star{
   position: absolute;
-  top: 47px;
+  top: 43px;
   left: -2px;
-  //border: 1px solid;
-  padding: 0px 180px 0px 0px;
+  padding: 6px 186px 0px 0px;
+  height: 27px;
+  border-radius: 5px;
 }
 
 .r_4_star:hover{
@@ -409,10 +410,11 @@ left: 320px;
 
 .r_3_star{
   position: absolute;
-  top: 90px;
+  top: 87px;
   left: -2px;
-  //border: 1px solid;
-  padding: 0px 180px 0px 0px;
+  padding: 5px 186px 0px 0px;
+  height: 27px;
+  border-radius: 5px;
 }
 
 .r_3_star:hover{
@@ -421,10 +423,11 @@ left: 320px;
 
 .r_2_star{
   position: absolute;
-  top: 132px;
+  top: 128px;
   left: -2px;
-  //border: 1px solid;
-  padding: 0px 180px 0px 0px;
+  padding: 4px 186px 0px 0px;
+  height: 27px;
+  border-radius: 5px;
 }
 
 .r_2_star:hover{
@@ -432,11 +435,12 @@ left: 320px;
 }
 
 .r_1_star{
-  position: absolute;
-  top: 174px;
-  left: -2px;
-  //border: 1px solid;
-  padding: 0px 185px 0px 0px;
+position: absolute;
+top: 170px;
+left: -2px;
+padding: 4px 189px 0px 0px;
+height: 27px;
+  border-radius: 5px;
 }
 
 .r_1_star:hover{
