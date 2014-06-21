@@ -19,6 +19,7 @@
 
   function showComments(){
     $('.r_all_comments').animate({left: '-420px'},1000);
+    $('#comment_comment').focus();
   }
 
   function closeComments(){

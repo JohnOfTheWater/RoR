@@ -30,6 +30,12 @@ var $rating = $('<div>');
 var $comments = $('<div>');
 var $comments_count = $('<div>');
 var $all_comments = $('<div>');
+var $ratings = $('<div>');
+var $5star = $link = '<%= link_to("5", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 5, remote: true}, :class => 'r_5_star')%>';
+var $4star = $link = '<%= link_to("4", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 4, remote: true}, :class => 'r_4_star')%>';
+var $3star = $link = '<%= link_to("3", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 3, remote: true}, :class => 'r_3_star')%>';
+var $2star = $link = '<%= link_to("2", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 2, remote: true}, :class => 'r_2_star')%>';
+var $1star = $link = '<%= link_to("1", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 1, remote: true}, :class => 'r_1_star')%>';
 
 var comments;
 if ('<%=@recipe.commented%>' == 'yes'){
@@ -80,6 +86,7 @@ $comments.addClass('r_comments').text('comments');
 $add_to_fav_link.text('').attr('href', '#').attr('data-remote', 'true').addClass('r_add_to_fav_link');
 $comments_count.addClass('r_comments_count').text('('+'<%=@recipe.comments.count%>'+')');
 $all_comments.html("<%= j render('comments.html.haml') %>").addClass('r_all_comments');
+$ratings.addClass('r_ratings').css('background', 'url('+'http://evernode.delacqua.us/img/johngmailcom/john/9292395-rc1ay.png'+') 2px -8px').css('background-size', 'cover');
 
 //-----append dom elements-------//
 $('#recipe_wrap').append($recipeName);
@@ -106,3 +113,9 @@ $('#recipe_wrap').append($hr3);
 $add_to_favorites.append($link);
 $comments.append($comments_count);
 $('#recipe_wrap').append($all_comments);
+$('#recipe_wrap').append($ratings);
+$ratings.append($5star);
+$ratings.append($4star);
+$ratings.append($3star);
+$ratings.append($2star);
+$ratings.append($1star);

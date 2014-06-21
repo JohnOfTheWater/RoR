@@ -184,8 +184,9 @@ width: 300px;
 }
 
 #comment_comment {
-  width: 300px;
+  width: 390px;
   height: 130px;
+  font-size: 17px;
 }
 
 .com_user_img img{
@@ -230,7 +231,7 @@ width: 300px;
   min-height: 680px;
   //height: 800px;
   box-shadow: 5px 5px 5px #1A1717;
-  background-color: rgba(235, 229, 229, 0.9);
+  background-color: rgba(235, 229, 229, 0.89);
   border: 1px solid white;
   padding: 5px 0px 0px 5px;
   border-radius: 5px;
@@ -366,6 +367,82 @@ top: 35px;
 left: 320px;
 }
 
+.r_ratings a{
+  font-size: 19px;
+  text-decoration: none;
+  color: black;
+}
+
+.r_ratings {
+  //border: 1px solid;
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: 75px;
+  left: 320px;
+}
+
+.r_5_star{
+  position: absolute;
+  top: 4px;
+  left: -2px;
+  //border: 1px solid;
+  padding: 0px 180px 0px 0px;
+  height: 20px;
+}
+
+.r_5_star:hover{
+  background: rgba(235, 229, 229, 0.8);
+}
+
+.r_4_star{
+  position: absolute;
+  top: 47px;
+  left: -2px;
+  //border: 1px solid;
+  padding: 0px 180px 0px 0px;
+}
+
+.r_4_star:hover{
+  background: rgba(235, 229, 229, 0.8);
+}
+
+.r_3_star{
+  position: absolute;
+  top: 90px;
+  left: -2px;
+  //border: 1px solid;
+  padding: 0px 180px 0px 0px;
+}
+
+.r_3_star:hover{
+  background: rgba(235, 229, 229, 0.8);
+}
+
+.r_2_star{
+  position: absolute;
+  top: 132px;
+  left: -2px;
+  //border: 1px solid;
+  padding: 0px 180px 0px 0px;
+}
+
+.r_2_star:hover{
+  background: rgba(235, 229, 229, 0.8);
+}
+
+.r_1_star{
+  position: absolute;
+  top: 174px;
+  left: -2px;
+  //border: 1px solid;
+  padding: 0px 185px 0px 0px;
+}
+
+.r_1_star:hover{
+  background: rgba(235, 229, 229, 0.8);
+}
+
 .r_add_to_fav_link{
 //border: 1px solid;
 padding: 60px 0px 0px 130px;
@@ -406,7 +483,7 @@ font-family: 'Concert One', cursive;
 .r_all_comments {
   border: 1px solid whitesmoke;
   width: 392px;
-  background-color: rgba(235, 229, 229, 0.9);
+  background-color: rgba(235, 229, 229, 0.89);
   padding: 0px 10px 0px 10px;
   position: absolute;
   top: -1px;

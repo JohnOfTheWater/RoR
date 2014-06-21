@@ -14,6 +14,13 @@ class RecipesController < ApplicationController
     @comments = Comment.all.where(:recipe_id => params[:id])
   end
 
+  def rating
+    rating = Recipe.find_by_id(params[:id]).rating
+    final_rating = (rating+(params[:new_rating].to_i))/2
+    final_rating = final_rating.to_i
+    Recipe.find_by_id(params[:id]).update_attributes(:rating => final_rating)
+  end
+
   def show
     @recipe = Recipe.find_by_id(params[:id])
     if FavRecipe.find_by_id(params[:id]) == nil
