@@ -4,7 +4,7 @@
 #recipes_wrap
   %h1 Favorites
   - if user_signed_in?
-    = link_to("Add Recipe", {:action => 'new'}, :id => 'add_recipe')
+    = link_to("+ Recipe", {:controller => 'Recipes', :action => 'new'}, :id => "add_recipe")
   - @recipes.each do |recipe |
     .recipe_wrap
       .index_image

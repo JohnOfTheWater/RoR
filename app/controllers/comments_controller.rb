@@ -15,6 +15,7 @@ class CommentsController < ApplicationController
       flash[:alert] = "Your comment could not be created"
     end
     redirect_to recipe_path (recipe)
+    #render :js => "window.location = '/jobs/index'"
   end
 
   private

@@ -1,7 +1,12 @@
 %h2 Comments
 %p.close_comments close[x]
-- @recipe.comments.each do |com|
+- @recipe.comments.reverse_order.each do |com|
   %div.com_username= 'From: ' + com.username
   .com_user_img= image_tag com.user_image
   %div.com_created= 'Date: ' + com.created_at.to_s.slice(0,10)
   %div.com_comment= com.comment
+= simple_form_for(Comment.new, url: recipe_comments_path(@recipe)) do |f|
+  = f.input :comment, as: :text, maxlength: 1500
+  = f.hidden_field :username, as: :string, :value => current_user.username
+  = f.hidden_field :user_image, as: :string, :value => current_user.image, as: :string
+  = f.button :submit, "Comment"

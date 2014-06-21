@@ -19,7 +19,7 @@ feature "User edits account" do
     page.should have_content "Are you sure you want to delete the recipe banana?"
     click_button "Delete Recipe"
     page.should have_content "Recipe 'banana' destroyed successfully"
-    page.should have_link "Add Recipe"
+    page.should have_link "+ Recipe"
     #save_and_open_page
   end
 
