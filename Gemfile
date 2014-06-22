@@ -6,6 +6,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'acts_as_commentable'
 gem 'devise'
 gem 'carrierwave'
+#gem "fog", "~> 1.3.1"
 gem 'haml-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'jquery-rails'
@@ -24,8 +25,8 @@ group :development do
 end
 
 group :development, :test do
-  gem 'rspec-rails'
-  gem 'rspec'
+  gem 'rspec-rails', '~> 2.14.2'
+  gem 'rspec','~> 2.14.1'
 end
 
 group :test do

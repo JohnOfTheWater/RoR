@@ -1,0 +1,29 @@
+$('.search_form').remove();
+//$('.s_b_r_t').remove();
+//$('#recipe_wrap').hide();
+//$('#recipe_wrap').fadeIn(400);
+
+//-----create dom elements-------//
+var $s_b_r_text = $('<div>');
+var $search_by_rating = $('<input>');
+var $search_form = $('<div>');
+
+
+//-----give attributes to dom elements-------//
+//$s_b_r_text.addClass('s_b_r_t').text('Search by Rating').hide();
+//$search_by_rating.addClass('s_b_r').hide();
+$search_form.html("<%= j render('search.html.haml') %>").addClass('search_form').hide();
+
+//-----append dom elements-------//
+
+//$('#here').append($search_by_rating);
+//$('#here').append($s_b_r_text);
+$('#here').append($search_form);
+
+//-----animate dom elements-------//
+//$($search_by_rating).delay(500).fadeIn(800, function(){
+  //$($search_by_rating).focus();
+//});
+//$($s_b_r_text).delay(400).fadeIn(800);
+$($search_form).delay(600).fadeIn(800);
+

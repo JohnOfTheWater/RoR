@@ -8,6 +8,7 @@
   function initialize(){
     //$('#wrap').hide();
     //$('#hunter').click(showSecondo);
+    $('#scroll_down').click(scrollToAnchor);
     $('#recipe_wrap').on('click', '.close_recipe', close_recipe);
     $('#recipe_wrap').on('click', '.comments', showComments);
     $('#recipe_wrap').on('click', '.close_comments', closeComments);
@@ -29,6 +30,10 @@
 
   function showRatings(){
     $('.r_ratings').fadeToggle(300);
+  }
+
+  function scrollToAnchor(){
+    $('html,body').animate({scrollTop: $('#here').offset().top}, 1500);
   }
 
 

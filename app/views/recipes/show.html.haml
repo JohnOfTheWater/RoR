@@ -21,7 +21,7 @@
 
 #comment_wrap
   %h2 Comments
-  - @recipe.comments.each do |com|
+  - @recipe.comments.reverse_order.each do |com|
     %div.com_username= 'From: ' + com.username
     .com_user_img= image_tag com.user_image
     %div.com_created= 'Date: ' + com.created_at.to_s.slice(0,10)

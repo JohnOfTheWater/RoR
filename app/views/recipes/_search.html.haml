@@ -1,0 +1,9 @@
+%h2 Search Recipes:
+= form_for(:recipe, :url => {:action => 'search'}, remote: true) do |f|
+    %h3 Search by Rating
+    = f.text_field(:rating, placeholder: "5 Stars", maxlength: 100, autofocus: "true")
+    %h3 Search by Tags
+    = f.text_field(:tags, placeholder: "easy", maxlength: 110)
+    %h3 Search by Preparation time
+    = f.text_field(:ready_in, placeholder: "30 min")
+    = submit_tag("Search!")

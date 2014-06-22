@@ -22,6 +22,19 @@ class RecipesController < ApplicationController
     @rating = final_rating
   end
 
+  def search_menu
+  end
+
+  def search
+    if Recipe.find_by_rating(params[:rating]) == nil
+      @search_rating = 'no match'
+    else
+      @search_rating = Recipe.find_by_rating(params[:rating])
+    end
+    #@search_tags = Recipe.find_by_tags(params[:tags])
+    #@search_ready_in = Recipe.find_by_ready_in(params[:ready_in])
+  end
+
   def show
     @recipe = Recipe.find_by_id(params[:id])
     if FavRecipe.find_by_id(params[:id]) == nil
@@ -99,7 +112,7 @@ class RecipesController < ApplicationController
 
   def destroy
     recipe = Recipe.find_by_id(params[:id]).destroy
-    flash[:notice] = "Recipe '#{recipe.recipe_name}'  destroyed successfully"
+    flash[:notice] = "Recipe '#{recipe.recipe_name}' destroyed successfully"
     redirect_to(:action => 'index')
   end
 
