@@ -31,11 +31,11 @@ var $comments = $('<div>');
 var $comments_count = $('<div>');
 var $all_comments = $('<div>');
 var $ratings = $('<div>');
-var $5star = '<%= link_to("5", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 6, remote: true}, :class => 'r_5_star')%>';
-var $4star = '<%= link_to("4", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 4, remote: true}, :class => 'r_4_star')%>';
-var $3star = '<%= link_to("3", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 3, remote: true}, :class => 'r_3_star')%>';
-var $2star = '<%= link_to("2", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 2, remote: true}, :class => 'r_2_star')%>';
-var $1star = '<%= link_to("1", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 1, remote: true}, :class => 'r_1_star')%>';
+var $5star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 6, remote: true}, :class => 'r_5_star')%>';
+var $4star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 4, remote: true}, :class => 'r_4_star')%>';
+var $3star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 3, remote: true}, :class => 'r_3_star')%>';
+var $2star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 2, remote: true}, :class => 'r_2_star')%>';
+var $1star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 1, remote: true}, :class => 'r_1_star')%>';
 
 var comments;
 if ('<%=@recipe.commented%>' == 'yes'){
@@ -102,7 +102,7 @@ $comments.addClass('r_comments').text('comments');
 $add_to_fav_link.text('').attr('href', '#').attr('data-remote', 'true').addClass('r_add_to_fav_link');
 $comments_count.addClass('r_comments_count').text('('+'<%=@recipe.comments.count%>'+')');
 $all_comments.html("<%= j render('comments.html.haml') %>").addClass('r_all_comments');
-$ratings.addClass('r_ratings').css('background', 'url('+'http://evernode.delacqua.us/img/johngmailcom/john/9292395-rc1ay.png'+') 2px -8px').css('background-size', 'cover').hide();
+$ratings.addClass('r_ratings').css('background', 'url('+'http://evernode.delacqua.us/img/johngmailcom/john/9292395-rc1ay.png'+') 2px -6px').css('background-size', 'cover').hide();
 
 //-----append dom elements-------//
 $('#recipe_wrap').append($recipeName);

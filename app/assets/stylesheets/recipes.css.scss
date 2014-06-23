@@ -374,20 +374,19 @@ left: 320px;
 }
 
 .r_ratings {
-  //border: 1px solid;
-  width: 200px;
-  height: 200px;
+  width: 150px;
+  height: 150px;
   position: absolute;
-  top: 75px;
-  left: 320px;
+  top: 80px;
+  left: 340px;
 }
 
 .r_5_star{
   position: absolute;
   top: 0px;
-  left: -2px;
-  padding: 5px 185px 0px 0px;
-  height: 25px;
+  left: 7px;
+  padding: 0px 139px 0px 0px;
+  height: 24px;
   border-radius: 5px;
 }
 
@@ -397,10 +396,10 @@ left: 320px;
 
 .r_4_star{
   position: absolute;
-  top: 43px;
-  left: -2px;
-  padding: 6px 186px 0px 0px;
-  height: 27px;
+  top: 32px;
+  left: 7px;
+  padding: 0px 138px 0px 0px;
+  height: 24px;
   border-radius: 5px;
 }
 
@@ -410,10 +409,10 @@ left: 320px;
 
 .r_3_star{
   position: absolute;
-  top: 87px;
-  left: -2px;
-  padding: 5px 186px 0px 0px;
-  height: 27px;
+  top: 65px;
+  left: 8px;
+  padding: 0px 137px 0px 0px;
+  height: 24px;
   border-radius: 5px;
 }
 
@@ -423,10 +422,10 @@ left: 320px;
 
 .r_2_star{
   position: absolute;
-  top: 128px;
-  left: -2px;
-  padding: 4px 186px 0px 0px;
-  height: 27px;
+  top: 96px;
+  left: 8px;
+  padding: 0px 138px 0px 0px;
+  height: 24px;
   border-radius: 5px;
 }
 
@@ -435,11 +434,11 @@ left: 320px;
 }
 
 .r_1_star{
-position: absolute;
-top: 170px;
-left: -2px;
-padding: 4px 189px 0px 0px;
-height: 27px;
+  position: absolute;
+  top: 128px;
+  left: 8px;
+  padding: 0px 138px 0px 0px;
+  height: 24px;
   border-radius: 5px;
 }
 
@@ -548,4 +547,51 @@ width: 240px;
   //top: -260px;
   //left: 350px;
   //float: left;
+}
+
+//-----search engine----//
+
+.search_results{
+  border: 1px solid;
+  position: relative;
+  top: -245px;
+  left: 710px;
+  width: 940px;
+  height: 590px;
+}
+
+.search_recipe_wrap {
+  border: 1px solid;
+  width: 200px;
+  height: 251px;
+  background: #383838;
+  box-shadow: 5px 5px 5px #1A1717;
+  padding: 0px 0px 0px 0px;
+  float: left;
+  margin: 0px 5px 20px 25px;
+  border-radius: 10px;
+}
+
+.search_show {
+position: relative;
+top: -250px;
+padding: 0px 0px 233px 198px;
+}
+
+#search_rating{
+width: 180px;
+}
+
+#search_tags{
+width: 180px;
+}
+
+#search_ready_in{
+width: 180px;
+}
+
+.rat {
+  float: left;
+  margin: 15px 76px 0px 0px;
+  border: 1px solid;
 }

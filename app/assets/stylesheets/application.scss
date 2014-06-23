@@ -138,9 +138,17 @@ border: 2px solid whitesmoke;
 
 //------scroll down navigation------//
 
+#scroll_down {
+text-decoration: none;
+color: whitesmoke;
+padding: 0px 10px 0px 10px;
+text-shadow: 1px 1px 1px black;
+border-right: 1px solid black;
+}
+
 #here {
 clear: both;
-margin: 1000px 0px 0px 0px;
+margin: 1000px 0px 250px 0px;
 width: 100%;
 background: black;
 color: white;

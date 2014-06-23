@@ -1,11 +1,11 @@
 //$('.r_add_to_fav_link').remove();
 //$('.r_favorites_text').remove();
-//$('.r_favorites').remove();
+$('.search_results').remove();
 console.log('from search: '+'<%=@search_rating%>');
 
-var $search_results_wrap = $('<div>');
+var $search_results = $('<div>');
 
-$search_results_wrap.addClass('search_results_wrap').text('it works!');
+$search_results.html("<%= j render('search_results.html.haml') %>").addClass('search_results');
 
-$('#there').append($search_results_wrap);
+$('#there').append($search_results);
 

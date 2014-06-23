@@ -1,0 +1,22 @@
+%h3 results
+- @search_rating.each do |rat|
+  .search_recipe_wrap
+    .index_image
+      = image_tag rat.image.to_s
+    %p.name= rat.recipe_name
+    = link_to("", {:action => 'show', :id => rat.id}, :class => 'search_show')
+
+- @search_tags.each do |tag|
+  .search_recipe_wrap
+    .index_image
+      = image_tag tag.image.to_s
+    %p.name= tag.recipe_name
+    = link_to("", {:action => 'show', :id => tag.id}, :class => 'search_show')
+
+- @search_ready_in.each do |time|
+  .search_recipe_wrap
+    .index_image
+      = image_tag time.image.to_s
+    %p.name= time.recipe_name
+    = link_to("", {:action => 'show', :id => time.id}, :class => 'search_show')
+

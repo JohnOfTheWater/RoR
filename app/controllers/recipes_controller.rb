@@ -22,17 +22,14 @@ class RecipesController < ApplicationController
     @rating = final_rating
   end
 
-  def search_menu
-  end
-
   def search
-    if Recipe.find_by_rating(params[:rating]) == nil
-      @search_rating = 'no match'
-    else
-      @search_rating = Recipe.find_by_rating(params[:rating])
+    @search_rating = Recipe.where(search_rating)
+    @search_tags = Recipe.where(search_tags)
+    @search_ready_in = Recipe.where(search_ready_in)
+    respond_to do |format|
+      format.html
+      format.js
     end
-    #@search_tags = Recipe.find_by_tags(params[:tags])
-    #@search_ready_in = Recipe.find_by_ready_in(params[:ready_in])
   end
 
   def show
@@ -122,7 +119,17 @@ class RecipesController < ApplicationController
     params.require(:recipe).permit(:recipe_name, :description, :ingredients, :preparation, :tags, :user, :image, :rating, :favorite, :commented, :servings, :ready_in)
   end
 
+  def search_rating
+    params.require(:search).permit(:rating)
+  end
 
+  def search_tags
+    params.require(:search).permit(:tags)
+  end
+
+  def search_ready_in
+    params.require(:search).permit(:ready_in)
+  end
 
 
 end
