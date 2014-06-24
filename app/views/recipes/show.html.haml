@@ -4,19 +4,21 @@
 = link_to("<< Back to Recipes List", {:action => 'index'}, :class => 'back_button')
 #full_recipe_wrap
   %h1#full_name= @recipe.recipe_name
-  %h3#full_desc
-    INGREDIENTS
-  - @ingredients.each do |ing|
-    %p.ing= '- ' + ing
-  %h3#full_prep
-    PREPARATION
-  %p.full_prep= @recipe.preparation
-  %h4#full_tags Tags:
-  %p.full_tags= @recipe.tags
-  %h4#full_date Date:
-  %p.full_date= @recipe.created_at.to_s.slice!(0, 10)
   %div#full_image
     = image_tag @recipe.image.to_s
+  %h3#full_ing
+    INGREDIENTS
+    - @ingredients.each do |ing|
+      %p.ing= '- ' + ing
+  %h3#full_prep
+    PREPARATION
+    %p.full_prep= @recipe.preparation
+  %h4#full_tags
+    Tags:
+    %p.full_tags= @recipe.tags
+  %h4#full_date
+    Date:
+    %p.full_date= @recipe.created_at.to_s.slice!(0, 10)
 
 
 #comment_wrap

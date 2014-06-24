@@ -7,8 +7,10 @@
 
   function initialize(){
     $('#search_form').hide();
+    $('#create_new_recipe').hide();
     //$('#hunter').click(showSecondo);
     $('#scroll_down').click(scrollToAnchor);
+    $('#add_new_recipe').click(scrollToNewRecipe);
     $('#recipe_wrap').on('click', '.close_recipe', close_recipe);
     $('#recipe_wrap').on('click', '.comments', showComments);
     $('#recipe_wrap').on('click', '.close_comments', closeComments);
@@ -34,9 +36,20 @@
 
   function scrollToAnchor(){
     $('#search_form').hide();
+    $('#create_new_recipe').hide();
     $('html,body').animate({scrollTop: $('#here').offset().top}, 800, function(){
       $('#search_form').fadeIn(500, function(){
         $('#search_rating').focus();
+      });
+    });
+  }
+
+  function scrollToNewRecipe(){
+    $('#search_form').hide();
+    $('#create_new_recipe').hide();
+    $('html,body').animate({scrollTop: $('#here').offset().top}, 800, function(){
+      $('#create_new_recipe').fadeIn(500, function(){
+        $('#new_name input').focus();//css background change
       });
     });
   }

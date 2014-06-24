@@ -8,7 +8,7 @@
       %h2#new_desc Description
       = f.text_area(:description, placeholder: "a brief description of this recipe", maxlength: 110)
       %h2#new_ingr Ingredients
-      = f.text_area(:ingredients, placeholder: "- stuffing with more stuffing  - stuffing with more stuffing  - stuffing with more stuffing  ")
+      = f.text_area(:ingredients, placeholder: "- stuffing with more stuffing  - stuffing with more stuffing  - stuffing with more stuffing  ", maxlength: 1500)
       %h2#new_prep Preparation
       = f.text_area(:preparation, maxlength: 2000, placeholder: "Heat vegetable oil in a large skillet over medium heat. Pan-fry chicken until golden brown on both sides, 5 to 7 minutes; transfer to a plate. Melt butter in the same skillet; cook and stir remaining 2 tablespoons flour in butter for 5 minutes, then add chicken broth and lemon juice. Simmer until thickened, about 10 minutes. Return chicken to the skillet. Continue simmering until chicken is no longer pink in the center, about 15 more minutes... basically peal it, eat it!", maxlength: 2000)
       %h2#new_time Ready In
