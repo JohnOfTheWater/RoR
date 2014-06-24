@@ -25,6 +25,8 @@ var $hr3 = $('<div>');
 var $add_to_favorites = $('<div>');
 var $add_to_favorites_text = $('<div>');
 var $add_to_fav_link = $('<a>');
+var $full_page = $('<div>');
+var $chef_hat = $('<div>');
 var $by = $('<div>');
 var $rating = $('<div>');
 var $comments = $('<div>');
@@ -36,6 +38,7 @@ var $4star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :i
 var $3star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 3, remote: true}, :class => 'r_3_star')%>';
 var $2star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 2, remote: true}, :class => 'r_2_star')%>';
 var $1star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 1, remote: true}, :class => 'r_1_star')%>';
+var $full_page_link = '<%= link_to("", {:controller => 'Recipes', :action => 'show', :id => @recipe.id}, :class => 'r_full_page_link')%>';
 
 var comments;
 if ('<%=@recipe.commented%>' == 'yes'){
@@ -103,6 +106,8 @@ $add_to_fav_link.text('').attr('href', '#').attr('data-remote', 'true').addClass
 $comments_count.addClass('r_comments_count').text('('+'<%=@recipe.comments.count%>'+')');
 $all_comments.html("<%= j render('comments.html.haml') %>").addClass('r_all_comments');
 $ratings.addClass('r_ratings').css('background', 'url('+'http://evernode.delacqua.us/img/johngmailcom/john/9292395-rc1ay.png'+') 2px -6px').css('background-size', 'cover').hide();
+$full_page.addClass('r_full_page').text('Recipe page');
+$chef_hat.addClass('r_chef_hat').css('background', 'url('+'http://evernode.delacqua.us/img/johngmailcom/john/6982395-k0yht.png'+')').css('background-size', 'cover');
 
 //-----append dom elements-------//
 $('#recipe_wrap').append($recipeName);
@@ -135,3 +140,6 @@ $ratings.append($4star);
 $ratings.append($3star);
 $ratings.append($2star);
 $ratings.append($1star);
+$('#recipe_wrap').append($full_page);
+$('#recipe_wrap').append($chef_hat);
+$('#recipe_wrap').append($full_page_link);
