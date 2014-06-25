@@ -1,0 +1,49 @@
+// Place all the styles related to the Recipes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('http://fonts.googleapis.com/css?family=Indie+Flower');
+@import url('http://fonts.googleapis.com/css?family=Concert+One');
+
+//-------days wrap-----//
+
+#weeks_wrap{
+margin: 40px 0px 0px 0px;
+}
+
+//-------days wrap-----//
+
+#user_week{
+margin: 0px 0px 70px 0px;
+}
+
+.days_wrap {
+border: 1px solid;
+width: 260px;
+height: 300px;
+float: left;
+margin: 0px 50px 100px 50px;
+}
+
+#new_day {
+clear: both;
+width: 280px;
+border: 1px solid;
+}
+
+.day_image img{
+  background-size: cover;
+  width: 260px;
+  height: 214px;
+}
+
+.link_show_recipe a{
+  padding: 0px 0px 280px 260px;
+  position: relative;
+  top: -304px;
+}
+
+#new_day input{
+width: 250px;
+}
+
+

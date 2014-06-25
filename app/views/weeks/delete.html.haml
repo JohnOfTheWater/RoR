@@ -1,6 +1,6 @@
 = link_to("<< Back to Recipes List", {:action => 'index'}, :class => 'back_button')
 #delete_wrap
   %h2 Delete Recipe
-  %p Are you sure you want to delete the recipe #{@recipe.recipe_name}?
+  %p Are you sure you want to delete the week #{@week.week_date}?
 
-  = button_to('Delete Recipe', {:controller => 'Recipes', :action => 'destroy', :id => @recipe.id})
+  = button_to('Delete Week', {:controller => 'Weeks', :action => 'destroy', :id => @week.id})

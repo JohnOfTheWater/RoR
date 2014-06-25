@@ -74,7 +74,7 @@ class WeeksController < ApplicationController
 
   def destroy
     week = Week.find_by_id(params[:id]).destroy
-    flash[:notice] = "Week '#{week.week_day}' destroyed successfully"
+    flash[:notice] = "Week '#{week.week_date}' destroyed successfully"
     redirect_to(:action => 'index')
   end
 

@@ -16,6 +16,7 @@
           %li= link_to "+ Recipe", new_recipe_path
           %li#scroll_down Search
           %li#add_new_recipe + Recipe
+          %li= link_to("Meal Planner", {:controller => 'Weeks', :action => 'index'})
         %ul.devise_navigation
           - if user_signed_in?
             %li= link_to current_user.username, edit_user_registration_path

@@ -16,6 +16,11 @@ class DaysController < ApplicationController
     #render :js => "window.location = '/jobs/index'"
   end
 
+  def show
+    @recipe = Recipe.find_by_recipe_name(params[:recipe_name])
+    redirect_to(:controller => 'Recipes', :action => 'show', :id => @recipe.id)
+  end
+
   private
 
   def day_params

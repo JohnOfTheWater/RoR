@@ -4,21 +4,19 @@
 = link_to("<< Back to Recipes List", {:action => 'index'}, :class => 'back_button')
 #full_week_wrap
   %h1= 'Date: '+@week.week_date
-  %h4
-    User:
-    %p= @week.user
+  %p#user_week= 'User: '+@week.user
 
 #days_wrap
-  %h2 Days
   - @week.days.each do |day|
     .days_wrap
       %p= day.day
       %p= day.recipe_name
       .day_image= image_tag day.image.to_s
+      .link_show_recipe= link_to("", {:controller => 'Days', :action => 'show', :recipe_name => day.recipe_name})
 = simple_form_for(Day.new, url: week_days_path(@week)) do |f|
   = f.input :day, as: :string, maxlength: 20
   = f.input :recipe_name, as: :string, maxlength: 100
   = f.input :description, as: :string, maxlength: 110
   = f.input :tags, as: :string, maxlength: 30
   = f.file_field(:image)
-  = f.button :submit, "Comment"
+  = f.button :submit, "New Day"
