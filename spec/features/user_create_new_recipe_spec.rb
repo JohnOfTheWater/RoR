@@ -12,6 +12,7 @@ feature "New recipe" do
   end
 
   scenario "user creates a new recipe" do
+    visit recipes_path
     click_link "+ Recipe"
     fill_in "recipe[recipe_name]", with: "body for test!"
     fill_in "recipe[description]", with: "Text input with body for test!"
@@ -26,6 +27,7 @@ feature "New recipe" do
   end
 
   scenario "user creates a new recipe" do
+    visit recipes_path
     click_link "+ Recipe"
     fill_in "recipe[recipe_name]", with: "body for test!"
     fill_in "recipe[description]", with: "Text input with body for test!"
