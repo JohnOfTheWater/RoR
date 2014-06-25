@@ -10,6 +10,14 @@ class WeeksController < ApplicationController
     @weeks = Week.all.where(:user => params[:user]).order("id asc")
   end
 
+  def my_fav
+    @recipes = Recipe.all.where(:user => params[:user]).order("id asc")
+    respond_to do |format|
+      format.html
+      format.js
+    end
+  end
+
   def comments
     @comments = Comment.all.where(:recipe_id => params[:id])
   end
@@ -34,6 +42,7 @@ class WeeksController < ApplicationController
 
   def show
     @week = Week.find_by_id(params[:id])
+    @favorites = FavRecipe.all.where(:user => current_user.username)
     respond_to do |format|
       format.html # show.html.haml
       format.js # show.js.erb

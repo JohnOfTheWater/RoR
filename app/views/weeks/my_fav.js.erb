@@ -1,0 +1,13 @@
+//$('#recipe_wrap div').remove();
+//$('#recipe_wrap').hide();
+
+//-----create dom elements-------//
+var $favorites = $('<div>');
+//var $add_to_fav_link = $('<a>');
+
+//-----give attributes to dom elements-------//
+$favorites.html("<%= j render('favorites.html.haml') %>").addClass('favorites');
+
+//-----append dom elements-------//
+$('#results').append($favorites);
+$ratings.append($3star);

@@ -8,9 +8,11 @@
   function initialize(){
     $('#search_form').hide();
     $('#create_new_recipe').hide();
+    $('#risultati').hide();
     //$('#hunter').click(showSecondo);
     $('#scroll_down').click(scrollToAnchor);
     $('#add_new_recipe').click(scrollToNewRecipe);
+    $('#mostra').click(showRisultati);
     $('#recipe_wrap').on('click', '.close_recipe', close_recipe);
     $('#recipe_wrap').on('click', '.comments', showComments);
     $('#recipe_wrap').on('click', '.close_comments', closeComments);
@@ -34,6 +36,10 @@
     $('.r_ratings').fadeToggle(300);
   }
 
+  function showRisultati(){
+    $('#risultati').fadeToggle(300);
+  }
+
   function scrollToAnchor(){
     $('#search_form').hide();
     $('#create_new_recipe').hide();
@@ -53,6 +59,14 @@
       });
     });
   }
+
+  var drags = '.fav_recipe_wrap, .days_wrap, #user_week';//add here your draggable divs
+  var drops = '#drop_box';//add here your draggable divs
+
+  $(function() {$(drags).draggable({helper: "clone"});});
+  $(function() {$(drops).droppable({accept: ".fav_recipe_wrap", drop: function(){
+    alert('it works');
+  }});});
 
 
 //$($search_by_rating).delay(500).fadeIn(800, function(){

@@ -1,0 +1,7 @@
+%h2 Favorites:
+- @recipes.each do |rec|
+  .fav_recipe_wrap
+    .fav_index_image
+      = image_tag rec.image.to_s
+    %p.fav_name= rec.recipe_name
+    = link_to("", {:controller => 'Recipes', :action => 'show', :id => rec.id}, :class => 'search_show')

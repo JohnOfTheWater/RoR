@@ -20,3 +20,17 @@
   = f.input :tags, as: :string, maxlength: 30
   = f.file_field(:image)
   = f.button :submit, "New Day"
+
+#drop_box
+#mostra Click
+#risultati
+  %h2 Favorites:
+  - @favorites.each do |rec|
+    .fav_recipe_wrap
+      .fav_index_image
+        = image_tag rec.image.to_s
+      %p.fav_name= rec.recipe_name
+      = link_to("", {:controller => 'Recipes', :action => 'show', :id => rec.id}, :class => 'search_show')
+
+= link_to('favorites', {:controller => 'Weeks', :action => 'my_fav', :user => current_user.username, remote: true}, :id => 'meal_fav_button')
+
