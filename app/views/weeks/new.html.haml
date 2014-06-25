@@ -1,0 +1,10 @@
+= link_to("<< Back to week List", {:action => 'index'}, :class => 'back_button')
+#week_wrap
+  %h2 New Week
+  = form_for(:week, html:  {:multipart => true}, :url => {:action => 'create'}) do |f|
+    %table{:summary => "Recipe form field"}
+      %h2#new_name Week date
+      = f.text_field(:week_date, placeholder: "5-12-June", maxlength: 100, autofocus: "true")
+      = f.hidden_field(:user, :value => current_user.username)
+    #new_button
+      = submit_tag("Create Week!")

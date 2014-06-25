@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140624151130) do
+ActiveRecord::Schema.define(version: 20140625010618) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -22,6 +22,17 @@ ActiveRecord::Schema.define(version: 20140624151130) do
     t.integer  "user_id"
     t.string   "username"
     t.string   "user_image"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "days", force: true do |t|
+    t.string   "day"
+    t.integer  "week_id"
+    t.string   "recipe_name", limit: 100
+    t.string   "description", limit: 110
+    t.string   "tags",        limit: 30
+    t.string   "image"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -86,5 +97,12 @@ ActiveRecord::Schema.define(version: 20140624151130) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "weeks", force: true do |t|
+    t.string   "week_date"
+    t.string   "user"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

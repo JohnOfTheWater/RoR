@@ -5,6 +5,7 @@ Rails.application.routes.draw do
 
   resources :recipes
   resources :fav_recipes
+  resources :weeks
 
   resources :recipes do
     resources :comments
@@ -12,6 +13,10 @@ Rails.application.routes.draw do
 
   resources :fav_recipes do
     resources :comments
+  end
+
+  resources :weeks do
+    resources :days
   end
 
 

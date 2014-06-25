@@ -1,0 +1,148 @@
+$('#recipe_wrap div').remove();
+$('#recipe_wrap').hide();
+$('#recipe_wrap').fadeIn(400);
+
+//-----create dom elements-------//
+var $recipeName = $('<div>');
+var $recipePic = $('<div>');
+var $close = $('<div>');
+var $comments = $('<div>');
+var $from = $('<div>');
+var $from_pic = $('<div>');
+var $comments = $('<div>');
+var $commenter = $('<div>');
+var $commenter_pic = $('<div>');
+var $ingredients = $('<div>');
+var $preparation = $('<div>');
+var $prep_title = $('<div>');
+var $ready_in = $('<div>');
+var $clock = $('<div>');
+var $hr1 = $('<div>');
+var $servings = $('<div>');
+var $servings_title = $('<div>');
+var $hr2 = $('<div>');
+var $hr3 = $('<div>');
+var $hr4 = $('<div>');
+var $add_to_favorites = $('<div>');
+var $add_to_favorites_text = $('<div>');
+var $add_to_fav_link = $('<a>');
+var $full_page = $('<div>');
+var $chef_hat = $('<div>');
+var $by = $('<div>');
+var $rating = $('<div>');
+var $comments = $('<div>');
+var $comments_count = $('<div>');
+var $all_comments = $('<div>');
+var $ratings = $('<div>');
+var $5star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 6, remote: true}, :class => 'r_5_star')%>';
+var $4star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 4, remote: true}, :class => 'r_4_star')%>';
+var $3star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 3, remote: true}, :class => 'r_3_star')%>';
+var $2star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 2, remote: true}, :class => 'r_2_star')%>';
+var $1star = '<%= link_to("", {:controller => 'Recipes', :action => 'rating', :id => @recipe.id, :new_rating => 1, remote: true}, :class => 'r_1_star')%>';
+var $full_page_link = '<%= link_to("", {:controller => 'Recipes', :action => 'show', :id => @recipe.id}, :class => 'r_full_page_link')%>';
+
+var comments;
+if ('<%=@recipe.commented%>' == 'yes'){
+  comments = '<%=@comments%>';
+  commenter = '<%=@commenter%>';
+  commenter_pic = '<%=@commenter_pic%>';
+  $comments.addClass('comments').text('Last comment: ' + comments)
+  $commenter.addClass('commenter').text('User: ' + commenter)
+  $commenter_pic.addClass('from_pic').css('background', 'url('+commenter_pic+')').css('background-size', 'cover');
+}else{
+  comments = 'no comments';
+  $comments.addClass('comments').text('Add a comment for this recipe');
+}
+
+var favorite_icon;
+var favorite_text;
+var $link;
+if ('<%=@favorite%>' == 'no'){
+  favorite_icon = 'http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-3/256/add-to-favorites-icon.png';
+  favorite_text = 'Add to Favorites';
+  $link = '<%= link_to("", {:controller => 'Recipes', :action => 'add_to_fav', :id => @recipe.id, :recipe_name => @recipe.recipe_name, :tags => @recipe.tags, :description => @recipe.description, :username => current_user.username, remote: true}, :class => 'r_add_to_fav_link')%>';
+}else{
+  favorite_icon = 'http://files.softicons.com/download/business-icons/pretty-office-iii-icons-by-custom-icon-design/png/256/remove-from-favorites.png';
+  favorite_text = 'Remove from Favorites';
+  $link = '<%= link_to("", {:controller => 'Recipes', :action => 'remove_from_fav', :id => @recipe.id, :username => current_user.username, remote: true}, :class => 'r_add_to_fav_link')%>';
+}
+//------display rating---------//
+console.log('rating: '+'<%=@recipe.rating%>');
+var stars;
+
+if ('<%=@recipe.rating%>' == 5){
+  stars = 'url(http://evernode.delacqua.us/img/johngmailcom/john/9292395-rc1ay.png) 0px 214px';
+}else if ('<%=@recipe.rating%>' == 4){
+  stars = 'url(http://evernode.delacqua.us/img/johngmailcom/john/9292395-rc1ay.png) 0px 170px';
+}else if ('<%=@recipe.rating%>' == 3){
+  stars = 'url(http://evernode.delacqua.us/img/johngmailcom/john/9292395-rc1ay.png) 0px 127px';
+}else if ('<%=@recipe.rating%>' == 2){
+  stars = 'url(http://evernode.delacqua.us/img/johngmailcom/john/9292395-rc1ay.png) 0px 85px';
+}else if ('<%=@recipe.rating%>' == 1){
+  stars = 'url(http://evernode.delacqua.us/img/johngmailcom/john/9292395-rc1ay.png) 0px 43px';
+}
+
+console.log('comments num: '+'<%=@recipe.comments.count%>')
+
+//-----give attributes to dom elements-------//
+$recipeName.addClass('r_name').text('<%=@recipe.recipe_name%>');
+$recipePic.addClass('r_pic').css('background', 'url('+'<%=@recipe.image%>'+')').css('background-size', 'cover');
+$close.addClass('close_recipe').text('close[x]');
+$ingredients.html("<%= j render('ingredients.html.haml') %>").addClass('r_ing');
+$preparation.addClass('r_prep').text('<%=@recipe.preparation%>');
+$prep_title.addClass('r_prep_title').text('Preparation:');
+$ready_in.addClass('r_ready').text('Ready In: '+'<%=@recipe.ready_in%>');
+$clock.addClass('r_clock').css('background', 'url('+'http://evernode.delacqua.us/img/johngmailcom/john/8902395-17hct.png'+')').css('background-size', 'cover');
+$hr1.addClass('r_hr1');
+$hr2.addClass('r_hr2');
+$hr3.addClass('r_hr3');
+$hr4.addClass('r_hr4');
+$servings_title.addClass('r_servings_title').text('Servings:');
+$servings.addClass('r_servings').text('<%=@recipe.servings%>');
+$add_to_favorites.addClass('r_favorites').css('background', 'url('+favorite_icon+')').css('background-size', 'cover');
+$add_to_favorites_text.addClass('r_favorites_text').text(favorite_text);
+$by.addClass('r_by').text('By: '+'<%=@recipe.user%>');
+$rating.addClass('r_rating').css('background', ''+stars+'').css('background-size', 'cover');
+$comments.addClass('r_comments').text('comments');
+$add_to_fav_link.text('').attr('href', '#').attr('data-remote', 'true').addClass('r_add_to_fav_link');
+$comments_count.addClass('r_comments_count').text('('+'<%=@recipe.comments.count%>'+')');
+$all_comments.html("<%= j render('comments.html.haml') %>").addClass('r_all_comments');
+$ratings.addClass('r_ratings').css('background', 'url('+'http://evernode.delacqua.us/img/johngmailcom/john/9292395-rc1ay.png'+') 2px -6px').css('background-size', 'cover').hide();
+$full_page.addClass('r_full_page').text('Recipe page');
+$chef_hat.addClass('r_chef_hat').css('background', 'url('+'http://evernode.delacqua.us/img/johngmailcom/john/6982395-k0yht.png'+')').css('background-size', 'cover');
+
+//-----append dom elements-------//
+$('#recipe_wrap').append($recipeName);
+$('#recipe_wrap').append($recipePic);
+$('#recipe_wrap').append($close);
+//$('#recipe_wrap').append($comments);
+//$('#recipe_wrap').append($commenter);
+//$('#recipe_wrap').append($commenter_pic);
+$('#recipe_wrap').append($ingredients);
+$('#recipe_wrap').append($prep_title);
+$prep_title.append($preparation);
+$('#recipe_wrap').append($clock);
+$('#recipe_wrap').append($ready_in);
+$('#recipe_wrap').append($hr1);
+$('#recipe_wrap').append($hr2);
+$('#recipe_wrap').append($servings_title);
+$('#recipe_wrap').append($servings);
+$('#recipe_wrap').append($add_to_favorites_text);
+$('#recipe_wrap').append($add_to_favorites);
+$('#recipe_wrap').append($by);
+$('#recipe_wrap').append($rating);
+$('#recipe_wrap').append($comments);
+$('#recipe_wrap').append($hr3);
+$('#recipe_wrap').append($hr4);
+$add_to_favorites.append($link);
+$comments.append($comments_count);
+$('#recipe_wrap').append($all_comments);
+$('#recipe_wrap').append($ratings);
+$ratings.append($5star);
+$ratings.append($4star);
+$ratings.append($3star);
+$ratings.append($2star);
+$ratings.append($1star);
+$('#recipe_wrap').append($full_page);
+$('#recipe_wrap').append($chef_hat);
+$('#recipe_wrap').append($full_page_link);
