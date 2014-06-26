@@ -28,6 +28,7 @@ body{
 
 #background {
 background: url('http://evernode.delacqua.us/img/johngmailcom/john/822395-1t5vz.jpg');
+-webkit-filter: blur(3px);
 background-size: cover;
 position: absolute;
 top: 0px;
@@ -41,15 +42,18 @@ margin: 290px 0px 0px 0px;
 color: whitesmoke;
 text-align: center;
 text-shadow: 1px 1px 3px black, -1px -1px 3px black;
+position: relative;
+font-size: 20px;
 }
 
 #black_folder{
   background-color: rgba(250, 250, 250, 0.7);
   position: absolute;
-  top: 524px;
+  top: 571px;
   width: 100%;
-  height: 45%;
+  height: 40%;
   border-top: 2px solid whitesmoke;
+  left: 0px;
 }
 
 #black_folder a{
@@ -84,7 +88,7 @@ padding: 70px 0px 0px 0px;
 }
 
 #secondo {
-background: url('http://evernode.delacqua.us/img/johngmailcom/john/5482395-7tocj.png');
+background: url('http://evernode.delacqua.us/img/johngmailcom/john/3362395-796vi.png');
 background-size: cover;
 width: 70px;
 height: 70px;
@@ -97,21 +101,101 @@ left: 820px;
   position: relative;
   top: 220px;
   left: 950px;
-  padding: 50px 15px 0px 15px;
+  padding: 70px 15px 0px 15px;
 }
 
 #terzo {
-background: url('http://evernode.delacqua.us/img/johngmailcom/john/8872395-1axvn.png');
+background: url('http://evernode.delacqua.us/img/johngmailcom/john/3462395-18mfm.png');
 background-size: cover;
-width: 95px;
-height: 95px;
+width: 80px;
+height: 60px;
 position: absolute;
-top: 145px;
-left: 1110px;
+top: 155px;
+left: 1120px;
 }
 
-//--------------------------//
+//---------sign-up----------------//
 
+
+#background_sign_up {
+background: url('http://evernode.delacqua.us/img/johngmailcom/john/8232395-12pxl.jpg');
+-webkit-filter: blur(2px);
+background-size: cover;
+position: absolute;
+top: 0px;
+left: 0px;
+width: 100%;
+height: 100%;
+z-index: 0;
+}
+
+#sign_up_form_wrap {
+  position: relative;
+  z-index: 1;
+  width: 350px;
+  top: 70px;
+  left: 930px;
+  padding: 0px 0px 30px 60px;
+  box-shadow: 5px 5px 5px #1A1717;
+  background-color: rgba(235, 229, 229, 0.7);
+  border: 1px solid white;
+  color: white;
+}
+
+#signUp{
+  margin: 10px 0px 10px -60px;
+  border-bottom: 1px solid grey;
+  padding: 0px 0px 5px 20px;
+}
+
+#user_email {
+position: relative;
+left: 26px;
+width: 170px;
+margin-bottom: 15px;
+}
+
+#user_username {
+width: 170px;
+margin-bottom: 15px;
+}
+
+#user_password {
+width: 166px;
+position: relative;
+left: 4px;
+margin-bottom: 15px;
+}
+
+#user_password_confirmation{
+width: 180px;
+margin-bottom: 15px;
+}
+
+#sign_up_form_wrap a{
+  position: absolute;
+  top: 177px;
+  left: -530px;
+  color: white;
+  font-size: 22px;
+}
+
+#sign_up_form_wrap input.btn{
+  position: relative;
+  left: 90px;
+  top: 30px;
+}
+
+#welcome {
+  position: relative;
+  z-index: 1;
+  top: 300px;
+  left: 50px;
+  color: white;
+  font-size: 24px;
+}
+
+//-----------------//
 .devise_navigation{
 float: right;
 }
@@ -166,6 +250,7 @@ border-right: 1px solid black;
 
 .flash_notice {
   margin-top: 7px;
+  visibility: hidden;
 }
 
 #title{
@@ -178,9 +263,6 @@ margin: 30px 0px 0px 0px;
 margin: 40px 0px 0px 0px;
 }
 
-#signUp{
-margin: 20px 0px 10px 0px;
-}
 
 #editUser{
 margin: 40px 0px 20px 0px;
@@ -251,4 +333,51 @@ border-right: 1px solid black;
   height: 330px;
   background: url("http://evernode.delacqua.us/img/johngmailcom/john/442395-1pq2h.jpg");
   background-size: cover;
+}
+
+//----cool button----//
+#sign_up_form_wrap input.btn {
+  -moz-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  -webkit-box-shadow:inset 0px 1px 0px 0px #ffffff;
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #ededed), color-stop(1, #dfdfdf) );
+  background:-moz-linear-gradient( center top, #ededed 5%, #dfdfdf 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#ededed', endColorstr='#dfdfdf');
+  background-color:#ededed;
+  -webkit-border-top-left-radius:6px;
+  -moz-border-radius-topleft:6px;
+  border-top-left-radius:6px;
+  -webkit-border-top-right-radius:6px;
+  -moz-border-radius-topright:6px;
+  border-top-right-radius:6px;
+  -webkit-border-bottom-right-radius:6px;
+  -moz-border-radius-bottomright:6px;
+  border-bottom-right-radius:6px;
+  -webkit-border-bottom-left-radius:6px;
+  -moz-border-radius-bottomleft:6px;
+  border-bottom-left-radius:6px;
+  text-indent:0;
+  border:1px solid #dcdcdc;
+  display:inline-block;
+  color:black;
+  font-family:arial;
+  font-size:15px;
+  font-weight:bold;
+  font-style:normal;
+  height:50px;
+  line-height:50px;
+  width:100px;
+  text-decoration:none;
+  text-align:center;
+  text-shadow:1px 1px 0px #ffffff;
+  padding: 0px;
+}
+#sign_up_form_wrap input.btn:hover {
+  background:-webkit-gradient( linear, left top, left bottom, color-stop(0.05, #dfdfdf), color-stop(1, #ededed) );
+  background:-moz-linear-gradient( center top, #dfdfdf 5%, #ededed 100% );
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#dfdfdf', endColorstr='#ededed');
+  background-color:#dfdfdf;
+}#sign_up_form_wrap input.btn:active {
+  position:relative;
+  top:1px;
 }

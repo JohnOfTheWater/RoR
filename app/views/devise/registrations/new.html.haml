@@ -1,12 +1,17 @@
 - if resource.errors
   .alert Your account could not be created.
+#background_sign_up
+#welcome
+  %h2 Welcome to Recipes On Rails
+  %p are you a member already?
 
-%h2#signUp Sign up
-= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = f.input :email, autofocus: true
-  = f.input :username
-  = f.input :password
-  = f.input :password_confirmation
-  = f.input :image, :as => :file
-  = f.button :submit, "Sign up"
-= render "devise/shared/links"
+#sign_up_form_wrap
+  %h2#signUp Sign up
+  = simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+    = f.input :email, autofocus: true, placeholder: 'john@whatever.com'
+    = f.input :username
+    = f.input :password
+    = f.input :password_confirmation
+    = f.input :image, :as => :file
+    = f.button :submit, "Sign up"
+  = render "devise/shared/links"
