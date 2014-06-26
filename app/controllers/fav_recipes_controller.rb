@@ -15,15 +15,6 @@ class FavRecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find_by_id(params[:id])
-    if Comment.all.where(:recipe_id => params[:id])[-1] == nil
-      @comments = 'no comments'
-      @commenter = ''
-      @commenter_pic = ''
-    else
-      @comments = Comment.all.where(:recipe_id => params[:id])[-1].comment
-      @commenter = Comment.all.where(:recipe_id => params[:id])[-1].username
-      @commenter_pic = Comment.all.where(:recipe_id => params[:id])[-1].user_image
-    end
     @ingredients = Recipe.find_by_id(params[:id]).ingredients.split('-')[1..-1]
     respond_to do |format|
       format.html # show.html.haml

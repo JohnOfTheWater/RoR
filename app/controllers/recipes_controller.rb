@@ -16,7 +16,7 @@ class RecipesController < ApplicationController
 
   def rating
     rating = Recipe.find_by_id(params[:id]).rating
-    final_rating = (rating+(params[:new_rating].to_i))/3
+    final_rating = (rating+(params[:new_rating].to_i))/2
     final_rating = final_rating.to_i
     Recipe.find_by_id(params[:id]).update_attributes(:rating => final_rating)
     @rating = final_rating
@@ -34,7 +34,7 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find_by_id(params[:id])
-    if FavRecipe.where(:id => params[:id], :user => current_user.username).count == 0
+    if FavRecipe.where(:f_id => params[:id], :user => current_user.username).count == 0
       @favorite = 'no'
     else
       @favorite = 'yes'
@@ -79,8 +79,8 @@ class RecipesController < ApplicationController
     @recipe = Recipe.find_by_id(params[:id])
     @image = Recipe.find_by_id(params[:id]).image
     fav_recipe = FavRecipe.create
-    fav_recipe.update_attributes(:favorite => "yes")
-    fav_recipe.update_attributes(:id => (params[:id]))
+    #fav_recipe.update_attributes(:favorite => "yes")
+    fav_recipe.update_attributes(:f_id => (params[:id]))
     fav_recipe.update_attributes(:tags => (params[:tags]))
     fav_recipe.update_attributes(:user => (params[:username]))
     fav_recipe.update_attributes(:recipe_name => (params[:recipe_name]))
@@ -94,7 +94,7 @@ class RecipesController < ApplicationController
 
   def remove_from_fav
     #recipe = Recipe.find_by_id(params[:id]).update_attributes(:favorite => "no")
-    fav_recipe = FavRecipe.where(:id => params[:id], :user => params[:username])[0]
+    fav_recipe = FavRecipe.where(f_id: params[:id], user: params[:username])[0]
     fav_recipe.destroy
     @recipe = Recipe.find_by_id(params[:id])
     respond_to do |format|
