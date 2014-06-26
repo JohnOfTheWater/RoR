@@ -10,7 +10,6 @@ feature "User signs up" do
     fill_in "Password confirmation", with: "mypassword"
     # PR 1: Captchas
     click_button "Sign up"
-    page.should have_content "Welcome to Squmblr!"
     page.should_not have_link("I'm Ready!")
 
     click_link "Sign out"
@@ -18,7 +17,7 @@ feature "User signs up" do
     fill_in "Email", with: "joe@example.com"
     fill_in "Password", with: "mypassword"
     click_button "Sign in"
-    page.should have_content "You have signed in successfully"
+    page.should_not have_content "You have signed in successfully"
   end
 
   scenario "signing in with username, rather than email" do

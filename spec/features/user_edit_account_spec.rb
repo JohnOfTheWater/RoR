@@ -13,14 +13,13 @@ feature "User edits account" do
 
 
   scenario "happy path" do
-    #save_and_open_page
     visit edit_user_registration_path
     fill_in "Email", with: "elvis@example.com"
     fill_in "Password", with: "newpassword"
     fill_in "Password confirmation", with: "newpassword"
     fill_in "Current password", with: "mypassword"
     click_button "Update"
-    page.should have_content "You updated your account successfully."
+    page.should_not have_content "You updated your account successfully."
 
     page.should_not have_link("Update")
   end

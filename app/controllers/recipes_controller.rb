@@ -53,7 +53,6 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     if @recipe.save
-      flash[:notice] = "Recipe created successfully"
       redirect_to(:action => 'index')
     else
       render('new')

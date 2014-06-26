@@ -13,6 +13,7 @@ feature "User comments recipe" do
   end
 
   scenario "happy path" do
+    click_link "Recipes"
     click_link "My Recipes"
     click_link "Show"
     fill_in "Comment", with: "bananaaaaaaaa!!!"
@@ -23,6 +24,7 @@ feature "User comments recipe" do
   end
 
   scenario "another happy path" do
+    click_link "Recipes"
     click_link "My Recipes"
     click_link "Show"
     fill_in "Comment", with: "more bananaaaaaaaas!!!"

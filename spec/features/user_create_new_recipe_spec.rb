@@ -21,7 +21,6 @@ feature "New recipe" do
     fill_in "recipe[tags]", with: "Text input with body for test!"
     #save_and_open_page
     click_button "Add Recipe!"
-    page.should have_content "Recipe created successfully"
     current_path.should == recipes_path
     page.should have_content "Recipes"
   end
@@ -38,7 +37,6 @@ feature "New recipe" do
     fill_in "recipe[servings]", with: "4"
     #save_and_open_page
     click_button "Add Recipe!"
-    page.should have_content "Recipe created successfully"
     current_path.should == recipes_path
     page.should have_content "Recipes"
   end

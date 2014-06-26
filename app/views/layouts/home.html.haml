@@ -1,0 +1,10 @@
+!!!
+%html
+  %head
+    %title R_On_R
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = favicon_link_tag '9642395-kams4.png'
+    = csrf_meta_tags
+  %body
+    = yield

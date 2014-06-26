@@ -1,5 +1,16 @@
-%h1#title R_on_R
-%h2 Meal planner social media
+#background
+  #sign_in= link_to 'Sign in', new_user_session_path
+  #sign_out= link_to 'Sign out', destroy_user_session_path, method: 'delete'
 
-- unless user_signed_in?
-  = link_to "Sign Up!", new_user_registration_path
+  #main_title
+    %h1#title R_on_R
+    %h2#subtitle Meal planner social media
+    - unless user_signed_in?
+      = link_to "Sign Up!", new_user_registration_path
+  #black_folder
+    #primo
+    #secondo
+    #terzo
+    = link_to("Recipes", {:controller => 'Recipes', :action => 'index'}, :id => 'go_to_rec')
+    = link_to("Create", {:controller => 'Recipes', :action => 'new'}, :id => 'go_to_create')
+    = link_to("Plan", {:controller => 'Weeks', :action => 'new'}, :id => 'go_to_plan')

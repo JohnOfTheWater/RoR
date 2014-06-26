@@ -34,6 +34,7 @@ feature "User add recipe to fav recipe" do
   end
 
   scenario "the real deal" do
+    click_link "Recipes"
     click_link "Favorites"
     expect(page).to have_content 'banana'
     page.should have_content "bona"
@@ -42,6 +43,7 @@ feature "User add recipe to fav recipe" do
   end
 
   scenario "the real shit" do
+    click_link "Recipes"
     click_link "Favorites"
     expect(page).to_not have_content 'avocado'
 
