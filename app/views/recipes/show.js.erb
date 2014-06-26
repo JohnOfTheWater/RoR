@@ -57,6 +57,7 @@ if ('<%=@recipe.commented%>' == 'yes'){
 var favorite_icon;
 var favorite_text;
 var $link;
+console.log('favorite: '+'<%=@favorite%>');
 if ('<%=@favorite%>' == 'no'){
   favorite_icon = 'http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-3/256/add-to-favorites-icon.png';
   favorite_text = 'Add to Favorites';

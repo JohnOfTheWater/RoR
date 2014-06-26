@@ -1,0 +1,7 @@
+$('.new_day_message').remove();
+
+var $newDayMessage = $('<div>');
+
+$newDayMessage.text('Your meal for '+'<%=@message%>'+' as been planned!').addClass('new_day_message');
+
+$('#user_week').append($newDayMessage);

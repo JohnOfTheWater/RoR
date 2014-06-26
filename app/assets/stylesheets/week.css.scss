@@ -23,13 +23,13 @@ height: 300px;
 float: left;
 margin: 0px 50px 100px 50px;
 }
-
+/*
 #new_day {
 clear: both;
 width: 280px;
 border: 1px solid;
 }
-
+*/
 .day_image img{
   background-size: cover;
   width: 260px;
@@ -42,10 +42,89 @@ border: 1px solid;
   top: -304px;
 }
 
-#new_day input{
-width: 250px;
+#mostra {
+  position: relative;
+  top: 300px;
 }
 
+#risultati {
+position: relative;
+top: 300px;
+}
+
+#new_day input{
+width: 160px;
+}
+
+#monday {
+  border: 1px solid;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  top: 200px;
+  left: 110px;
+  visibility: hidden;
+}
+
+#tuesday {
+  border: 1px solid;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  top: 200px;
+  left: 310px;
+  visibility: hidden;
+}
+
+#wednesday {
+  border: 1px solid;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  top: 200px;
+  left: 510px;
+  visibility: hidden;
+}
+
+#thursday {
+  border: 1px solid;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  top: 200px;
+  left: 710px;
+  visibility: hidden;
+}
+
+#friday {
+  border: 1px solid;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  top: 200px;
+  left: 910px;
+  visibility: hidden;
+}
+
+#saturday {
+  border: 1px solid;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  top: 200px;
+  left: 1110px;
+  visibility: hidden;
+}
+
+#sunday {
+  border: 1px solid;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  top: 200px;
+  left: 1310px;
+  visibility: hidden;
+}
 //----draggable & droppable----//
 
 .fav_recipe_wrap {
@@ -82,11 +161,71 @@ width: 250px;
 
 #drop_box {
   border: 1px solid;
-  width: 300px;
-  height: 300px;
-  position: relative;
-  left: 400px;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  left: 110px;
+  top: 200px;
+  z-index: -1;
 }
 
 
+#drop_box_tuesday {
+  border: 1px solid;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  left: 310px;
+  top: 200px;
+  z-index: -1;
+}
 
+#drop_box_wednesday {
+  border: 1px solid;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  left: 510px;
+  top: 200px;
+  z-index: -1;
+}
+
+#drop_box_thursday {
+  border: 1px solid;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  left: 710px;
+  top: 200px;
+  z-index: -1;
+}
+
+#drop_box_friday {
+  border: 1px solid;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  left: 910px;
+  top: 200px;
+  z-index: -1;
+}
+
+#drop_box_saturday {
+  border: 1px solid;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  left: 1110px;
+  top: 200px;
+  z-index: -1;
+}
+
+#drop_box_sunday {
+  border: 1px solid;
+  width: 160px;
+  height: 170px;
+  position: absolute;
+  left: 1310px;
+  top: 200px;
+  z-index: -1;
+}

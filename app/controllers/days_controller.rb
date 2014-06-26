@@ -7,12 +7,12 @@ class DaysController < ApplicationController
   def create
     week = Week.find(params[:week_id])
     day = week.days.build(day_params)
-    if day.save
-      flash[:notice] = "Your day has been created"
-    else
-      flash[:alert] = "Your comment could not be created"
+    @message = day.day
+    day.save
+    respond_to do |format|
+      format.html {redirect_to weeks_path}
+      format.js
     end
-    redirect_to weeks_path
     #render :js => "window.location = '/jobs/index'"
   end
 

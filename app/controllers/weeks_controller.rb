@@ -43,6 +43,11 @@ class WeeksController < ApplicationController
   def show
     @week = Week.find_by_id(params[:id])
     @favorites = FavRecipe.all.where(:user => current_user.username)
+    if @week.days.count == 7
+      @full = 'yes'
+    else
+      @full = 'no'
+    end
     respond_to do |format|
       format.html # show.html.haml
       format.js # show.js.erb
@@ -56,8 +61,7 @@ class WeeksController < ApplicationController
   def create
     @week = Week.new(week_params)
     if @week.save
-      flash[:notice] = "Recipe created successfully"
-      redirect_to(:action => 'index')
+      redirect_to(:action => 'show', :id => @week.id)
     else
       render('new')
     end
