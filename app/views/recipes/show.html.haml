@@ -18,6 +18,12 @@
   %h4#full_date
     Date:
     %p.full_date= @recipe.created_at.to_s.slice!(0, 10)
+  %h4#full_servings
+    Servings:
+    %p.full_servings= @recipe.servings
+  %h4#full_time
+    Ready In:
+    %p.full_time= @recipe.ready_in
 
 
 #comment_wrap
