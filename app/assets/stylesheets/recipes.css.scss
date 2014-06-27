@@ -256,10 +256,12 @@ height: 150px;
 #full_name {
   font-family: 'Indie Flower', cursive;
   font-size: 30px;
-  margin: 5px 0px 15px 0px;
+  margin: 35px 0px 15px 0px;
   text-transform: capitalize;
   font-style: italic;
   font-weight: bolder;
+color: white;
+text-shadow: 1px 1px 3px black;
 }
 
 #full_image img{
@@ -267,14 +269,16 @@ height: 150px;
   max-height: 280px;
   position: relative;
   top: -15px;
-  border: 2px solid black;
+  border: 1px solid whitesmoke;
 }
 
 #full_ing{
 font-size: 35px;
-border-right: 1px solid grey;
+border-right: 1px solid beige;
 width: 590px;
 float: left;
+color: white;
+text-shadow: 1px 1px 3px black;
 }
 
 .ing {
@@ -285,9 +289,11 @@ font-size: 20px;
 #full_prep {
   width: 560px;
   float: left;
-  border-right: 1px solid grey;
+  border-right: 1px solid beige;
   line-height: 40px;
   padding: 0px 20px 0px 33px;
+color: white;
+text-shadow: 1px 1px 3px black;
 }
 
 #full_prep p {
@@ -297,6 +303,17 @@ font-size: 24px;
 
 #full_tags {
 clear: left;
+color: white;
+text-shadow: 1px 1px 3px black;
+}
+
+#full_date {
+  clear: left;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  position: relative;
+  top: -76px;
+  left: 100px;
 }
 
 #comment_wrap{
@@ -307,6 +324,10 @@ clear: left;
   padding: 0px 5px 5px 5px;
   width: 396px;
   margin: 0px 0px 0px;
+color: whitesmoke;
+text-shadow: 1px 1px 3px black;
+box-shadow: 5px 5px 5px #1A1717;
+  background-color: rgba(235, 229, 229, 0.7);
 }
 
 #comment_comment {

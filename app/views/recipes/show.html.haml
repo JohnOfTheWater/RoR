@@ -1,7 +1,6 @@
 - if !flash[:notice].blank?
   .flash_notice
     = flash[:notice]
-= link_to("<< Back to Recipes List", {:action => 'index'}, :class => 'back_button')
 #full_recipe_wrap
   %h1#full_name= @recipe.recipe_name
   %div#full_image

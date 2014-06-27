@@ -16,7 +16,7 @@ feature "User click show" do
   scenario "happy path" do
     visit recipes_path
     click_link "Show"
-    page.should have_link "<< Back to Recipes List"
+    page.should_not have_link "<< Back to Recipes List"
     page.should have_content "banana"
     #save_and_open_page
 
