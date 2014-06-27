@@ -1,9 +1,15 @@
-%h2#signIn Sign in
-= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
-  .form-inputs
-    = f.input :email, required: false, autofocus: true
-    = f.input :password, required: false
-    = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
-  .form-actions
-    = f.button :submit, "Sign in"
-= render "devise/shared/links"
+#background_sign_in
+#welcome_back
+  %h2 Welcome back to Recipes On Rails!
+
+#sign_in_form_wrap
+  %h2#signIn Sign in
+  = simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
+    .form-inputs
+      = f.input :email, required: false, autofocus: true
+      = f.input :password, required: false
+      = f.input :remember_me, as: :boolean if devise_mapping.rememberable?
+    .form-actions
+      = f.button :submit, "Sign in"
+  = render "devise/shared/links"
+
