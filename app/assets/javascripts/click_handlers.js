@@ -132,6 +132,8 @@
   }
 
   function scrollToAnchor(){
+    $('#here').css('background', 'url(http://evernode.delacqua.us/img/johngmailcom/john/442395-1pq2h.jpg)').css('background-size', 'cover');
+    $('#there *').remove();
     $('#search_form').hide();
     $('#create_new_recipe').hide();
     $('html,body').animate({scrollTop: $('#here').offset().top}, 800, function(){
@@ -142,6 +144,8 @@
   }
 
   function scrollToNewRecipe(){
+    $('#here').css('background', 'url(http://evernode.delacqua.us/img/johngmailcom/john/9812395-1k7ba.png)').css('background-size', 'cover');
+    $('#there *').remove();
     $('#search_form').hide();
     $('#create_new_recipe').hide();
     $('html,body').animate({scrollTop: $('#here').offset().top}, 800, function(){

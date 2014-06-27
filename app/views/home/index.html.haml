@@ -3,7 +3,7 @@
   #sign_out= link_to 'Sign out', destroy_user_session_path, method: 'delete'
 
 #main_title
-  %h1#title R_on_R
+  %h1#title Recipes_on_Rails
   %h2#subtitle Meal planner social media
   - unless user_signed_in?
     = link_to "Sign Up!", new_user_registration_path
