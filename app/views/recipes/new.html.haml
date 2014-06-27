@@ -5,7 +5,7 @@
     %table{:summary => "Recipe form field", :id => 'summary'}
       %h2#new_recipe_name
         Recipe Name
-        = f.text_field(:recipe_name, placeholder: "Recipe Name", maxlength: 100, autofocus: "true")
+        = f.text_field(:recipe_name, placeholder: "Recipe Name", maxlength: 31, autofocus: "true")
       %h2#new_recipe_desc
         Description
         = f.text_area(:description, placeholder: "a brief description of this recipe", maxlength: 82)
