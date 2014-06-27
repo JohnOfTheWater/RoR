@@ -1,13 +1,13 @@
 - if !flash[:notice].blank?
   .flash_notice
     = flash[:notice]
+= link_to("+ Week", {:action => 'new'}, :id => 'add_week')
 #weeks_wrap
-  = link_to("+ Week", {:action => 'new'}, :id => 'add_week')
-  %h1 Weeks
+  %h1 Planned Weeks
   - @weeks.each do |week|
     .week_wrap
-      %p.week_date= week.week_date
-      %p.week_user= week.user
+      %p.week_date= 'Week Date: '+week.week_date
+      %p.week_user= 'User: '+week.user
       - if user_signed_in? && week.user == current_user.username
         = link_to("Show", {:action => 'show', :id => week.id }, :class => 'show')
         = link_to("Edit", {:action => 'edit', :id => week.id }, :class => 'edit')

@@ -9,8 +9,8 @@
 #days_wrap
   - @week.days.each do |day|
     .days_wrap
-      %p= day.day
-      %p= day.recipe_name
+      %p.day_day= day.day.capitalize
+      %p.day_name= day.recipe_name.capitalize
       .day_image= image_tag day.image.to_s
       .link_show_recipe= link_to("", {:controller => 'Days', :action => 'show', :recipe_name => day.recipe_name})
 - if @full == 'no'
@@ -63,20 +63,27 @@
       = f.input :image, as: :string, input_html: {id: "sunday_image"}
       = f.button :submit, "New Day"
 
-  #drop_box
-  #drop_box_tuesday
-  #drop_box_wednesday
-  #drop_box_thursday
-  #drop_box_friday
-  #drop_box_saturday
-  #drop_box_sunday
-  #mostra Click
+  #drop_box drag here your recipe -monday-
+  #drop_box_tuesday drag here your recipe -tuesday-
+  #drop_box_wednesday drag here your recipe -wedsady-
+  #drop_box_thursday drag here your recipe -thursday-
+  #drop_box_friday drag here your recipe -friday-
+  #drop_box_saturday drag here your recipe -saturday-
+  #drop_box_sunday drag here your recipe -sunday-
+  #mostra Favorites
+  #vegetarian \   Vegetarian
   #risultati
-    %h2 Favorites:
     - @favorites.each do |rec|
       .fav_recipe_wrap
         .fav_index_image
           = image_tag rec.image.to_s
         %p.fav_name= rec.recipe_name
         = link_to("", {:controller => 'Recipes', :action => 'show', :id => rec.id}, :class => 'search_show')
+  #risultati2
+    - @vegetarians.each do |veg|
+      .fav_recipe_wrap
+        .fav_index_image
+          = image_tag veg.image.to_s
+        %p.fav_name= veg.recipe_name
+        = link_to("", {:controller => 'Recipes', :action => 'show', :id => veg.id}, :class => 'search_show')
 

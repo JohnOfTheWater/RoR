@@ -9,10 +9,12 @@
     $('#search_form').hide();
     $('#create_new_recipe').hide();
     $('#risultati').hide();
+    $('#risultati2').hide();
     //$('#hunter').click(showSecondo);
     $('#scroll_down').click(scrollToAnchor);
     $('#add_new_recipe').click(scrollToNewRecipe);
     $('#mostra').click(showRisultati);
+    $('#vegetarian').click(showRisultati2);
     $('#recipe_wrap').on('click', '.close_recipe', close_recipe);
     $('#recipe_wrap').on('click', '.comments', showComments);
     $('#recipe_wrap').on('click', '.close_comments', closeComments);
@@ -128,7 +130,13 @@
   }
 
   function showRisultati(){
+    $('#risultati2').hide();
     $('#risultati').fadeToggle(300);
+  }
+
+  function showRisultati2(){
+    $('#risultati').hide();
+    $('#risultati2').fadeToggle(300);
   }
 
   function scrollToAnchor(){
