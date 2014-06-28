@@ -8,9 +8,10 @@
   - unless user_signed_in?
     = link_to "Sign Up!", new_user_registration_path
 #black_folder
-  #primo
-  #secondo
-  #terzo
-  = link_to("Recipes", {:controller => 'Recipes', :action => 'index'}, :id => 'go_to_rec')
-  = link_to("Create", {:controller => 'Recipes', :action => 'new'}, :id => 'go_to_create')
-  = link_to("Plan", {:controller => 'Weeks', :action => 'new'}, :id => 'go_to_plan')
+  #black_folder_wrap
+    #primo
+      = link_to("Recipes", {:controller => 'Recipes', :action => 'index'}, :id => 'go_to_rec')
+    #secondo
+      = link_to("Create", {:controller => 'Recipes', :action => 'new'}, :id => 'go_to_create')
+    #terzo
+      = link_to("Plan", {:controller => 'Weeks', :action => 'new'}, :id => 'go_to_plan')
