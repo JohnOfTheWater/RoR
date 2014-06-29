@@ -5,7 +5,7 @@
   %h1 My Recipes
   = link_to("Add Recipe", {:action => 'new'}, :id => 'add_recipe')
   - @recipes.each do |recipe |
-    .my_recipe_wrap
+    .my_recipe_wrap.animated
       %h2
         Recipe Name:
       %p.name= recipe.recipe_name

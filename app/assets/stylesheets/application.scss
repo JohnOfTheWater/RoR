@@ -16,13 +16,18 @@
 
 //-------navigation--------//
 @import url('http://fonts.googleapis.com/css?family=Montserrat');
+
+html {
+height: 100%;
+}
+
 body{
   //background: -webkit-linear-gradient(-45deg, #1e5799 0%,#2989d8 50%,#207cca 51%,#7db9e8 100%);
   //background: -webkit-linear-gradient(-45deg, #b4e391 0%,#61c419 100%,#b4e391 100%,#61c419 100%);
   //background: -webkit-linear-gradient(-45deg, #eaefb5 0%,#e1e9a0 100%);
   //background: -webkit-radial-gradient(center, ellipse cover, #f0f9ff 0%,#cbebff 97%,#a1dbff 100%);
-  background: url('http://evernode.delacqua.us/img/johngmailcom/john/1562395-o5tb2.jpg');
-  background-size: cover;
+  //background: url('http://evernode.delacqua.us/img/johngmailcom/john/1562395-o5tb2.jpg');
+  //background-size: cover;
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -89,7 +94,7 @@ margin: 0px 240px 0px 0px;
 #go_to_create {
   position: relative;
   top: 67px;
-  left: -10px;
+  left: -3px;
   padding: 70px 0px 0px 0px;
 }
 
@@ -105,7 +110,7 @@ margin: 0px 240px 0px 0px;
 #go_to_plan {
   position: relative;
   top: 67px;
-  left: -10px;
+  left: -1px;
   padding: 70px 15px 0px 15px;
 }
 
@@ -467,4 +472,25 @@ border-right: 1px solid black;
 }#main_title a:active {
   position:relative;
   top:1px;
+}
+
+
+@media (min-width: 0px) and (max-width: 400px) {//between
+  body {
+    background: linear-gradient(#d5f1f0 350px, #75cbd2 0px);
+  }
+
+}
+
+@media screen and (min-width: 401px) { //it means from 1023px(ipad) do
+
+  body {
+    background: linear-gradient(#d5f1f0 200px, #DAD6A7 730px);
+    //background: linear-gradient(#d5f1f0 50px, #75cbd2 330px);
+    height: 100%;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+
 }

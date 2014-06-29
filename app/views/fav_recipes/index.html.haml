@@ -6,14 +6,14 @@
   - if user_signed_in?
     = link_to("+ Recipe", {:controller => 'Recipes', :action => 'new'}, :id => "add_recipe")
   - @recipes.each do |recipe |
-    .recipe_wrap
+    .recipe_wrap.animated
       .index_image
         = image_tag recipe.image.to_s
       %p.name= recipe.recipe_name
       %p.desc= recipe.description.slice(0, 110)
       %p.fav_tags= recipe.tags
       - if user_signed_in? && recipe.user == current_user.username
-        = link_to("Show", {:action => 'show', :id => recipe.f_id, remote: true }, :class => 'action_show')
+        = link_to("Show", {:action => 'show', :id => recipe.f_id, remote: true })
         = link_to("Edit", {:action => 'edit', :id => recipe.id }, :class => 'action edit')
       - else
         = link_to("Show", {:action => 'show', :id => recipe.id, remote: true }, :class => 'action_show')

@@ -10,7 +10,9 @@
     $('#create_new_recipe').hide();
     $('#risultati').hide();
     $('#risultati2').hide();
-    //$('#hunter').click(showSecondo);
+    $('.week_wrap').addClass('flipInX');
+    $('.recipe_wrap').addClass('fadeInDown');
+    $('.my_recipe_wrap').addClass('fadeInDown');
     $('#scroll_down').click(scrollToAnchor);
     $('#add_new_recipe').click(scrollToNewRecipe);
     $('#mostra').click(showRisultati);

@@ -5,7 +5,7 @@
 #weeks_wrap
   %h1 Planned Weeks
   - @weeks.each do |week|
-    .week_wrap
+    .week_wrap.animated
       %p.week_date= 'Week Date: '+week.week_date
       %p.week_user= 'User: '+week.user
       - if user_signed_in? && week.user == current_user.username
