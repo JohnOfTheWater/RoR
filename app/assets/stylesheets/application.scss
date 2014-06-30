@@ -29,6 +29,8 @@ body{
   //background: url('http://evernode.delacqua.us/img/johngmailcom/john/1562395-o5tb2.jpg');
   //background-size: cover;
   font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(#d5f1f0 200px, #DAD6A7 730px);
+  background-size: cover;
 }
 
 //--------home screen-------//
@@ -482,7 +484,7 @@ border-right: 1px solid black;
 
 }
 
-@media screen and (min-width: 401px) { //it means from 1023px(ipad) do
+@media (min-width: 0px) and (max-width: 1024px) { //(ipad)
 
   body {
     background: linear-gradient(#d5f1f0 200px, #DAD6A7 730px);
@@ -491,6 +493,48 @@ border-right: 1px solid black;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
+  }
+
+  #black_folder {
+    background-color: rgba(250, 250, 250, 0.7);
+    position: absolute;
+    top: 461px;
+    width: 100%;
+    height: 40%;
+    border-top: 2px solid whitesmoke;
+    left: 0px;
+  }
+
+  #sign_up_form_wrap {
+    position: relative;
+    margin: 0px 0px 0px 0px;
+    z-index: 1;
+    width: 350px;
+    top: 100px;
+    left: 550px;
+    padding: 0px 0px 30px 60px;
+    box-shadow: 5px 5px 5px #1A1717;
+    background-color: rgba(235, 229, 229, 0.7);
+    border: 1px solid white;
+    color: white;
+  }
+
+  #welcome {
+    position: relative;
+    z-index: 1;
+    top: 80px;
+    left: 50px;
+    color: white;
+    font-size: 24px;
+    text-shadow: 1px 1px 3px black;
+  }
+
+  #sign_up_form_wrap a {
+    position: absolute;
+    top: -73px;
+    left: -150px;
+    color: white;
+    font-size: 22px;
   }
 
 }
