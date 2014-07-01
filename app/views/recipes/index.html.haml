@@ -21,6 +21,7 @@
       - else
         = link_to("Show", {:action => 'show', :id => recipe.id, remote: true })
         = link_to('Write a Comment ', {:controller => 'Recipes', :action => 'show', :id => recipe})
+        = link_to("", {:action => 'show', :id => recipe.id, remote: true }, :class => 'action_show')
 #recipe_wrap
 
 #here
