@@ -281,12 +281,24 @@ text-shadow: 1px 1px 3px black;
 }
 
 #full_ing{
-font-size: 35px;
+font-size: 33px;
 border-right: 1px solid beige;
 width: 590px;
 float: left;
 color: white;
 text-shadow: 1px 1px 3px black;
+}
+
+#clock {
+background: url('http://evernode.delacqua.us/img/johngmailcom/john/8902395-17hct.png');
+background-size: cover;
+width: 50px;
+height: 50px;
+float: right;
+}
+
+.full_time{
+  margin: 5px 0px 0px 0px;
 }
 
 .ing {
@@ -302,6 +314,7 @@ font-size: 20px;
   padding: 0px 20px 0px 33px;
 color: white;
 text-shadow: 1px 1px 3px black;
+font-size: 33px;
 }
 
 #full_prep p {
