@@ -24,7 +24,7 @@
   %h4#full_time
     Ready In:
     #clock
-    %p.full_time= @recipe.ready_in
+    %p.full_time= @recipe.ready_in.to_s.slice(0,6)
 
 
 #comment_wrap
