@@ -12,7 +12,16 @@ color: white;
     text-shadow: 1px 1px 3px black;
     text-decoration: none;
     position: relative;
-    top: 30px;
+    top: 40px;
+    background-color: rgba(235, 229, 229, 0.5);
+    padding: 3px 5px 5px 5px;
+    left: 280px;
+    border: 1px solid;
+    box-shadow: 1px 1px 3px #1A1717;
+}
+
+#add_week:hover{
+    box-shadow: 1px 1px 0px #1A1717;
 }
 
 #weeks_wrap{
@@ -40,11 +49,22 @@ text-shadow: 1px 1px 3px black;
 
 .week_wrap{
   box-shadow: 5px 5px 5px #1A1717;
-  background-color: rgba(235, 229, 229, 0.7);
+  background-color: rgba(235, 229, 229, 0.3);
   border: 1px solid white;
   float: left;
   padding: 10px 10px 10px 10px;
   margin: 0px 0px 0px 30px;
+}
+
+.week_wrap a{
+  background-color: rgba(235, 229, 229, 0.5);
+  padding: 2px 2px 2px 2px;
+  border: 1px solid;
+  box-shadow: 1px 1px 3px #1A1717;
+}
+
+.week_wrap a:hover{
+  box-shadow: 1px 1px 0px #1A1717;
 }
 
 
@@ -128,18 +148,46 @@ border: 1px solid;
 #mostra {
   position: relative;
   top: 300px;
-color: white;
-text-shadow: 1px 1px 3px black;
-font-size: 32px;
+  color: white;
+  font-size: 24px;
+  text-shadow: 1px 1px 3px black;
+  text-decoration: none;
+  background-color: rgba(235, 229, 229, 0.5);
+  padding: 3px 5px 5px 5px;
+  border: 1px solid;
+  box-shadow: 1px 1px 3px #1A1717;
+  width: 116px;
+}
+
+#mostra:hover{
+    box-shadow: 1px 1px 0px #1A1717;
 }
 
 #vegetarian {
   position: relative;
   top: 260px;
   color: white;
+  left: 150px;
+  font-size: 24px;
   text-shadow: 1px 1px 3px black;
-  font-size: 32px;
-  left: 180px;
+  text-decoration: none;
+  background-color: rgba(235, 229, 229, 0.5);
+  padding: 3px 5px 5px 5px;
+  border: 1px solid;
+  box-shadow: 1px 1px 3px #1A1717;
+  width: 135px;
+}
+
+#vegetarian:hover{
+    box-shadow: 1px 1px 0px #1A1717;
+}
+
+#hr {
+  border-top: 1px solid gray;
+  width: 450px;
+  position: relative;
+  top: 240px;
+  left: 40px;
 }
 
 #risultati {

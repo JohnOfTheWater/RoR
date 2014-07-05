@@ -44,7 +44,7 @@ class WeeksController < ApplicationController
     @week = Week.find_by_id(params[:id])
     @favorites = FavRecipe.all.where(:user => current_user.username)
     @vegetarians = Recipe.all.where(:tags => 'vegetarian')
-    if @week.days.count == 7
+    if @week.days.count >= 7
       @full = 'yes'
     else
       @full = 'no'
@@ -88,7 +88,6 @@ class WeeksController < ApplicationController
 
   def destroy
     week = Week.find_by_id(params[:id]).destroy
-    flash[:notice] = "Week '#{week.week_date}' destroyed successfully"
     redirect_to(:action => 'index')
   end
 
