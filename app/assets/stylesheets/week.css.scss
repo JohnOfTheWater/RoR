@@ -126,23 +126,28 @@ text-align: center;
   position: relative;
   left: -3px;
 }
-/*
-#new_day {
-clear: both;
-width: 280px;
-border: 1px solid;
+
+.day_name {
+  margin: 0px 0px 0px 0px;
+  position: relative;
+  top: -227px;
+  font-size: 18px;
+  text-transform: capitalize;
+  text-align: center;
 }
-*/
+
 .day_image img{
   background-size: cover;
   width: 260px;
   height: 214px;
+  position: relative;
+  top: 35px;
 }
 
 .link_show_recipe a{
   padding: 0px 0px 280px 260px;
   position: relative;
-  top: -304px;
+  top: -290px;
 }
 
 #mostra {

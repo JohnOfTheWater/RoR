@@ -11,8 +11,8 @@
     - @week.days.each do |day|
       .days_wrap
         %p.day_day= day.day.capitalize
-        %p.day_name= day.recipe_name.to_s.slice(0,28).capitalize
         .day_image= image_tag day.image.to_s
+        %p.day_name= day.recipe_name
         .link_show_recipe= link_to("", {:controller => 'Days', :action => 'show', :recipe_name => day.recipe_name})
 
 - else
