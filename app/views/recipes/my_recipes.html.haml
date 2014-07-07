@@ -11,10 +11,10 @@
       %p.name= recipe.recipe_name
       %h3#desc
         DESCRIPTION
-      %p.desc= recipe.ingredients.slice(0, 127)
+      %p.desc= recipe.description.slice(0, 110)
       %h3#prep
         PREPARATION
-      %p.prep= recipe.preparation.slice(0, 468)
+      %p.prep= recipe.preparation.slice(0, 645)
       %h4
         Tags:
       %p.tags= recipe.tags

@@ -15,7 +15,9 @@
       - if user_signed_in? && recipe.user == current_user.username
         = link_to("Show", {:action => 'show', :id => recipe.f_id, remote: true })
         = link_to("Edit", {:action => 'edit', :id => recipe.id }, :class => 'action edit')
+        = link_to("", {:controller => 'Recipes', :action => 'show', :id => recipe.f_id, remote: true }, :class => 'action_show')
       - else
         = link_to("Show", {:action => 'show', :id => recipe.id, remote: true }, :class => 'action_show')
         = link_to('Write a Comment ', '#')
+        = link_to("", {:controller => 'Recipes', :action => 'show', :id => recipe.f_id, remote: true }, :class => 'action_show')
 #recipe_wrap

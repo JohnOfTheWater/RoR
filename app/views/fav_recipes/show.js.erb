@@ -85,7 +85,7 @@ $recipeName.addClass('r_name').text('<%=@recipe.recipe_name%>');
 $recipePic.addClass('r_pic').css('background', 'url('+'<%=@recipe.image%>'+')').css('background-size', 'cover');
 $close.addClass('close_recipe').text('close[x]');
 $ingredients.html("<%= j render('ingredients.html.haml') %>").addClass('r_ing');
-$preparation.addClass('r_prep').text('<%=@recipe.preparation%>');
+$preparation.addClass('r_prep').text('<%=@recipe.preparation.to_s%>');
 $prep_title.addClass('r_prep_title').text('Preparation:');
 $ready_in.addClass('r_ready').text('Ready In: '+'<%=@recipe.ready_in%>');
 $clock.addClass('r_clock').css('background', 'url('+'http://evernode.delacqua.us/img/johngmailcom/john/8902395-17hct.png'+')').css('background-size', 'cover');
