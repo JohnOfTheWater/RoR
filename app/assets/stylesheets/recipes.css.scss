@@ -780,15 +780,19 @@ left: 830px;
 }
 
 #new_recipe_wrap {
-  position: relative;
+  position: absolute;
   box-shadow: 5px 5px 5px #1A1717;
   background-color: rgba(235, 229, 229, 0.7);
   border: 1px solid white;
   width: 730px;
   height: 720px;
   padding: 0px 0px 0px 25px;
-  top: 130px;
+  top: 10%;
   left: 20px;
+}
+
+#new_recipe_wrap form{
+  height: 722px;
 }
 
 #new_recipe_name {
