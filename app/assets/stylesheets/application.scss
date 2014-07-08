@@ -30,7 +30,7 @@ body{
   background-size: cover;
   font-family: 'Montserrat', sans-serif;
   background: linear-gradient(#d5f1f0 200px, #DAD6A7 730px);
-    height: 100%;
+    //height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -61,7 +61,7 @@ font-size: 20px;
 #black_folder{
   background-color: rgba(250, 250, 250, 0.7);
   position: absolute;
-  top: 571px;
+  top: 60%;
   width: 100%;
   height: 40%;
   border-top: 2px solid whitesmoke;
@@ -72,7 +72,13 @@ font-size: 20px;
   color: white;
   text-decoration: none;
   text-shadow: 1px 1px 3px black, -1px -1px 3px black;
-  font-size: 22px;
+  font-size: 24px;
+}
+
+#black_folder a:hover {
+  color: black;
+  text-shadow: 1px 1px 3px white, -1px -1px 3px white;
+  font-size: 24px;
 }
 
 #black_folder_wrap{
@@ -115,7 +121,7 @@ margin: 0px 240px 0px 0px;
 #go_to_plan {
   position: relative;
   top: 67px;
-  left: -1px;
+  left: 1px;
   padding: 70px 15px 0px 15px;
 }
 
@@ -200,6 +206,7 @@ margin-bottom: 15px;
 }
 
 #welcome {
+  width: 600px;
   position: relative;
   z-index: 1;
   top: 300px;
@@ -313,6 +320,31 @@ z-index: 0;
   margin: 10px 0px 10px -60px;
   border-bottom: 1px solid grey;
   padding: 0px 0px 5px 20px;
+}
+
+#sign_in_form_wrap a{
+  color: white;
+  font-size: 20px;
+  position: relative;
+  top: 20px;
+  left: 260px;
+}
+
+#sign_in_form_wrap .btn{
+  color: white;
+  text-shadow: 1px 1px 3px black;
+  font-size: 24px;
+  background-color: rgba(235, 229, 229, 0.5);
+  padding: 3px 5px 5px 5px;
+  border: 1px solid;
+  box-shadow: 1px 1px 3px #1A1717;
+  position: relative;
+  top: 20px;
+  left: 80px;
+}
+
+#sign_in_form_wrap .btn:hover{
+  box-shadow: 1px 1px 0px #1A1717;
 }
 
 #editUser{
