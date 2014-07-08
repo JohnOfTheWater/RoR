@@ -18,6 +18,15 @@ class WeeksController < ApplicationController
     end
   end
 
+  def reset_days
+    i = Week.find_by_id(params[:id]).days.count
+    week = Week.find_by_id(params[:id])
+    i.times do
+      week.days.last.destroy
+    end
+    redirect_to(:action => 'index')
+  end
+
   def comments
     @comments = Comment.all.where(:recipe_id => params[:id])
   end
