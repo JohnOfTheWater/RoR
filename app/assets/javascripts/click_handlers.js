@@ -33,7 +33,7 @@
       //$('#day_day').val('monday');
       $('#monday_name').val(ui.draggable.find("p").text());
       $('#monday_image').val(ui.draggable.find("img").attr("src"));
-      $('#drop_box').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover');
+      $('#drop_box').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover').css('text-transform', 'capitalize');
       $('#monday input.btn').css({
         'visibility' : 'visible',
         'position' : 'relative',
@@ -45,7 +45,7 @@
     $(function() {$('#tuesday').droppable({accept: ".fav_recipe_wrap", drop: function(event, ui) {
       $('#tuesday_name').val(ui.draggable.find("p").text());
       $('#tuesday_image').val(ui.draggable.find("img").attr("src"));
-      $('#drop_box_tuesday').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover');
+      $('#drop_box_tuesday').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover').css('text-transform', 'capitalize');
       $('#tuesday input.btn').css({
         'visibility' : 'visible',
         'position' : 'relative',
@@ -57,7 +57,7 @@
     $(function() {$('#wednesday').droppable({accept: ".fav_recipe_wrap", drop: function(event, ui) {
       $('#wednesday_name').val(ui.draggable.find("p").text());
       $('#wednesday_image').val(ui.draggable.find("img").attr("src"));
-      $('#drop_box_wednesday').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover');
+      $('#drop_box_wednesday').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover').css('text-transform', 'capitalize');
       $('#wednesday input.btn').css({
         'visibility' : 'visible',
         'position' : 'relative',
@@ -69,7 +69,7 @@
     $(function() {$('#thursday').droppable({accept: ".fav_recipe_wrap", drop: function(event, ui) {
       $('#thursday_name').val(ui.draggable.find("p").text());
       $('#thursday_image').val(ui.draggable.find("img").attr("src"));
-      $('#drop_box_thursday').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover');
+      $('#drop_box_thursday').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover').css('text-transform', 'capitalize');
       $('#thursday input.btn').css({
         'visibility' : 'visible',
         'position' : 'relative',
@@ -81,7 +81,7 @@
     $(function() {$('#friday').droppable({accept: ".fav_recipe_wrap", drop: function(event, ui) {
       $('#friday_name').val(ui.draggable.find("p").text());
       $('#friday_image').val(ui.draggable.find("img").attr("src"));
-      $('#drop_box_friday').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover');
+      $('#drop_box_friday').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover').css('text-transform', 'capitalize');
       $('#friday input.btn').css({
         'visibility' : 'visible',
         'position' : 'relative',
@@ -93,7 +93,7 @@
     $(function() {$('#saturday').droppable({accept: ".fav_recipe_wrap", drop: function(event, ui) {
       $('#saturday_name').val(ui.draggable.find("p").text());
       $('#saturday_image').val(ui.draggable.find("img").attr("src"));
-      $('#drop_box_saturday').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover');
+      $('#drop_box_saturday').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover').css('text-transform', 'capitalize');
       $('#saturday input.btn').css({
         'visibility' : 'visible',
         'position' : 'relative',
@@ -105,7 +105,7 @@
     $(function() {$('#sunday').droppable({accept: ".fav_recipe_wrap", drop: function(event, ui) {
       $('#sunday_name').val(ui.draggable.find("p").text());
       $('#sunday_image').val(ui.draggable.find("img").attr("src"));
-      $('#drop_box_sunday').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover');
+      $('#drop_box_sunday').text(ui.draggable.find("p").text()).css('background', 'url('+ui.draggable.find("img").attr("src")+')').css('background-size', 'cover').css('text-transform', 'capitalize');
       $('#sunday input.btn').css({
         'visibility' : 'visible',
         'position' : 'relative',

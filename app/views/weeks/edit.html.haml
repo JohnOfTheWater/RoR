@@ -1,11 +1,9 @@
-= link_to("<< Back to week List", {:action => 'index'}, :class => 'back_button')
-#week_wrap
-  %h2 New Week
+#edit_week_wrap
   = simple_form_for(@week) do |f|
-    %h2#new_week_date Week date
-    = f.text_field(:week_date, maxlength: 100, autofocus: "true")
+    %h2#edit_week_date Week date
+    = f.text_field(:week_date, maxlength: 100, autofocus: "true", id: 'edit_input')
     = f.hidden_field(:user, :value => current_user.username)
-    #new_button
-      = submit_tag("Update Week")
+    #edit_button
+      = submit_tag("Update Week", id: 'update_week')
 
-= link_to("Reset Days", {:action => 'reset_days', :id => @week.id}, :class => 'reset_days')
+  = link_to("Reset Days", {:action => 'reset_days', :id => @week.id}, :class => 'reset_days')
