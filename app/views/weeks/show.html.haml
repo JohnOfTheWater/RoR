@@ -77,7 +77,7 @@
         .fav_index_image
           = image_tag rec.image.to_s
         %p.fav_name= rec.recipe_name
-        = link_to("", {:controller => 'Recipes', :action => 'show', :id => rec.id}, :class => 'search_show')
+        = link_to("", {:controller => 'Recipes', :action => 'show', :id => rec.f_id}, :class => 'search_show')
   #risultati2
     - @vegetarians.each do |veg|
       .fav_recipe_wrap
@@ -86,3 +86,4 @@
         %p.fav_name= veg.recipe_name
         = link_to("", {:controller => 'Recipes', :action => 'show', :id => veg.id}, :class => 'search_show')
 
+  //= link_to("Click here if you are using an iPad", {:controller => 'Weeks', :action => 'show_iPad', :id => @week.id}, :class => 'show_iPad')

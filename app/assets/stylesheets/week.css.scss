@@ -353,6 +353,24 @@ color: white;
   left: 1310px;
   visibility: hidden;
 }
+
+.show_iPad {
+position: relative;
+top: 230px;
+color: white;
+left: 330px;
+font-size: 17px;
+text-shadow: 1px 1px 3px black;
+text-decoration: none;
+background-color: rgba(235, 229, 229, 0.5);
+padding: 3px 5px 5px 5px;
+border: 1px solid;
+box-shadow: 1px 1px 3px #1A1717;
+}
+
+.show_iPad:hover {
+    box-shadow: 1px 1px 0px #1A1717;
+}
 //----draggable & droppable----//
 
 .fav_recipe_wrap {

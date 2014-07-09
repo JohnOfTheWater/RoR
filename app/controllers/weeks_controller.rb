@@ -49,6 +49,12 @@ class WeeksController < ApplicationController
     end
   end
 
+  def show_iPad
+    @week = Week.find_by_id(params[:id])
+    @favorites = FavRecipe.all.where(:user => current_user.username)
+    @vegetarians = Recipe.all.where(:tags => 'vegetarian')
+  end
+
   def show
     @week = Week.find_by_id(params[:id])
     @favorites = FavRecipe.all.where(:user => current_user.username)

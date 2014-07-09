@@ -1,0 +1,77 @@
+#full_week_wrap
+  %h1= 'Date: '+@week.week_date
+  %p#user_week= 'User: '+@week.user
+
+#monday
+  = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
+    = f.hidden_field(:day, :value => 'monday')
+    = f.input :recipe_name, as: :string, input_html: {id: "monday_name"}, maxlength: 100
+    = f.input :image, as: :string, input_html: {id: "monday_image"}
+    = f.button :submit, "Add Recipe", class: 'days_button'
+
+#tuesday
+  = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
+    = f.hidden_field(:day, :value => 'tuesday')
+    = f.input :recipe_name, as: :string, input_html: {id: "tuesday_name"}, maxlength: 100
+    = f.input :image, as: :string, input_html: {id: "tuesday_image"}
+    = f.button :submit, "Add Recipe!", class: 'days_button'
+
+#wednesday
+  = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
+    = f.hidden_field(:day, :value => 'wednesday')
+    = f.input :recipe_name, as: :string, input_html: {id: "wednesday_name"}, maxlength: 100
+    = f.input :image, as: :string, input_html: {id: "wednesday_image"}
+    = f.button :submit, "Add Recipe", class: 'days_button'
+
+#thursday
+  = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
+    = f.hidden_field(:day, :value => 'thursday')
+    = f.input :recipe_name, as: :string, input_html: {id: "thursday_name"}, maxlength: 100
+    = f.input :image, as: :string, input_html: {id: "thursday_image"}
+    = f.button :submit, "Add Recipe", class: 'days_button'
+
+#friday
+  = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
+    = f.hidden_field(:day, :value => 'friday')
+    = f.input :recipe_name, as: :string, input_html: {id: "friday_name"}, maxlength: 100
+    = f.input :image, as: :string, input_html: {id: "friday_image"}
+    = f.button :submit, "Add Recipe", class: 'days_button'
+
+#saturday
+  = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
+    = f.hidden_field(:day, :value => 'saturday')
+    = f.input :recipe_name, as: :string, input_html: {id: "saturday_name"}, maxlength: 100
+    = f.input :image, as: :string, input_html: {id: "saturday_image"}
+    = f.button :submit, "Add Recipe", class: 'days_button'
+
+#sunday
+  = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
+    = f.hidden_field(:day, :value => 'sunday')
+    = f.input :recipe_name, as: :string, input_html: {id: "sunday_name"}, maxlength: 100
+    = f.input :image, as: :string, input_html: {id: "sunday_image"}
+    = f.button :submit, "Add Recipe", class: 'days_button'
+
+#drop_box drag here Monday recipe
+#drop_box_tuesday drag here Tuesday recipe
+#drop_box_wednesday drag here Wednesady recipe
+#drop_box_thursday drag here Thursday recipe
+#drop_box_friday drag here Friday recipe
+#drop_box_saturday drag here Saturday recipe
+#drop_box_sunday drag here Sunday recipe
+#mostra Favorites
+#hr
+#vegetarian Vegetarian
+#risultati
+  - @favorites.each do |rec|
+    .fav_recipe_wrap
+      .fav_index_image
+        = image_tag rec.image.to_s
+      %p.fav_name= rec.recipe_name
+      = link_to("", {:controller => 'Recipes', :action => 'show', :id => rec.id}, :class => 'search_show')
+#risultati2
+  - @vegetarians.each do |veg|
+    .fav_recipe_wrap
+      .fav_index_image
+        = image_tag veg.image.to_s
+      %p.fav_name= veg.recipe_name
+      = link_to("", {:controller => 'Recipes', :action => 'show', :id => veg.id}, :class => 'search_show')
