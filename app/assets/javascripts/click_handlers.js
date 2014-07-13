@@ -133,12 +133,16 @@
 
   function showRisultati(){
     $('#risultati2').hide();
+    $('#risultati_ipad2').hide();
     $('#risultati').fadeToggle(300);
+    $('#risultati_ipad').fadeToggle(300);
   }
 
   function showRisultati2(){
     $('#risultati').hide();
+    $('#risultati_ipad').hide();
     $('#risultati2').fadeToggle(300);
+    $('#risultati_ipad2').fadeToggle(300);
   }
 
   function scrollToAnchor(){

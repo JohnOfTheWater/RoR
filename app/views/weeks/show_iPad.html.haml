@@ -2,76 +2,34 @@
   %h1= 'Date: '+@week.week_date
   %p#user_week= 'User: '+@week.user
 
-#monday
+#monday_ipad
   = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
-    = f.hidden_field(:day, :value => 'monday')
-    = f.input :recipe_name, as: :string, input_html: {id: "monday_name"}, maxlength: 100
-    = f.input :image, as: :string, input_html: {id: "monday_image"}
+    = f.input :day, as: :string, input_html: {id: "form_day"}
+    = f.input :recipe_name, as: :string, input_html: {id: "form_name"}
+    = f.input :image, as: :string, input_html: {id: "form_image"}
     = f.button :submit, "Add Recipe", class: 'days_button'
 
-#tuesday
-  = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
-    = f.hidden_field(:day, :value => 'tuesday')
-    = f.input :recipe_name, as: :string, input_html: {id: "tuesday_name"}, maxlength: 100
-    = f.input :image, as: :string, input_html: {id: "tuesday_image"}
-    = f.button :submit, "Add Recipe!", class: 'days_button'
-
-#wednesday
-  = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
-    = f.hidden_field(:day, :value => 'wednesday')
-    = f.input :recipe_name, as: :string, input_html: {id: "wednesday_name"}, maxlength: 100
-    = f.input :image, as: :string, input_html: {id: "wednesday_image"}
-    = f.button :submit, "Add Recipe", class: 'days_button'
-
-#thursday
-  = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
-    = f.hidden_field(:day, :value => 'thursday')
-    = f.input :recipe_name, as: :string, input_html: {id: "thursday_name"}, maxlength: 100
-    = f.input :image, as: :string, input_html: {id: "thursday_image"}
-    = f.button :submit, "Add Recipe", class: 'days_button'
-
-#friday
-  = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
-    = f.hidden_field(:day, :value => 'friday')
-    = f.input :recipe_name, as: :string, input_html: {id: "friday_name"}, maxlength: 100
-    = f.input :image, as: :string, input_html: {id: "friday_image"}
-    = f.button :submit, "Add Recipe", class: 'days_button'
-
-#saturday
-  = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
-    = f.hidden_field(:day, :value => 'saturday')
-    = f.input :recipe_name, as: :string, input_html: {id: "saturday_name"}, maxlength: 100
-    = f.input :image, as: :string, input_html: {id: "saturday_image"}
-    = f.button :submit, "Add Recipe", class: 'days_button'
-
-#sunday
-  = simple_form_for(Day.new, url: week_days_path(@week), remote: true) do |f|
-    = f.hidden_field(:day, :value => 'sunday')
-    = f.input :recipe_name, as: :string, input_html: {id: "sunday_name"}, maxlength: 100
-    = f.input :image, as: :string, input_html: {id: "sunday_image"}
-    = f.button :submit, "Add Recipe", class: 'days_button'
-
-#drop_box drag here Monday recipe
-#drop_box_tuesday drag here Tuesday recipe
-#drop_box_wednesday drag here Wednesady recipe
-#drop_box_thursday drag here Thursday recipe
-#drop_box_friday drag here Friday recipe
-#drop_box_saturday drag here Saturday recipe
-#drop_box_sunday drag here Sunday recipe
+#drop_boxes
+  #drop_box_ipad click here to chose Monday recipe
+  #drop_box_tuesday_ipad click here to chose Tuesday recipe
+  #drop_box_wednesday_ipad click here to chose Wednesday recipe
+  #drop_box_thursday_ipad click here to chose Thursday recipe
+  #drop_box_friday_ipad click here to chose Friday recipe
+  #drop_box_saturday_ipad click here to chose Saturday recipe
+  #drop_box_sunday_ipad click here to chose Sunday recipe
 #mostra Favorites
 #hr
 #vegetarian Vegetarian
-#risultati
+#risultati_ipad
   - @favorites.each do |rec|
-    .fav_recipe_wrap
-      .fav_index_image
+    .fav_recipe_wrap.ipad
+      .fav_index_image.ipad
         = image_tag rec.image.to_s
-      %p.fav_name= rec.recipe_name
-      = link_to("", {:controller => 'Recipes', :action => 'show', :id => rec.id}, :class => 'search_show')
-#risultati2
+      %p.fav_name.ipad= rec.recipe_name
+
+#risultati_ipad2
   - @vegetarians.each do |veg|
-    .fav_recipe_wrap
-      .fav_index_image
+    .fav_recipe_wrap.ipad
+      .fav_index_image.ipad
         = image_tag veg.image.to_s
-      %p.fav_name= veg.recipe_name
-      = link_to("", {:controller => 'Recipes', :action => 'show', :id => veg.id}, :class => 'search_show')
+      %p.fav_name.ipad= veg.recipe_name

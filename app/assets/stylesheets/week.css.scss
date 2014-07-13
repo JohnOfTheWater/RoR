@@ -260,7 +260,17 @@ position: relative;
 top: 300px;
 }
 
+#risultati_ipad {
+position: relative;
+top: 300px;
+}
+
 #risultati2 {
+position: relative;
+top: 300px;
+}
+
+#risultati_ipad2 {
 position: relative;
 top: 300px;
 }
@@ -270,6 +280,16 @@ width: 160px;
 }
 
 #monday {
+  border: 1px solid;
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  top: 200px;
+  left: 110px;
+  visibility: hidden;
+}
+
+#monday_ipad {
   border: 1px solid;
   width: 170px;
   height: 170px;
@@ -354,23 +374,20 @@ color: white;
   visibility: hidden;
 }
 
-.show_iPad {
-position: relative;
-top: 230px;
-color: white;
-left: 330px;
-font-size: 17px;
-text-shadow: 1px 1px 3px black;
-text-decoration: none;
-background-color: rgba(235, 229, 229, 0.5);
-padding: 3px 5px 5px 5px;
-border: 1px solid;
-box-shadow: 1px 1px 3px #1A1717;
+#ipad_icon {
+  position: relative;
+  top: -230px;
+  left: 610px;
+  background: url("http://evernode.delacqua.us/img/johngmailcom/john/5546469-1f2m8.png");
+  background-size: cover;
+  width: 60px;
+  height: 75px;
 }
 
-.show_iPad:hover {
-    box-shadow: 1px 1px 0px #1A1717;
+.show_iPad {
+  padding: 0px 58px 55px 0px;
 }
+
 //----draggable & droppable----//
 
 .fav_recipe_wrap {
@@ -421,6 +438,22 @@ box-shadow: 1px 1px 3px #1A1717;
 }
 
 
+#drop_box_ipad {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  left: 110px;
+  top: 200px;
+  z-index: 1;
+  background-color: rgba(235, 229, 229, 0.7);
+  border: 1px solid white;
+  text-align: center;
+  font-size: 28px;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+
 #drop_box_tuesday {
   font-size: 28px;
   width: 170px;
@@ -429,6 +462,21 @@ box-shadow: 1px 1px 3px #1A1717;
   left: 310px;
   top: 200px;
   z-index: -1;
+  background-color: rgba(235, 229, 229, 0.7);
+  border: 1px solid white;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+#drop_box_tuesday_ipad {
+  font-size: 28px;
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  left: 310px;
+  top: 200px;
+  z-index: 1;
   background-color: rgba(235, 229, 229, 0.7);
   border: 1px solid white;
   text-align: center;
@@ -451,6 +499,21 @@ box-shadow: 1px 1px 3px #1A1717;
   text-shadow: 1px 1px 3px black;
 }
 
+#drop_box_wednesday_ipad {
+  font-size: 28px;
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  left: 510px;
+  top: 200px;
+  z-index: 1;
+  background-color: rgba(235, 229, 229, 0.7);
+  border: 1px solid white;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
 #drop_box_thursday {
   width: 170px;
   height: 170px;
@@ -459,6 +522,21 @@ box-shadow: 1px 1px 3px #1A1717;
   left: 710px;
   top: 200px;
   z-index: -1;
+  background-color: rgba(235, 229, 229, 0.7);
+  border: 1px solid white;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+#drop_box_thursday_ipad {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  font-size: 28px;
+  left: 710px;
+  top: 200px;
+  z-index: 1;
   background-color: rgba(235, 229, 229, 0.7);
   border: 1px solid white;
   text-align: center;
@@ -481,6 +559,21 @@ box-shadow: 1px 1px 3px #1A1717;
   text-shadow: 1px 1px 3px black;
 }
 
+#drop_box_friday_ipad {
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  left: 910px;
+  top: 200px;
+  font-size: 28px;
+  z-index: 1;
+  background-color: rgba(235, 229, 229, 0.7);
+  border: 1px solid white;
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
 #drop_box_saturday {
   background-color: rgba(235, 229, 229, 0.7);
   border: 1px solid white;
@@ -492,6 +585,21 @@ box-shadow: 1px 1px 3px #1A1717;
   left: 1110px;
   top: 200px;
   z-index: -1;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+#drop_box_saturday_ipad {
+  background-color: rgba(235, 229, 229, 0.7);
+  border: 1px solid white;
+  text-align: center;
+  font-size: 28px;
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  left: 1110px;
+  top: 200px;
+  z-index: 1;
   color: white;
   text-shadow: 1px 1px 3px black;
 }
@@ -509,4 +617,23 @@ box-shadow: 1px 1px 3px #1A1717;
   z-index: -1;
   color: white;
   text-shadow: 1px 1px 3px black;
+}
+
+#drop_box_sunday_ipad {
+  background-color: rgba(235, 229, 229, 0.7);
+  border: 1px solid white;
+  font-size: 28px;
+  text-align: center;
+  width: 170px;
+  height: 170px;
+  position: absolute;
+  left: 1310px;
+  top: 200px;
+  z-index: 1;
+  color: white;
+  text-shadow: 1px 1px 3px black;
+}
+
+.selected {
+border: 5px ridge #98bf21;
 }

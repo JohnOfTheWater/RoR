@@ -86,4 +86,5 @@
         %p.fav_name= veg.recipe_name
         = link_to("", {:controller => 'Recipes', :action => 'show', :id => veg.id}, :class => 'search_show')
 
-  //= link_to("Click here if you are using an iPad", {:controller => 'Weeks', :action => 'show_iPad', :id => @week.id}, :class => 'show_iPad')
+  #ipad_icon
+    = link_to("", {:controller => 'Weeks', :action => 'show_iPad', :id => @week.id}, :class => 'show_iPad')
