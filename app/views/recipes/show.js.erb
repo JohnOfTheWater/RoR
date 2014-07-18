@@ -59,11 +59,11 @@ var favorite_text;
 var $link;
 console.log('favorite: '+'<%=@favorite%>');
 if ('<%=@favorite%>' == 'no'){
-  favorite_icon = 'http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-3/256/add-to-favorites-icon.png';
+  favorite_icon = 'http://evernode.delacqua.us/img/johngmailcom/john/8571950-vuby6.png';
   favorite_text = 'Add to Favorites';
   $link = '<%= link_to("", {:controller => 'Recipes', :action => 'add_to_fav', :id => @recipe.id, :recipe_name => @recipe.recipe_name, :tags => @recipe.tags, :description => @recipe.description, :username => current_user.username, remote: true}, :class => 'r_add_to_fav_link')%>';
 }else{
-  favorite_icon = 'http://files.softicons.com/download/business-icons/pretty-office-iii-icons-by-custom-icon-design/png/256/remove-from-favorites.png';
+  favorite_icon = 'http://evernode.delacqua.us/img/johngmailcom/john/7691950-mllnu.png';
   favorite_text = 'Remove from Favorites';
   $link = '<%= link_to("", {:controller => 'Recipes', :action => 'remove_from_fav', :id => @recipe.id, :username => current_user.username, remote: true}, :class => 'r_add_to_fav_link')%>';
 }
